@@ -1,0 +1,16 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	List<Integer> integerList = List<Integer>();
+    integerList.add(num1);
+    integerList.add(num2);
+    integerList.add(num3);
+
+    Integer maxValue = integerList[0];
+
+    for (integer i = 0; i < integerList.size(); i++) {
+        if integerList[i] > maxValue {
+            maxValue = integerList[i];
+        }
+    }
+
+    return maxValue;
+}
