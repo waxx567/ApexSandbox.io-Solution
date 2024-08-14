@@ -1,0 +1,7 @@
+public String aOrAn(String word) {
+    if(word[0] in ['aeiou']) {
+        return 'an ' + word;
+    } else {
+        return 'a ' + word;
+    }
+}
