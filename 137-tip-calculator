@@ -2,6 +2,8 @@ public Decimal computeTip(Decimal total, Integer percent) {
     
     Decimal answer = 0.0;
 
+    percent = percent / 100;
+
     answer  = total / percent;
 
     return answer;
