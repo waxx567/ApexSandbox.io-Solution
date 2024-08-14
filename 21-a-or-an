@@ -1,5 +1,5 @@
 public String aOrAn(String word) {
-    if(word[0] == 'a') || word[0] == 'e' || word[0] == 'i' || word[0] == 'o' || word[0] == 'u')) {
+    if((word.startsWith('a')) || (word.startsWith('e') || (word.startsWith('i') || (word.startsWith('o') || (word.startsWith('u')) {
         String answer = String.join('an ', word);
     } else {
         String answer = String.join('a ', word);
