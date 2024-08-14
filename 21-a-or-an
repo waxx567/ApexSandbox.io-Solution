@@ -1,9 +1,8 @@
 public String aOrAn(String word) {
-    String answer = 'answer';
     if(word[0] == 'a') || word[0] == 'e' || word[0] == 'i' || word[0] == 'o' || word[0] == 'u')) {
-        answer = 'an ' + word;
+        String answer = String.join('an ', word);
     } else {
-        answer = 'a ' + word;
+        String answer = String.join('a ', word);
     }
     return answer;
 }
