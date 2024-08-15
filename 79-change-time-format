@@ -23,7 +23,7 @@ public String changeTimeFormat(String strTime) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
 
-    else {
+    else if (newTime[0] in pmHours) {
         Integer intHour = Integer.valueOf(newTime[0]);
         Integer convertHour = intHour - 12;
         String lateHour = String.valueOf(convertHour);
