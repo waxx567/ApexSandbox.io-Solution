@@ -2,17 +2,7 @@ public String changeTimeFormat(String strTime) {
 
     List<String> newTime = strTime.split(':');
 
-    Integer intHour = Integer.valueOf(newTime[0]);
-
-    if (intHour <= 12) {
-        String morning = String.valueOf(intHour.format());
-        return '0' + morning + ':' + newTime[1] + ' AM';
-    }
-    else if (intHour > 12) {
-        intHour = intHour - 12;
-        String afternoon = String.valueOf(intHour.format());
-        return afternoon + ':' + newTime[1] + ' PM'; 
-    }
+    System.debug(newTime);
 
 
 }
