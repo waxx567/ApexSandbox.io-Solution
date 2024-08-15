@@ -1,9 +1,10 @@
 public Integer nextPrime(Integer num) {
 
     Integer temp = 0;
+    Integer current = num + 1;
     
-    If (Math.mod((num + 1), 2) == 0) {
-        return num + 1;
+    If (Math.mod(current, 2) == 0) {
+        return current;
     }
     
 }
