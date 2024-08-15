@@ -1,14 +1,14 @@
 public Boolean companionPlants(String plant1, String plant2) {
     
-    Map<String, String> goodCombos = new Map<String, String>();
-    
-    goodCombos.put('lettuce', 'cucumbers');
-    goodCombos.put('lettuce', 'onions');
-    goodCombos.put('onions', 'carrots');
-    goodCombos.put('onions', 'tomatoes');
-
-    if (goodCombos == true) {
-        return true;
+    if (plant1 == 'lettuce') {
+        if (plant2 == 'cucumbers' || plant2 == 'onions') {
+            return true;
+        }
+    }
+    else if (plant1 == 'onions') {
+        if (plant2 == 'carrots' || plant2 == 'tomatoes') {
+            return true;
+        }
     }
     else {
         return false;
