@@ -8,8 +8,8 @@ public Integer sumToN(Integer n) {
 
     Integer answer = 0;
 
-    for (Integer int : numList) {
-        answer = answer + int;
+    for (Integer AddInt : numList) {
+        answer = answer + AddInt;
     }
 
     return answer;
