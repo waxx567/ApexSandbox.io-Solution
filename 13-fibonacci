@@ -1,8 +1,15 @@
 public Integer fibonacci(Integer n) {
+
+    Integer var1 = 0;
+    Integer var2 = 0;
+
     if (n == 1 || (n == 2)) {
         return 1;
     }
     else {
-        return 0;
+        for (Integer i = 0; i < n.size(); i++) {
+            var1 = var1 + var1.valueOf(i);
+        }
+        return var1;
     }
 }
