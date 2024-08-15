@@ -13,10 +13,10 @@ public Integer fibonacci(Integer n) {
     if (n == 1 || (n == 2)) {
         return answer;
     } 
-    if (n >= 3) {
+    else {
         var2 = numList[0] + numList[1];
         numList.add(var2);
-        return answer;
+        return 0;
         // var1 = numList[1];
         // Integer i = 3;
 
