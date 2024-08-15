@@ -11,7 +11,7 @@ public Integer fibonacci(Integer n) {
     Integer answer = numList[indexNum];
 
     if (n == 1 || (n == 2)) {
-        return answer;
+        return numList.size()-1;
     } 
     else {
         var2 = 2;
