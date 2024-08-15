@@ -2,7 +2,7 @@ public String changeTimeFormat(String strTime) {
 
     List<String> newTime = strTime.split(':');
 
-    Integer intHour = Integer.valueOf(newTime(0));
+    Integer intHour = Integer.valueOf(newTime[0]);
 
     if (intHour <= 12) {
         String lowHour = String.valueOf(intHour.format());
