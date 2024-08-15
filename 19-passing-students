@@ -1,19 +1,11 @@
 public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
     
-    if(isPassed(true, true, false)){
+    if (passedExam==true && passedAssignments==true) {
         return true;
-    } else if(isPassed(true, false, true)){
+    } else if (passedExam==true && passedProject==true) {
         return true;
-    } else if(isPassed(false, true, true)){
+    } else if(passedAssignments==true && passedProject==true) {
         return true;
-    } else if(isPassed(true, true, true)){
-        return true;
-    } else if(isPassed(false, false, false)){
-        return false;
-    } else if(isPassed(false, false, true)){
-        return false;
-    } else if(isPassed(false, true, false)){
-        return false;
     } else {
         return false;
     }
