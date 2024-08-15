@@ -4,7 +4,7 @@ public String changeTimeFormat(String strTime) {
     //     '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
     // };
 
-    List<String> pmHours = new List<String> {
+    Set<String> pmHours = new Set<String> {
         '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'
     };
 
@@ -23,7 +23,7 @@ public String changeTimeFormat(String strTime) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
 
-    else if (newTime[0] in pmHours) {
+    else if (pmHours.contains(newTime[0])) {
         Integer intHour = Integer.valueOf(newTime[0]);
         Integer convertHour = intHour - 12;
         String lateHour = String.valueOf(convertHour);
