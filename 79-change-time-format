@@ -2,7 +2,6 @@ public String changeTimeFormat(String strTime) {
 
     List<String> newTime = strTime.split(':');
 
-    System.debug(newTime);
-
+    return newTime[0] + newTime[1];
 
 }
