@@ -49,6 +49,5 @@ public String changeTimeFormat(String strTime) {
         // else {
         //     String lateHour2 = String.valueOf(convertHour);
         //     return lateHour2 + ':' + newTime[1] + ' PM';
-        }
     }
 }
