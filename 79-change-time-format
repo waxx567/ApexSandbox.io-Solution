@@ -5,7 +5,7 @@ public String changeTimeFormat(String strTime) {
 
     Integer intHour = Integer.valueOf(hour);
 
-    if (intHour < 12) {
+    if (intHour <= 12) {
         String lowHour = String.valueOf(intHour.format());
         return lowHour + ':' + mins + ' AM';
     }
