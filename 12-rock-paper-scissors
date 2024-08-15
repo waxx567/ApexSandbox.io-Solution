@@ -5,7 +5,7 @@ public Integer rockPaperScissors(String player1, String player2) {
     String paper = 'paper';
     String scissors = 'scissors';
 
-    if ('rock', 'rock') {
+    if (player1=='rock' && player2=='rock') {
         return 0;
     }
 }
