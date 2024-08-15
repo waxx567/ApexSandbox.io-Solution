@@ -6,7 +6,7 @@ public Integer fibonacci(Integer n) {
     List<Integer> numList = new List<Integer>();
     numList.add(var1);
     numList.add(var2);
-    Integer total = numList.size()
+    Integer total = numList.size();
     Integer indexNum = total - 1;
     Integer answer = numList[indexNum];
     
