@@ -18,12 +18,15 @@ public String changeTimeFormat(String strTime) {
     if (midnight == true) {
         return '12' + ':' + newTime[1] + ' AM';
     }
+
     else if (early == true || (early1 == true)) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
-    else {
-        return newTime[0] + ':' + newTime[1] + ' PM';
-    }
-    //Integer intHour = Integer.valueOf(newTime[0]);
 
+    else {
+        Integer intHour = Integer.valueOf(newTime[0]);
+        Integer convertHour = intHour - 12;
+        String lateHour = String.valueOf(convertHour);
+        return lateHour + ':' + newTime[1] + ' PM';
+    }
 }
