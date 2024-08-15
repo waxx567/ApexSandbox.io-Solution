@@ -1,0 +1,22 @@
+public String formatName(String firstName, String lastName) {
+    
+    List<String> nameList = new List<String>();
+    nameList.add(firstName);
+    nameList.add(lastName);
+
+    String answer = '';
+    Integer count = 0;
+
+    for (String str : nameList) {
+        count++;
+    }
+
+    if (count == 1) {
+        answer = nameList.get(0);
+    }
+    else if (count == 2) {
+        answer = nameList.get(1) + nameList.get(0);
+    }
+
+    return answer;
+}
