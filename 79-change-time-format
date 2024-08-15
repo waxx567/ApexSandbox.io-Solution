@@ -25,7 +25,7 @@ public String changeTimeFormat(String strTime) {
 
     else {
         for (String s : pmHours) {
-            if (pmHours.contains(newTime[0])) {
+            if (newTime[0] == s) {
                 Integer intHour = Integer.valueOf(newTime[0]);
                 Integer convertHour = intHour - 12;
                 String lateHour = String.valueOf(convertHour);
