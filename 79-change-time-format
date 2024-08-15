@@ -12,9 +12,10 @@ public String changeTimeFormat(String strTime) {
     List<String> newTime = strTime.split(':');
 
     Boolean early = strTime.startsWith('0');
-    Boolean midday = strTime.startsWith('1');
+    Boolean midday1 = strTime.startsWith('11');
+    Boolean midday2 = strTime.startsWith('12');
 
-    if (early == true || (midday == true)) {
+    if (early == true || (midday1 == true) || (midday2 == true)) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
     else {
