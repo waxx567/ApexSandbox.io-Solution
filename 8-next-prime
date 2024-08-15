@@ -2,9 +2,10 @@ public Integer nextPrime(Integer num) {
 
     Integer current = num + 1;
     Boolean check = false;
+    Integer remainder = Math.mod(current, 2);
      
     while (check != true) {
-        if (Math.mod(current, 2) == 0) {
+        if (remainder == 0) {
             check = true;
         }
         else {
