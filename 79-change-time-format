@@ -2,6 +2,9 @@ public String changeTimeFormat(String strTime) {
 
     List<String> newTime = strTime.split(':');
 
-    return newTime[0] + newTime[1];
+    if (newTime[0].startsWith('0')) {
+        return strTime + ' AM';
+    }
+    //Integer intHour = Integer.valueOf(newTime[0]);
 
 }
