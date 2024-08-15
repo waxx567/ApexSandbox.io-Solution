@@ -1,9 +1,8 @@
 public String changeTimeFormat(String strTime) {
 
-    String hour = strTime.substringBefore(':');
-    String mins = strTime.substringAfter(':');
+    List<String> time = strTime.split(':');
 
-    Integer intHour = Integer.valueOf(hour);
+    Integer intHour = Integer.valueOf(time(0));
 
     if (intHour <= 12) {
         String lowHour = String.valueOf(intHour.format());
