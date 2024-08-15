@@ -1,9 +1,24 @@
 public String formatName(String firstName, String lastName) {
     
-    if ((firstName == null && lastName = null) || (firstName == null && lastName == '') || (firstName == '' && lastName == '')) {
+    if (firstName == null && lastName = null) {
+        return '';
+    }
+    else if (firstName == null && lastName == '') {
         return '';
     } 
-    else if ((firstName == null && lastName != null) || (firstName == null && lastName != '') || (firstName == '' && lastName != null) || (firstName == '' && lastName != '')) {
+    else if (firstName == '' && lastName == '') {
+        return '';
+    }
+    else if (firstName == null && lastName != null) {
+        return lastName;
+    } 
+    else if (firstName == null && lastName != '') {
+        return lastName;
+    }
+    else if (firstName == '' && lastName != null) {
+        return lastName;
+    }
+    else if (firstName == '' && lastName != '') {
         return lastName;
     }
     else {
