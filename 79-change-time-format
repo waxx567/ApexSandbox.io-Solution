@@ -37,8 +37,20 @@ public String changeTimeFormat(String strTime) {
     else if (midday == true) {
         return newTime[0] + ':' + newTime[1] + ' PM';
 
-        // Integer intHour = Integer.valueOf(newTime[0]);
-        // Integer convertHour = intHour - 12;
+    else {
+        Integer intHour = Integer.valueOf(newTime[0]);
+        Integer convertHour = intHour - 12;
+        if (convertHour < 10) {
+            String lateHour1 = String.valueOf(convertHour);
+            return '0' + lateHour1 + ':' + newTime[1] + ' PM';
+        }
+        else {
+            String lateHour2 = String.valueOf(convertHour);
+            return lateHour2 + ':' + newTime[1] + ' PM';
+        }
+
+    }
+
         // if (convertHour < 10) {
         //     String lateHour1 = String.valueOf(convertHour);
         //     return '0' + lateHour1 + ':' + newTime[1] + ' PM';
