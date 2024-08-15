@@ -4,9 +4,9 @@ public String changeTimeFormat(String strTime) {
     
     Boolean early = strTime.startsWith('0');
 
-    //if (early == true) {
+    if (early == true) {
         return newTime[0] + ':' + newTime[1] + ' AM';
-    //}
+    }
     //Integer intHour = Integer.valueOf(newTime[0]);
 
 }
