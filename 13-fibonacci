@@ -22,7 +22,7 @@ public Integer fibonacci(Integer n) {
             var2 = var1;
             i++;
         }
-    }
     
-    return answer;
+        return answer;
+    }
 }
