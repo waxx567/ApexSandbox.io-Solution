@@ -4,4 +4,8 @@ public Integer rockPaperScissors(String player1, String player2) {
     String rock = 'rock';
     String paper = 'paper';
     String scissors = 'scissors';
+
+    if ('rock', 'rock') {
+        return 0;
+    }
 }
