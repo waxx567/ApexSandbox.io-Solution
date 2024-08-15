@@ -14,8 +14,7 @@ public Integer fibonacci(Integer n) {
         return numList.size()-1;
     } 
     else {
-        var2 = 2;
-        // var2 = numList[0] + numList[1];
+        var2 = numList[0] + numList[1];
         numList.add(var2);
         return numList.size()-1;
         // var1 = numList[1];
