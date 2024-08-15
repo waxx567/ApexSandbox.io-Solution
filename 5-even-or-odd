@@ -1,8 +1,8 @@
 public String evenOrOdd(Integer num) {
     
     num = Math.abs(num);
-    
-    Integer result = Math.mod(num, 10);
+
+    Integer result = Math.mod(num, 2);
 
     if (result==0) {
         return 'even';
