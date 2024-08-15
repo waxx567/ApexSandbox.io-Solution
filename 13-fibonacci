@@ -18,5 +18,4 @@ public Integer fibonacci(Integer n) {
     else {
         return answer;
     }
-    return answer;
 }
