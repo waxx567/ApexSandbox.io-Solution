@@ -1,10 +1,20 @@
 public String changeTimeFormat(String strTime) {
-
-    List<String> newTime = strTime.split(':');
     
-    Boolean early = strTime.startsWith('0');
+    // List<String> amHours = new List<String> {
+    //     '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
+    // };
 
-    if (early == true) {
+    List<String> pmHours = new List<String> {
+        '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'
+    };
+
+    
+    List<String> newTime = strTime.split(':');
+
+    Boolean early = strTime.startsWith('0');
+    Boolean midday = strTime.startsWith('1');
+
+    if (early == true || (midday == true)) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
     else {
