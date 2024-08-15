@@ -36,7 +36,12 @@ public String changeTimeFormat(String strTime) {
     else {
         Integer intHour = Integer.valueOf(newTime[0]);
         Integer convertHour = intHour - 12;
-        String lateHour = String.valueOf(convertHour);
-        return lateHour + ':' + newTime[1] + ' PM';
+        if (convertHour < 10) {
+            String lateHour = String.valueOf(convertHour);
+            return '0' + lateHour + ':' + newTime[1] + ' PM';
+        else {
+            String lateHour = String.valueOf(convertHour);
+            return lateHour + ':' + newTime[1] + ' PM';            
+        }
     }
 }
