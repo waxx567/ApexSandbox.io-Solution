@@ -1,23 +1,4 @@
 public String changeTimeFormat(String strTime) {
-    
-    // List<String> amHours = new List<String> {
-    //     '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11'
-    // };
-
-    // Set<String> pmHours = new Set<String> {
-    //     '12', 
-    //     '13', 
-    //     '14', 
-    //     '15', 
-    //     '16', 
-    //     '17', 
-    //     '18', 
-    //     '19', 
-    //     '20', 
-    //     '21', 
-    //     '22', 
-    //     '23'
-    // };
 
     List<String> newTime = strTime.split(':');
 
@@ -50,14 +31,5 @@ public String changeTimeFormat(String strTime) {
             String lateHour2 = String.valueOf(convertHour);
             return lateHour2 + ':' + newTime[1] + ' PM';
         }
-        // Integer intHour = Integer.valueOf(newTime[0]);
-        // Integer convertHour = intHour - 12;
-        // if (convertHour < 10) {
-        //     String lateHour1 = String.valueOf(convertHour);
-        //     return '0' + lateHour1 + ':' + newTime[1] + ' PM';
-        // }
-        // else {
-        //     String lateHour2 = String.valueOf(convertHour);
-        //     return lateHour2 + ':' + newTime[1] + ' PM';
     }
 }
