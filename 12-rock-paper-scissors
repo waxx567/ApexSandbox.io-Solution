@@ -1,16 +1,23 @@
 public Integer rockPaperScissors(String player1, String player2) {
-    
-    Map<String, String> winOptions = Map<String, String> {
-        'rock' >= 'scissors',
-        'paper' >= 'rock',
-        'scissors' >= 'paper'
-    };
 
-    if (player1.equalsIgnoreCase(player2)) {
-        return 0;
-    } else if (winOptions.get(player1.toLowerCase()) == player2.toLowerCase()) {
-        return 1;
-    } else {
+    if(player1 == 'rock' && player2 == 'paper'){
         return 2;
     }
-}
+    else if (player1 == 'paper' && player2 == 'rock')){
+        return 1;
+    }
+    else if(player1 == 'scissors' && player2 == 'paper'){
+        return 1;
+    }
+    else if(player1 == 'paper' && player2 == 'scissors'){
+        return 2;
+    }
+    else if(player1 == 'rock' && player2 == 'scissors'){
+        return 1;
+    }
+    else if(player1 == 'scissors' && player2 == 'rock'){
+        return 2;
+    }
+    else {
+        return 0;
+
