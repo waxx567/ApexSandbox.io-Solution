@@ -1,31 +1,16 @@
 public Integer fibonacci(Integer n) {
 
-    Integer var1 = 1;
-    Integer var2 = 1;
+    Integer temp = 0;
+    Integer last = 1;
+    Integer latest = 1;
 
-    List<Integer> numList = new List<Integer>();
-    numList.add(var1);
-    numList.add(var2);
-    Integer totalSize = numList.size();
-    Integer indexNum = totalSize - 1;
-    Integer answer = numList[indexNum];
+    for (Integer i = 3; i <= n; i++) {
 
-    if (n == 1 || (n == 2)) {
-        return numList.size()-1;
-    } 
-    else {
-        var2 = numList[0] + numList[1];
-        numList.add(var2);
-        var1 = numList[1];
-        Integer i = 2;
-
-        while (i != n) {
-            var2 = var1 + var2;
-            numList.add(var2);
-            var1 = numList[i-1];
-            i++;
-        }
-    
-        return numList.size()-1;
+        temp = latest;
+        latest += last;
+        last = temp;
     }
+
+    return latest;
+
 }
