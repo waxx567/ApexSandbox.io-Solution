@@ -6,7 +6,7 @@ public String changeTimeFormat(String strTime) {
 
     if (intHour <= 12) {
         String morning = String.valueOf(intHour.format());
-        return morning + ':' + newTime[1] + ' AM';
+        return '0' + morning + ':' + newTime[1] + ' AM';
     }
     else if (intHour > 12) {
         intHour = intHour - 12;
