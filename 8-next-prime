@@ -1,6 +1,5 @@
 public Integer nextPrime(Integer num) {
 
-    Integer temp = 0;
     Integer current = num + 1;
     
     if (Math.mod(current, 2) == 0) {
