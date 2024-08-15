@@ -1,0 +1,16 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    
+    Map<String, String> goodCombos = new Map<String, String>();
+    
+    goodCombos.put('lettuce', 'cucumbers');
+    goodCombos.put('lettuce', 'onions');
+    goodCombos.put('onions', 'carrots');
+    goodCombos.put('onions', 'tomatoes');
+
+    if (goodCombos) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
