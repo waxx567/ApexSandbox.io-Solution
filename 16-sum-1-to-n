@@ -12,5 +12,7 @@ public Integer sumToN(Integer n) {
         answer = answer + AddInt;
     }
 
+    answer = answer + n;
+
     return answer;
 }
