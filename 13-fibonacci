@@ -4,17 +4,13 @@ public Integer fibonacci(Integer n) {
     Integer var2 = 1;
 
     List<Integer> numList = new List<Integer>();
+    numList.add(var1);
+    numList.add(var2);
 
     if (n == 1 || (n == 2)) {
-        return 1;
+        return numList[-1];
     }
     else {
-        numList.add(var1);
-        numList.add(var2);
-        for (Integer i = 3; i < n + 1; i++) {
-            Integer value = n.valueOf(i);
-            numList.add(value);
-        }
         return 0;
     }
 }
