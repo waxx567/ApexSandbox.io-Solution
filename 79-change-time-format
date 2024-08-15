@@ -24,7 +24,6 @@ public String changeTimeFormat(String strTime) {
     Boolean midnight = strTime.startsWith('00'); 
     Boolean early = strTime.startsWith('0');
     Boolean early1 = strTime.startsWith('11');
-    Boolean late = pmHours.contains(newTime[0]);
 
     if (midnight == true) {
         return '12' + ':' + newTime[1] + ' AM';
@@ -34,7 +33,7 @@ public String changeTimeFormat(String strTime) {
         return newTime[0] + ':' + newTime[1] + ' AM';
     }
 
-    else if (late == true) {
+    else {
         Integer intHour = Integer.valueOf(newTime[0]);
         Integer convertHour = intHour - 12;
         String lateHour = String.valueOf(convertHour);
