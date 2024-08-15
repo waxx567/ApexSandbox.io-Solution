@@ -10,6 +10,7 @@ public Integer nextPrime(Integer num) {
         current = current + 1;
         if (Math.mod(current, 2) == 0) {
         return current;
+        }
     }    
 }
 
