@@ -3,10 +3,14 @@ public Integer nextPrime(Integer num) {
     Integer temp = 0;
     Integer current = num + 1;
     
-    If (Math.mod(current, 2) == 0) {
+    if (Math.mod(current, 2) == 0) {
         return current;
     }
-    
+    else {
+        current = current + 1;
+        if (Math.mod(current, 2) == 0) {
+        return current;
+    }    
 }
 
 // List<Integer> collection = new List<Integer>();
