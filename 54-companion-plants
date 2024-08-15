@@ -7,7 +7,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     goodCombos.put('onions', 'carrots');
     goodCombos.put('onions', 'tomatoes');
 
-    if (goodCombos) {
+    if (goodCombos == true) {
         return true;
     }
     else {
