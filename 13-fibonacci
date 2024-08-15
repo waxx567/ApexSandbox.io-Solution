@@ -12,7 +12,7 @@ public Integer fibonacci(Integer n) {
     }
     else {
         for (Integer i = 0; i < n; i++) {
-            var3 = numList.size()-2 + numList.size()-1;
+            var3 = (numList.size()-2) + (numList.size()-1);
             numList.add(var3):
         }
         return numList.size()-1;
