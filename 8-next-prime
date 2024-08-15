@@ -9,39 +9,10 @@ public Integer nextPrime(Integer num) {
         }
         else {
             current += 1;
-            if (Math.mod(current, 2) == 0) {
-                check = true;
-            }
-        }  
+        }
     }
     
     if (check == true) {
         return current;
     }  
 }
-
-// List<Integer> collection = new List<Integer>();
-
-//     Integer checkNum = num + 1;
-
-//     collection.add(checkNum);
-
-//     Boolean good = false;
-
-//     for (Integer i : collection) {
-
-//         if (Math.mod(num, i) == 0) {
-
-//             good = false;
-//             Integer next = i + 1;
-//             collection.add(next);
-//         }
-//         else {
-//             good = true;
-//         }
-//     }
-
-//     if (good == true) {
-
-//         return collection.size()-1;
-//     }
