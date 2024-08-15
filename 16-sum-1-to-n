@@ -1,12 +1,16 @@
 public Integer sumToN(Integer n) {
     
-    Integer answer = 0;
+    List<Integer> numList = new List<Integer>();
 
     for (Integer i = 1; i < n; i++) {
-        answer.add(i);
+        numList.add(i);
     }
 
-    answer = answer + num;
-    
+    Integer answer = 0;
+
+    for (Integer int : numList) {
+        answer = answer + int;
+    }
+
     return answer;
 }
