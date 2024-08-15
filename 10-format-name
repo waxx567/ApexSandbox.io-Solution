@@ -15,7 +15,7 @@ public String formatName(String firstName, String lastName) {
         answer = nameList.get(0);
     }
     else if (count == 2) {
-        answer = nameList.get(1) + nameList.get(0);
+        answer = nameList.get(1) + ', ' nameList.get(0);
     }
 
     return answer;
