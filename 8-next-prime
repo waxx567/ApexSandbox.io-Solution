@@ -1,6 +1,6 @@
 public Integer nextPrime(Integer num) {
     
-    List<Integer> collection = List<Integer>();
+    List<Integer> collection = new List<Integer>();
 
     Integer checkNum = num + 1;
 
