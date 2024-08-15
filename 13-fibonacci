@@ -11,6 +11,7 @@ public Integer fibonacci(Integer n) {
         return var2;
     }
     else if (n == 3) {
-        return var1 + var2;
+        var3 = var1 + var2;
+        return var3;
     }
 }
