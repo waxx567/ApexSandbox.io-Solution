@@ -36,6 +36,7 @@ public String changeTimeFormat(String strTime) {
 
     else if (midday == true) {
         return newTime[0] + ':' + newTime[1] + ' PM';
+    }
 
     else {
         return newTime[0] + ':' + newTime[1] + ' PM';
