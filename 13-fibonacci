@@ -8,7 +8,7 @@ public Integer fibonacci(Integer n) {
     numList.add(var2);
 
     if (n == 1 || (n == 2)) {
-        return numList.last();
+        return numList[^1];
     }
     else {
         return 0;
