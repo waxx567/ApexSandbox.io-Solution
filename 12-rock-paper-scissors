@@ -1,0 +1,7 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    
+    // Valid moves
+    String rock = 'rock';
+    String paper = 'paper';
+    String scissors = 'scissors';
+}
