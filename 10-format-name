@@ -1,6 +1,15 @@
 public String formatName(String firstName, String lastName) {
     
-    if (firstName == null && lastName = null) {
+    if (firstName == null && lastName == null) {
+        return '';
+    }
+    if (firstName == null && lastName == '') {
+        return '';
+    }
+    if (firstName == '' && lastName == null) {
+        return '';
+    }
+    if (firstName == '' && lastName == '') {
         return '';
     }
 }
