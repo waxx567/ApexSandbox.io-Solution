@@ -11,9 +11,9 @@ public Integer fibonacci(Integer n) {
         return numList.size()-1;
     }
     else {
-        for (Integer i = 2; i < n+1; i++) {
-            var1 = numList[-2] + numList[-1];
-            numList.add(var1):
+        for (Integer i = 0; i < n; i++) {
+            var3 = numList.size()-2 + numList.size()-1;
+            numList.add(var3):
         }
         return numList.size()-1;
     }
