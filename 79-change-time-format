@@ -5,13 +5,13 @@ public String changeTimeFormat(String strTime) {
     Integer intHour = Integer.valueOf(newTime[0]);
 
     if (intHour <= 12) {
-        String lowHour = String.valueOf(intHour.format());
-        return lowHour + ':' + newTime[1] + ' AM';
+        String morning = String.valueOf(intHour.format());
+        return morning + ':' + newTime[1] + ' AM';
     }
     else if (intHour > 12) {
         intHour = intHour - 12;
-        String highHour = String.valueOf(intHour.format());
-        return highHour + ':' + newTime[1] + ' PM'; 
+        String afternoon = String.valueOf(intHour.format());
+        return afternoon + ':' + newTime[1] + ' PM'; 
     }
 
 
