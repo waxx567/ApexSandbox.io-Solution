@@ -6,12 +6,12 @@ public String changeTimeFormat(String strTime) {
 
     if (intHour <= 12) {
         String lowHour = String.valueOf(intHour.format());
-        return lowHour + ':' + mins + ' AM';
+        return lowHour + ':' + newTime[1] + ' AM';
     }
     else if (intHour > 12) {
         intHour = intHour - 12;
         String highHour = String.valueOf(intHour.format());
-        return highHour + ':' + mins + ' PM'; 
+        return highHour + ':' + newTime[1] + ' PM'; 
     }
 
 
