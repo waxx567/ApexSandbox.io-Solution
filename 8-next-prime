@@ -2,18 +2,20 @@ public Integer nextPrime(Integer num) {
 
     Integer current = num + 1;
     Boolean check = false;
-    
-    if (Math.mod(current, 2) == 0) {
-        check = true;
-    }
-    else {
-        current = current + 1;
+     
+    while (check != true) {
         if (Math.mod(current, 2) == 0) {
             check = true;
         }
-    }  
-
-    if ( check == true) {
+        else {
+            current += 1;
+            if (Math.mod(current, 2) == 0) {
+                check = true;
+            }
+        }  
+    }
+    
+    if (check == true) {
         return current;
     }  
 }
