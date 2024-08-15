@@ -2,7 +2,7 @@ public Integer nextPrime(Integer num) {
 
     Integer current = num + 1;
     Boolean check = false;
-    Integer remainder = Math.mod(current, 2);
+    Integer remainder = math.mod(current, 2);
      
     while (check != true) {
         if (remainder == 0) {
