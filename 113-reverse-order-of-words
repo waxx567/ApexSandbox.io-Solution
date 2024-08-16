@@ -17,4 +17,6 @@ public String reverseWordsInASentence(String sentence){
     for (String s : words) {
         return s;
     }
+
+    return null;
 }
