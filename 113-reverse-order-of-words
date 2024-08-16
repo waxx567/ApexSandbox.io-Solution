@@ -1,9 +1,13 @@
 public String reverseWordsInASentence(String sentence){
     
-    List<String> pieces = new List<String>();
+    List<String> words = new List<String>();
 
-    String word = sentence.split(' ');
+    for (Integer i = 0; s < sentence; s++) {
+        words.add(i);
+    }
 
-    return word;
+    for (String s : words) {
+        return s;
+    }
 
 }
