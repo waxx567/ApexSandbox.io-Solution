@@ -14,5 +14,7 @@ public String reverseWordsInASentence(String sentence){
 
     // reverse list
 
-    return words;
+    for (String s : words) {
+        return words;
+    }
 }
