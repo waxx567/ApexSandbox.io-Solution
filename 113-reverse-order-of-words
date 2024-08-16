@@ -2,6 +2,10 @@ public String reverseWordsInASentence(String sentence){
     
     String[] words = sentence.split(' ');
 
-    return words;
+    for (String s : words) {
+        if (s.isAlpha()) {
+            return s;
+        }
+    }
 
 }
