@@ -20,6 +20,6 @@ public Integer nextPrime(Integer num) {
             return current; // Return the prime number found
         }
 
-        current += 1; // If no number found yet, move to the next number
+        current += 1; // If no prime number has been found yet, move to the next number
     }
 }
