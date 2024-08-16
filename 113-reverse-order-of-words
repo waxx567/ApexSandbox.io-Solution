@@ -2,7 +2,7 @@ public String reverseWordsInASentence(String sentence){
     
     List<String> words = new List<String>();
 
-    for (Integer i = 0; i < sentence; i++) {
+    for (String i = 0; i < sentence; i++) {
         words.add(i);
     }
 
