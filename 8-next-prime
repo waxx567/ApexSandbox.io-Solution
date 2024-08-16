@@ -1,21 +1,25 @@
 public Integer nextPrime(Integer num) {
 
     Integer current = num + 1;
-    Boolean check = false;
-     
-    while (check != true) {
-        
-        Integer remainder = math.mod(current, 2);
 
-        if (remainder == 0) {
-            check = true;
+    // Infinite loop continues until a prime number is found
+    while (true) {
+
+        Boolean isPrime = true;
+
+        // Check divisibility from 2 up to the square root of current
+        // If divisible, set flag to false and break out of for loop
+        for (Integer i = 2; i * i <= current; i++) {
+            if (math.mod(current, i) == 0) {
+                isPrime - false;
+                break;
+            }
         }
-        else {
-            current += 1;
+
+        if (isPrime) {
+            return current; // Return the prime number found
         }
+
+        current += 1; // If no number found yet, move to the next number
     }
-    
-    if (check == true) {
-        return current;
-    }  
 }
