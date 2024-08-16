@@ -1,7 +1,7 @@
 public Integer nextPrime(Integer num) {
 
     // If the input number is negative, return 2, which is the smallest prime number
-    if (n < 2) {
+    if (num < 2) {
         return 2;
     }
 
