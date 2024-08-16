@@ -22,4 +22,6 @@ public Integer nextPrime(Integer num) {
 
         current += 1; // If no prime number has been found yet, move to the next number
     }
+
+    return null;
 }
