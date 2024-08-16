@@ -2,21 +2,8 @@ public String reverseWordsInASentence(String sentence){
     
     List<String> words = new List<String>();
 
-    // loop through sentence
-    while (true) {
-        String word = sentence.substringBefore(' ');
-        words.add(word);
-    }
-    
-    // remove full stop from last word and any commas etc
-    String lastWord = sentence.substringBefore('.');
-    words.add(lastWord);    
+    String word = sentence.split(' ');
 
-    // reverse list
+    return word;
 
-    for (String s : words) {
-        return s;
-    }
-
-    return null;
 }
