@@ -1,5 +1,10 @@
 public Integer nextPrime(Integer num) {
 
+    // If the input number is negative, return 2, which is the smallest prime number
+    if (n < 2) {
+        return 2;
+    }
+
     Integer current = num + 1;
 
     // Infinite loop continues until a prime number is found
@@ -23,5 +28,7 @@ public Integer nextPrime(Integer num) {
         current += 1; // If no prime number has been found yet, move to the next number
     }
 
+    // The while loop is infinite and always returns a prime number, hence this return
+    // statement will technically never be reached. It is only needed to satisfy the compiler.
     return null;
 }
