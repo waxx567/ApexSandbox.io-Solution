@@ -10,7 +10,7 @@ public Integer nextPrime(Integer num) {
         // Check divisibility from 2 up to the square root of current
         // If divisible, set flag to false and break out of for loop
         for (Integer i = 2; i * i <= current; i++) {
-            if (math.mod(current, i) == 0) {
+            if (Math.mod(current, i) == 0) {
                 isPrime = false;
                 break;
             }
