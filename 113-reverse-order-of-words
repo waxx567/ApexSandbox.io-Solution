@@ -1,4 +1,8 @@
 public String reverseWordsInASentence(String sentence){
+
+    if (sentence == null) {
+        return null;
+    }
     
     String[] words = sentence.split(' ');
 
