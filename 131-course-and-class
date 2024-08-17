@@ -2,36 +2,48 @@ public void createCourseAndClass(String name, String description) {
 
 
     if (description == null) {
-        return;
+        // Create a new course record
+        apxio__Course__c createCourse = new apxio__Course__c(
+            Name = name,
+        );
     }
-
-    // Create a new course record
-    apxio__Course__c createCourse = new apxio__Course__c(
-        Name = name, 
-        apxio__Course_Details__c = description
-    );
+    else {
+        // Create a new course record
+        apxio__Course__c createCourse = new apxio__Course__c(
+            Name = name, 
+            apxio__Course_Details__c = description
+        );        
+    }
     
     // Insert the new course record into the database
     insert createCourse;
 
     // Retrieve the details from the course using the new ID
-    // Use LIMIT 1 to ensure we only get a single record
     apxio__Course__c courseRecord = [SELECT Id, Name, apxio__Course_Details__c 
                                      FROM apxio__Course__c 
                                      WHERE Id = :createCourse.Id 
                                      LIMIT 1];
 
-    // Truncate the description to fit within the size limit of the Class description field
-    String trunDesc = courseRecord.apxio__Course_Details__c.length() > 255 
-                        ? courseRecord.apxio__Course_Details__c.substring(0, 255) 
-                        : courseRecord.apxio__Course_Details__c;
+    if (apxio__Course_Details__c == null) {
+        // Create a new class record
+        apxio__Class__c createClass = new apxio__Class__c(
+            Name = name, 
+            apxio__Course__c = createCourse.Id // Link the class to the course
+        );
+    }
+    else {
+        // Truncate the description to fit within the size limit of the Class description field
+        String trunDesc = courseRecord.apxio__Course_Details__c.length() > 255 
+                            ? courseRecord.apxio__Course_Details__c.substring(0, 255) 
+                            : courseRecord.apxio__Course_Details__c;
 
-    // Create a new class record
-    apxio__Class__c createClass = new apxio__Class__c(
-        Name = name, 
-        apxio__Description__c = trunDesc,
-        apxio__Course__c = createCourse.Id // Link the class to the course
-    );
+        // Create a new class record
+        apxio__Class__c createClass = new apxio__Class__c(
+            Name = name, 
+            apxio__Description__c = trunDesc,
+            apxio__Course__c = createCourse.Id // Link the class to the course
+        );
+    }
 
     // Insert the new class record into the database
     insert createClass;
