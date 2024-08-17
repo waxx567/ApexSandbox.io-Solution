@@ -1,0 +1,8 @@
+public List<apxio__Student__c> selectActiveStudents() {
+    
+    // Query the database for students who have the active field checked
+    apxio__Student__c activeStudents = [SELECT Id, Name FROM apxio__Student__c WHERE apxio__Active__c = TRUE];
+    
+    // Return the list of active students
+    return apxio__Student__c.activeStudents;
+}
