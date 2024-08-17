@@ -1,0 +1,14 @@
+public String registerStudent(String name, String phone, String email) {
+    
+    // create record
+    apxio__Student__c register = new apxio__Student__c(Name = name, apxio__Phone__c = phone, apxio__Email__c = email);
+
+    // insert
+    insert register;
+
+    // query database using id
+    String regNumber = [SELECT apxio__Registration_Number__c FROM apxio__Student__c];
+
+    // return reg num
+    return regNumber;
+}
