@@ -1,4 +1,4 @@
 public List<apxio__Student__c> selectActiveStudents() {
     
-    return [SELECT Id, Name, Phone, Email, Autonumber, Picklist, Number FROM apxio__Student__c WHERE apxio__Active__c = TRUE];
+    return [SELECT Id, Name, apxio__Phone__c, apxio__Email__c, apxio__Registration_Number__c, apxio__Home_Planet__c, apxio__Cumulative_GPA__c FROM apxio__Student__c WHERE apxio__Active__c = TRUE];
 }
