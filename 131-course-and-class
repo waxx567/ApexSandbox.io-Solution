@@ -1,15 +1,18 @@
 public void createCourseAndClass(String name, String description) {
 
+    // Declare course and class globally
+    apxio__Course__c createCourse;
+    apxio__Class__c createClass;
 
     if (description == null) {
         // Create a new course record
-        apxio__Course__c createCourse = new apxio__Course__c(
+        createCourse = new apxio__Course__c(
             Name = name,
         );
     }
     else {
         // Create a new course record
-        apxio__Course__c createCourse = new apxio__Course__c(
+        createCourse = new apxio__Course__c(
             Name = name, 
             apxio__Course_Details__c = description
         );        
@@ -26,7 +29,7 @@ public void createCourseAndClass(String name, String description) {
 
     if (apxio__Course_Details__c == null) {
         // Create a new class record
-        apxio__Class__c createClass = new apxio__Class__c(
+        createClass = new apxio__Class__c(
             Name = name, 
             apxio__Course__c = createCourse.Id // Link the class to the course
         );
@@ -38,7 +41,7 @@ public void createCourseAndClass(String name, String description) {
                             : courseRecord.apxio__Course_Details__c;
 
         // Create a new class record
-        apxio__Class__c createClass = new apxio__Class__c(
+        createClass = new apxio__Class__c(
             Name = name, 
             apxio__Description__c = trunDesc,
             apxio__Course__c = createCourse.Id // Link the class to the course
