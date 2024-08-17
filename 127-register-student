@@ -7,7 +7,7 @@ public String registerStudent(String name, String phone, String email) {
     insert register;
 
     // query database using id
-    apxio__Student__c result = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id IN :register.Id LIMIT 1];
+    apxio__Student__c result = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id = :register.Id LIMIT 1];
     
     // return reg num
     return result.apxio__Registration_Number__c;
