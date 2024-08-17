@@ -16,6 +16,10 @@ public void createCourseAndClass(String name, String description) {
                                      WHERE Id = :createCourse.Id 
                                      LIMIT 1];
 
+    if (courseRecord == null) {
+        return;
+    }
+
     // Truncate the description to fit within the size limit of the Class description field
     String trunDesc = courseRecord.apxio__Course_Details__c.length() > 255 
                         ? courseRecord.apxio__Course_Details__c.substring(0, 255) 
