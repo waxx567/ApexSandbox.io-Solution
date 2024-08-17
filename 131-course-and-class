@@ -7,7 +7,8 @@ public void createCourseAndClass(String name, String description) {
     insert createCourse;
 
     // Retrieve the name and details from the course using the new ID
-    String courseRecord = [SELECT apxio__Course__c.Id, apxio__Course__c.Name, apxio__Course__c.apxio__Course_Details__c FROM apxio__Course__c WHERE Id = :createCourse.Id LIMIT 1];
+    String courseRecord = [SELECT Id, Name, apxio__Course_Details__c 
+                        FROM apxio__Course__c WHERE Id = :createCourse.Id LIMIT 1];
 
     // Truncate the description to fits within the size limit of the Class description field
     String trunDesc = courseRecord.apxio__Course_Details__c.length > 255
