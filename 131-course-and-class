@@ -1,17 +1,15 @@
 public void createCourseAndClass(String name, String description) {
-
-    // Declare course and class globally
+    
+    // Declare the course and class variables at the top
     apxio__Course__c createCourse;
     apxio__Class__c createClass;
-
+    
+    // Handle the course creation
     if (description == null) {
-        // Create a new course record
         createCourse = new apxio__Course__c(
-            Name = name,
+            Name = name
         );
-    }
-    else {
-        // Create a new course record
+    } else {
         createCourse = new apxio__Course__c(
             Name = name, 
             apxio__Course_Details__c = description
@@ -27,20 +25,18 @@ public void createCourseAndClass(String name, String description) {
                                      WHERE Id = :createCourse.Id 
                                      LIMIT 1];
 
-    if (apxio__Course_Details__c == null) {
-        // Create a new class record
+    // Handle the class creation
+    if (description == null) {
         createClass = new apxio__Class__c(
             Name = name, 
             apxio__Course__c = createCourse.Id // Link the class to the course
         );
-    }
-    else {
+    } else {
         // Truncate the description to fit within the size limit of the Class description field
         String trunDesc = courseRecord.apxio__Course_Details__c.length() > 255 
                             ? courseRecord.apxio__Course_Details__c.substring(0, 255) 
                             : courseRecord.apxio__Course_Details__c;
 
-        // Create a new class record
         createClass = new apxio__Class__c(
             Name = name, 
             apxio__Description__c = trunDesc,
