@@ -1,6 +1,6 @@
 public void insertStudents(List<String> studentNames, List<String> studentEmails) {
     // Declare a list to hold all student records
-    List<apxio__Student__c> students =  new List<apxio__Student__c.(); 
+    List<apxio__Student__c> students =  new List<apxio__Student__c>(); 
 
     for (Integer i = 0; i < studentNames.size(); i++) {
         // Create a new student record and add it to the list
