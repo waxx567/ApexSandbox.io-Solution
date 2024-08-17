@@ -1,0 +1,20 @@
+public void createCourseAndClass(String name, String description) {
+
+    // Create a new course record
+    apxio__Course__c createCourse = new apxio__Course__c(Name = name, apxio__Course_Details__c = description);
+    
+    // Insert the new course record into the database
+    insert createCourse;
+
+    // Retrieve the name and details from the course using the new ID
+    String courseInfo = [SELECT Id, Name, apxio__Course_Details__c FROM apxio__Course__c WHERE Id = :createCourse.Id];
+
+    // Truncate the description to fits within the size limit of the Class description field
+    String trunDesc = courseInfo.apxio__Course_Details__c.left(255);
+
+    // Create a new class record
+    apxio__Class__c createClass = new apxio__Class__c(Name = name, apxio__Description__c = trunDesc);
+
+    // Insert the new class record into the database
+    insert createClass;
+}
