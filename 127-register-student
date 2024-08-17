@@ -8,7 +8,7 @@ public String registerStudent(String name, String phone, String email) {
 
     // query database using id
     String regNumber = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id IN register];
-
+    String answer = regNumber[0]; 
     // return reg num
-    return regNumber[0];
+    return answer;
 }
