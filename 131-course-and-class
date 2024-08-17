@@ -1,5 +1,10 @@
 public void createCourseAndClass(String name, String description) {
 
+
+    if (description == null) {
+        return;
+    }
+
     // Create a new course record
     apxio__Course__c createCourse = new apxio__Course__c(
         Name = name, 
@@ -15,10 +20,6 @@ public void createCourseAndClass(String name, String description) {
                                      FROM apxio__Course__c 
                                      WHERE Id = :createCourse.Id 
                                      LIMIT 1];
-
-    if (courseRecord == null) {
-        return;
-    }
 
     // Truncate the description to fit within the size limit of the Class description field
     String trunDesc = courseRecord.apxio__Course_Details__c.length() > 255 
