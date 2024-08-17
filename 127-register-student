@@ -7,8 +7,8 @@ public String registerStudent(String name, String phone, String email) {
     insert register;
 
     // query database using id
-    String regNumber = [SELECT apxio__Registration_Number__c FROM apxio__Student__c];
+    String regNumber = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id IN register];
 
     // return reg num
-    return regNumber;
+    return regNumber[0];
 }
