@@ -1,0 +1,38 @@
+public void enrollStudents(List<String> emails, String className) {
+    
+    // Query the Class object to find the class with the given name
+    // Include a WHERE clause with bind variables to ensure you 
+    // are retrieving only the relevant records.
+    List<String> verifyClassName = [
+        SELECT Id, Name FROM apxio__Class__c
+        WHERE Name = :className
+    ];
+
+    // Ensure the class exists
+    if (verifyClassName.isEmpty()) {
+        return null;
+    }
+    else {
+        List<String> verifyStudents = List<String>();
+        // Query the Student object to find students whose 
+        // email addresses match the provided list
+        for (Integer i = 0; i < emails; i++) {
+            verifyStudents = [
+                SELECT Id, Name, Email FROM apxio__Student__c
+                WHERE Email = :emails[i]
+            ];
+        }
+    }
+
+    // For each student record, create a new Class Enrollment 
+    // record that links the student to the class
+    // Populate the apxio__Student__c and apxio__Offered_Class__c 
+    // lookup fields on the enrollment record
+    apxio__Class_Enrollment__c newEnrollments = new apxio__Class_Enrollment__c(
+        apxio__Student__c = :verifyStudents.Id,
+        apxio__Offered_Class__c = :verifyClassName.Name
+    );
+
+    // Insert the new enrollment records into the database
+    insert newEnrollments;
+}
