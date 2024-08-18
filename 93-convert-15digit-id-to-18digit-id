@@ -1,7 +1,7 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
     // Validate input
-    if (fifteenDigit.length() != 15) {
+    if (fifteenDigit == null || fifteenDigit.length() != 15) {
         return '-1';
     }
 
@@ -15,8 +15,8 @@ public String convert15to18DigitId(String fifteenDigit)
     for (String segment : new List<String>{firstSegment, middleSegment, lastSegment}) {
         String binaryString = '';
         for (Integer i = 0; i < segment.length(); i++) {
-            Char c = segment.charAt(i);
-            binaryString += (Character.isUpperCase(c) ? '1' : '0');
+            String c = segment.substring(i, i + 1); // Extract individual character as a string
+            binaryString += (c.toUpperCase() == c ? '1' : '0'); // Compare the character to its uppercase version
         }
         Integer decimalValue = Integer.valueOf(binaryString, 2);
         checksums += getChecksumCharacter(decimalValue);
@@ -29,22 +29,9 @@ public String convert15to18DigitId(String fifteenDigit)
 // Helper method to convert the decimal value to a character
 private String getChecksumCharacter(Integer decimalValue) 
 {
-    Integer binaryValue = 0;
-
-    for (Integer i = 0; i < segment.length(); i++) {
-        Char c = segment.charAt(i);
-
-        if (Character.isUpperCase(c)) {
-            // If the character is uppercase, add the appropriate binary value
-            binaryValue += Math.pow(2, i);
-        }
-    }
-
-    // Map binary value to the corresponding character (A-Z0-9)
-    if (binaryValue <= 25) {
-        return String.valueOf((char) ('A' + binaryValue));
-    }
-    else {
-        return String.valueOf( - 26);
+    if (decimalValue <= 25) {
+        return String.valueOf((char) ('A' + decimalValue));
+    } else {
+        return String.valueOf((char) (0 + (decimalValue - 26)));
     }
 }
