@@ -2,7 +2,7 @@ public Id classFromCourse(String courseName) {
     // List to store record
     List<apxio__Course__c> record = [
         SELECT Id, Name FROM apxio__Course__c
-        WHERE courseName = :apxio__Course__c.Name 
+        WHERE Name = courseName
     ];
 
     if (record.isEmpty) {
