@@ -23,7 +23,7 @@ public String convert15to18DigitId(String fifteenDigit)
         Integer decimalValue = 0;
         for (Integer i = 0; i < binaryString.length(); i++) {
             if (binaryString.substring(i, i + 1) == '1') {
-                decimalValue += Math.pow(2, binaryString.length() - 1 - i);
+                decimalValue += Math.pow(2, binaryString.length() - 1 - i).intValue();
             }
         }
         checksums += getChecksumCharacter(decimalValue);
