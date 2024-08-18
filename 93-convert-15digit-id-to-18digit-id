@@ -2,7 +2,7 @@ public String convert15to18DigitId(String fifteenDigit)
 {
     // Check if the input string is 15 characters long
     if (fifteenDigit.length() != 15) {
-        return -1;
+        return '-1';
     }
 
     String str15 = Id.valueOf(fifteenDigit); 
