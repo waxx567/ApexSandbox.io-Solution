@@ -13,7 +13,7 @@ public void enrollStudents(List<String> emails, String className) {
         return null;
     }
     else {
-        List<String> verifyStudents = List<String>();
+        List<String> verifyStudents = new List<String>();
         // Query the Student object to find students whose 
         // email addresses match the provided list
         for (Integer i = 0; i < emails; i++) {
