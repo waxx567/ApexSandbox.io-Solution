@@ -1,5 +1,4 @@
 public void enrollStudents(List<String> emails, String className) {
-    
     // Query the Class object to find the class with the given name
     // Include a WHERE clause with bind variables to ensure you 
     // are retrieving only the relevant records.
@@ -16,10 +15,10 @@ public void enrollStudents(List<String> emails, String className) {
         List<String> verifyStudents = new List<String>();
         // Query the Student object to find students whose 
         // email addresses match the provided list
-        for (Integer i = 0; i < emails; i++) {
+        for (Integer i = 0; i < emails,size(); i++) {
             verifyStudents = [
-                SELECT Id, Name, Email FROM apxio__Student__c
-                WHERE Email = :emails[i]
+                SELECT Id, Name, apxio__Email__c FROM apxio__Student__c
+                WHERE apxio__Email__c = :emails[i]
             ];
         }
     }
