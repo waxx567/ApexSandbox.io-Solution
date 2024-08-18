@@ -3,7 +3,7 @@ public Boolean isTypeAccount(sObject record) {
     Boolean result = record instanceof Account;
 
     // Check result and return as appropriate
-    if (result = true) {
+    if (result == true) {
         return true;
     } else {
         return false;
