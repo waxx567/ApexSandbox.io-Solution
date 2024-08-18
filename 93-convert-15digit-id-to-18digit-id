@@ -6,9 +6,9 @@ public String convert15to18DigitId(String fifteenDigit)
     }
 
     // Split the ID intostring into three 5-character segments
-    String firstSegment = fifteenDigit.left(5);
+    String firstSegment = fifteenDigit.substring(0, 5);
     String middleSegment = fifteenDigit.substring(5, 10); 
-    String lastSegment = fifteenDigit.right(5);
+    String lastSegment = fifteenDigit.substring(10, 15);
 
     // Calculate checksums for each segment
     String checksums = '';
@@ -29,5 +29,5 @@ public String convert15to18DigitId(String fifteenDigit)
 // Helper method to convert the decimal value to a character
 private String getChecksumCharacter(Integer decimalValue) 
 {
-    
+
 }
