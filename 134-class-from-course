@@ -2,10 +2,10 @@ public Id classFromCourse(String courseName) {
     // List to store record
     List<apxio__Course__c> record = [
         SELECT Id, Name FROM apxio__Course__c
-        WHERE Name = courseName
+        WHERE Name = :courseName
     ];
 
-    if (record.isEmpty) {
+    if (record.isEmpty()) {
         return null; // If no course with the given name is found
     }
 
