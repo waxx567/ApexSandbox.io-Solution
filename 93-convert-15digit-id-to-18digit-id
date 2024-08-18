@@ -18,7 +18,14 @@ public String convert15to18DigitId(String fifteenDigit)
             String c = segment.substring(i, i + 1); // Extract individual character as a string
             binaryString += (c.toUpperCase() == c ? '1' : '0'); // Compare the character to its uppercase version
         }
-        Integer decimalValue = Integer.valueOf(binaryString, 2);
+        
+        // Convert the binary string to an integer
+        Integer decimalValue = 0;
+        for (Integer i = 0; i < binaryString.length(); i++) {
+            if (binaryString.substring(i, i + 1) == '1') {
+                decimalValue += Math.pow(2, binaryString.length() =1 -i);
+            }
+        }
         checksums += getChecksumCharacter(decimalValue);
     }
 
