@@ -20,7 +20,7 @@ public String convert15to18DigitId(String fifteenDigit)
         }
         
         // Convert the binary string to an integer
-        Integer decimalValue = 0;
+        Double decimalValue = 0;
         for (Integer i = 0; i < binaryString.length(); i++) {
             if (binaryString.substring(i, i + 1) == '1') {
                 decimalValue += Math.pow(2, binaryString.length() - 1 - i);
