@@ -43,7 +43,7 @@ private String getChecksumCharacter(Integer decimalValue)
     } else {
         // Convert 26-35 to '0-9'
         Integer decimal26 = decimalValue - 26;
-        String decimalString = String,valueOf(decimal26);
+        String decimalString = String.valueOf(decimal26);
         return '0' + decimalString;
     }
 }
