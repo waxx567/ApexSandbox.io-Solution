@@ -2,7 +2,7 @@ public String convert15to18DigitId(String fifteenDigit)
 {
     // Validate input
     if (fifteenDigit.length() != 15) {
-        return -1;
+        return '-1';
     }
 
     // Split the ID into three 5-character segments
