@@ -12,7 +12,7 @@ public Id classFromCourse(String courseName) {
     // Create a new class
     apxio__Class__c newClass = new apxio__Class__c(
         Name = courseName,
-        apxio__Course__c = record.Id 
+        apxio__Course__c = record[0].Id 
     );
 
     insert newClass;
