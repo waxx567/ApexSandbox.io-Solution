@@ -36,9 +36,12 @@ public String convert15to18DigitId(String fifteenDigit)
 // Helper method to convert the decimal value to a character
 private String getChecksumCharacter(Integer decimalValue) 
 {
+    String decimalStr = String.valueOf(decimalValue);
     if (decimalValue <= 25) {
-        return String.valueOf((char) ('A' + decimalValue));
+        // Convert 0-25 to 'A-Z'
+        return 'A' + decimalStr;
     } else {
-        return String.valueOf((char) (0 + (decimalValue - 26)));
+        // Convert 26-35 to '0-9'
+        return '0' + decimalStr - 26;
     }
 }
