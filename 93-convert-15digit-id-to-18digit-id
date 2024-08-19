@@ -9,6 +9,9 @@ public String convert15to18DigitId(String fifteenDigit)
     // An index from which to pick the correct character
     String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
+    
+    Double doubleDecimal = Double.ValueOf(decimalValue);
+
     // Split the input ID into three 5-character segments
     for (Integer i = 0; i <= 3; i++) {
         String segment = fifteenDigit.substring(i * 5, (i + 1) * 5);
@@ -25,7 +28,6 @@ public String convert15to18DigitId(String fifteenDigit)
         Integer decimalValue = 0;
         for (Integer k = 0; k < binaryString.length(); k++) {
             if (binaryString.substring(k, k + 1) == '1') {
-                Double doubleDecimal = Double.ValueOf(decimalValue);
                 doubleDecimal += Math.pow(2, binaryString.length() - 1 - k);
             }
         }
