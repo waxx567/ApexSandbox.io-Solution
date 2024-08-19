@@ -33,7 +33,7 @@ public String convert15to18DigitId(String fifteenDigit)
         if (decimalValue >= 0 && decimalValue < charSet.length()) {
             suffix += charSet.substring(decimalValue, decimalValue + 1);
         }
-
+    }
     // Return the 18-digit ID
     return fifteenDigit + suffix;
 }
