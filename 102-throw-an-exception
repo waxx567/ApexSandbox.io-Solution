@@ -16,10 +16,10 @@ public List<Account> checkAccounts(List<Account> accounts)
 
         }
         catch (IllegalArgumentException iae) {
-            exceptionMessage = iae.getMessage();
+            return exceptionMessage = iae.getMessage();
         }
         catch (AccountException ae) {
-            exceptionMessage = ae.getMessage();
+            return exceptionMessage = ae.getMessage();
         }
 }
 
