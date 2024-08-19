@@ -4,7 +4,7 @@ public List<Account> checkAccounts(List<Account> accounts)
 
     for (Account acc : accounts) {
         try {
-            if (acc.Name == null) {
+            if (!acc.Name) {
                 throw new IllegalArgumentException('accounts should not be null');
             }
             else if (acc.BillingCity == null) {
