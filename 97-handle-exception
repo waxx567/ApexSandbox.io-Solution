@@ -1,0 +1,6 @@
+public String divide(Integer a, Integer b){
+    //code here
+    Integer c = a / b;
+    String answer = String.valueOf(c);
+    return answer;
+}
