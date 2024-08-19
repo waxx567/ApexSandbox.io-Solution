@@ -35,7 +35,7 @@ public String convert15to18DigitId(String fifteenDigit)
         String strDecimal = String.valueOf(doubleDecimal);
 
         // Use the decimal value as an index to select a character from the character set
-        suffix += charSet.substring(strDecimal, strDecimal + 1);        
+        suffix += charSet.substring(strDecimal);        
     }
 
     // Return the 18-digit ID
