@@ -22,7 +22,12 @@ public String convert15to18DigitId(String fifteenDigit)
         }
 
         // Convert the binary string to a decimal
-        Integer decimalValue = Integer.valueOf(binaryString, 2);
+        Integer decimalValue = 0;
+        for (Integer k = 0; k < binaryString.length(); k++) {
+            if (binaryString.substring(k, k + 1) == '1') {
+                decimalValue += Math.pow(2, binaryString.length() - 1 - k);
+            }
+        }
 
         // Use the decimal value as an index to select a character from the character set
         suffix += charSet.substring(decimalValue, decimalValue + 1);        
