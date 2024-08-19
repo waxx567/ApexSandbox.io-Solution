@@ -1,6 +1,7 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
     String exceptionMessage = '';
+    List<Account> emptyList = new List<Account>();
 
     for (Account acc : accounts) {
         try {
@@ -17,14 +18,13 @@ public List<Account> checkAccounts(List<Account> accounts)
         }
         catch (IllegalArgumentException iae) {
             exceptionMessage = iae.getMessage();
+            return emptyList;
         }
         catch (AccountException ae) {
-            exceptionMessage = ae.getMessage();
+            exceptionMessage = ae.getMessage(); 
+            return emptyList;
         }
     }
-    
-    List<Account> emptyList = new List<Account>(); 
-    return emptyList;
 }
 
 //do not remove the following custom-defined exception
