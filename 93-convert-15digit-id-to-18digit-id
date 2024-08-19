@@ -10,7 +10,7 @@ public String convert15to18DigitId(String fifteenDigit)
     String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
     Integer decimalValue = 0;
-    Double doubleDecimal = Double.ValueOf(decimalValue);
+    Double doubleDecimal = Double.valueOf(decimalValue);
 
     // Split the input ID into three 5-character segments
     for (Integer i = 0; i <= 3; i++) {
@@ -32,8 +32,10 @@ public String convert15to18DigitId(String fifteenDigit)
             }
         }
 
+        String strDecimal = String.valueOf(doubleDecimal);
+
         // Use the decimal value as an index to select a character from the character set
-        suffix += charSet.substring(doubleDecimal, doubleDecimal + 1);        
+        suffix += charSet.substring(strDecimal, strDecimal + 1);        
     }
 
     // Return the 18-digit ID
