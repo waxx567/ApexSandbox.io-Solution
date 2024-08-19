@@ -21,10 +21,10 @@ public List<Account> checkAccounts(List<Account> accounts)
         catch (AccountException ae) {
             exceptionMessage = ae.getMessage();
         }
-
-        List<Account> emptyList = new List<Account>(); 
-        return emptyList;
     }
+    
+    List<Account> emptyList = new List<Account>(); 
+    return emptyList;
 }
 
 //do not remove the following custom-defined exception
