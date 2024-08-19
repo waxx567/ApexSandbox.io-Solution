@@ -10,7 +10,6 @@ public String convert15to18DigitId(String fifteenDigit)
         'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
         'Y', 'Z', '0', '1', '2', '3', '4', '5'
     };
-    System.debug(characters);
     
     List<String> binaries = new List<String>{
         '00000', '00001', '00010', '00011', '00100', '00101',
@@ -20,7 +19,6 @@ public String convert15to18DigitId(String fifteenDigit)
         '11000', '11001', '11010', '11011', '11100', '11101',
         '11110', '11111'
     };
-    System.debug(binaries);
 
     String suffix = '';
 
@@ -31,12 +29,9 @@ public String convert15to18DigitId(String fifteenDigit)
     segments.add(firstSegment);
     segments.add(middleSegment);
     segments.add(lastSegment);
-    
-    System.debug('Segments list: ' + segments);
 
     // Handle firstSegment
     String[] firstChars = firstSegment.split('');
-    System.debug('firstChars: ' + firstChars); 
     String firstBinaryString = '';
     // Loop over first segment character list
     for (String f : firstChars) {
@@ -47,7 +42,6 @@ public String convert15to18DigitId(String fifteenDigit)
             firstBinaryString += '1';
         }
     }
-    System.debug('firstBinaryString: ' + firstBinaryString);
 
     for (String s : binaries) {
         Integer firstIndex = binaries.indexOf(s);
@@ -60,7 +54,6 @@ public String convert15to18DigitId(String fifteenDigit)
 
     // Handle middleSegment
     String[] middleChars = middleSegment.split('');
-    System.debug('middleChars: ' + middleChars); 
     String middleBinaryString = '';
     // Loop over middle segment character list
     for (String m : middleChars) {
@@ -71,7 +64,6 @@ public String convert15to18DigitId(String fifteenDigit)
             middleBinaryString += '1';
         }
     }
-    System.debug('middleBinaryString: ' + middleBinaryString);
 
     for (String t : binaries) {
         Integer middleIndex = binaries.indexOf(t);
@@ -80,12 +72,9 @@ public String convert15to18DigitId(String fifteenDigit)
             suffix += characters[middleIndex];
         }
     }
-    
-    System.debug('suffix: ' + suffix);
 
     // Handle lastSegment
     String[] lastChars = lastSegment.split('');
-    System.debug('lastChars: ' + lastChars); 
     String lastBinaryString = '';
     // Loop over last segment character list
     for (String l : lastChars) {
@@ -96,21 +85,14 @@ public String convert15to18DigitId(String fifteenDigit)
             lastBinaryString += '1';
         }
     }
-    System.debug('lastBinaryString: ' + lastBinaryString);
 
     for (String u : binaries) {
         Integer lastIndex = binaries.indexOf(u);
         Boolean uMatch = u.equals(lastBinaryString);
-        // System.debug('u: ' + u);
-        // System.debug(binaries.indexOf(u));
-        // System.debug(uMatch);
         if (uMatch) {
             suffix += characters[lastIndex];
         }
     }
     
-    System.debug('suffix: ' + suffix);
-
-    System.debug(fifteenDigit + suffix);
     return fifteenDigit + suffix;
 }
