@@ -21,6 +21,7 @@ public List<Account> checkAccounts(List<Account> accounts)
         catch (AccountException ae) {
             return exceptionMessage = ae.getMessage();
         }
+    }
 }
 
 //do not remove the following custom-defined exception
