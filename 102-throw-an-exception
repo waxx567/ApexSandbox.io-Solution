@@ -2,7 +2,7 @@ public List<Account> checkAccounts(List<Account> accounts)
 {
     String exceptionMessage = '';
 
-    for (Account acc : accounts)
+    for (Account acc : accounts) {
         try {
             if (accounts == null) {
                 throw new IllegalArgumentException('accounts should not be null');
