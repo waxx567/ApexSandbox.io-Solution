@@ -1,0 +1,27 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    String exceptionMessage = '';
+
+    for (Account acc : accounts)
+        try {
+            if (accounts == null) {
+                throw new IllegalArgumentException('accounts should not be null');
+            }
+            else if (!acc.BillingCity) {
+                throw new AccountException('Invalid BillingCity');
+            }
+            else {
+                return accounts;
+            }
+
+        }
+        catch (IllegalArgumentException iae) {
+            exceptionMessage = getMessage();
+        }
+        catch (AccountException ae) {
+            exceptionMessage = getMessage();
+        }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
