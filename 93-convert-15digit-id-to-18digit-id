@@ -25,13 +25,14 @@ public String convert15to18DigitId(String fifteenDigit)
         Integer decimalValue = 0;
         for (Integer k = 0; k < binaryString.length(); k++) {
             if (binaryString.substring(k, k + 1) == '1') {
-                decimalValue += Integer.valueOf(Math.round(Math.pow(2, binaryString.length() - 1 - k)));
+                decimalValue += Integer.valueOf(Math.floor(Math.pow(2, binaryString.length() - 1 - k)));
             }
         }
 
         // Use the decimal value as an index to select a character from the character set
-        suffix += charSet.substring(decimalValue, decimalValue + 1);        
-    }
+        if (decimalValue >= 0 && decimalValue < charSet.length()) {
+            suffix += charSet.substring(decimalValue, decimalValue + 1);
+        }
 
     // Return the 18-digit ID
     return fifteenDigit + suffix;
