@@ -20,18 +20,18 @@ public String convert15to18DigitId(String fifteenDigit) {
         
         // Manually convert binary string to decimal
         Integer decimalValue = 0;
+        Integer binaryLength = binaryString.length();
         for (Integer k = 0; k < binaryString.length(); k++) {
             if (binaryString.substring(k, k + 1) == '1') {
-                decimalValue += (Integer)Math.pow(2, binaryString.length() - 1 - k);
+                decimalValue += Math.pow(2, binaryLength - 1 - k).intValue();
             }
         }
         
-        // Ensure the decimalValue is within the valid range for charSet
+        // Use the decimal value as an index to select the character from charSet
         if (decimalValue >= 0 && decimalValue < charSet.length()) {
             suffix += charSet.substring(decimalValue, decimalValue + 1);
         } else {
-            // This case should ideally never happen, but handle it gracefully
-            return '-1';
+            return '-1'; // Handle any out-of-range values
         }
     }
     
