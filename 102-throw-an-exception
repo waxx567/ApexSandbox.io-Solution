@@ -4,10 +4,10 @@ public List<Account> checkAccounts(List<Account> accounts)
 
     for (Account acc : accounts) {
         try {
-            if (accounts.Name == null) {
+            if (acc.Name == null) {
                 throw new IllegalArgumentException('accounts should not be null');
             }
-            else if (accounts.BillingCity == null) {
+            else if (acc.BillingCity == null) {
                 throw new AccountException('Invalid BillingCity');
             }
             else {
