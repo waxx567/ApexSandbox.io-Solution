@@ -1,41 +1,40 @@
-public String convert15to18DigitId(String fifteenDigit)
-{
+public String convert15to18DigitId(String fifteenDigit) {
     // Validate input
     if (fifteenDigit == null || fifteenDigit.length() != 15) {
         return '-1';
     }
 
     String suffix = '';
-    // An index from which to pick the correct character
     String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
-
-    // Split the input ID into three 5-character segments
-    for (Integer i = 0; i <= 3; i++) {
+    
+    // Split the ID into three 5-character segments
+    for (Integer i = 0; i < 3; i++) {
         String segment = fifteenDigit.substring(i * 5, (i + 1) * 5);
         String binaryString = '';
-
-        // Calculate the binary string based on the case of the characters
+        
+        // Calculate the binary string based on the case of characters
         for (Integer j = 0; j < segment.length(); j++) {
-            // Access individual characters withing the segment strings
             String c = segment.substring(j, j + 1);
-            binaryString += (c.toUpperCase() == c ? '1' : '0'); 
+            binaryString += (c.toUpperCase() == c ? '1' : '0');
         }
-
-        // Convert the binary string to a decimal
+        
+        // Manually convert binary string to decimal
         Integer decimalValue = 0;
         for (Integer k = 0; k < binaryString.length(); k++) {
             if (binaryString.substring(k, k + 1) == '1') {
-                decimalValue += Integer.valueOf(Math.floor(Math.pow(2, binaryString.length() - 1 - k)));
+                decimalValue += (Integer)Math.pow(2, binaryString.length() - 1 - k);
             }
         }
-
-        // Use the decimal value as an index to select a character from the character set
+        
+        // Ensure the decimalValue is within the valid range for charSet
         if (decimalValue >= 0 && decimalValue < charSet.length()) {
             suffix += charSet.substring(decimalValue, decimalValue + 1);
         } else {
+            // This case should ideally never happen, but handle it gracefully
             return '-1';
         }
     }
-    // Return the 18-digit ID
+    
+    // Return the 18-character ID
     return fifteenDigit + suffix;
 }
