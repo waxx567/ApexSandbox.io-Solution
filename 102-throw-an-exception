@@ -21,6 +21,9 @@ public List<Account> checkAccounts(List<Account> accounts)
         catch (AccountException ae) {
             exceptionMessage = ae.getMessage();
         }
+
+        List<Account> emptyList = new List<Account>(); 
+        return emptyList;
     }
 }
 
