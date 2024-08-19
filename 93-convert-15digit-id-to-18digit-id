@@ -5,36 +5,27 @@ public String convert15to18DigitId(String fifteenDigit) {
     }
 
     String suffix = '';
-    String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
-    
+    Integer flags = 0;
+
     // Split the ID into three 5-character segments
     for (Integer i = 0; i < 3; i++) {
-        String segment = fifteenDigit.substring(i * 5, (i + 1) * 5);
-        String binaryString = '';
         
-        // Calculate the binary string based on the case of characters
-        for (Integer j = 0; j < segment.length(); j++) {
-            String c = segment.substring(j, j + 1);
-            binaryString += (c.toUpperCase() == c ? '1' : '0');
-        }
-        
-        // Manually convert binary string to decimal
-        Integer decimalValue = 0;
-        Integer binaryLength = binaryString.length();
-        for (Integer k = 0; k < binaryString.length(); k++) {
-            if (binaryString.substring(k, k + 1) == '1') {
-                decimalValue += Math.pow(2, binaryLength - 1 - k).intValue();
+        for (Integer j = 0; j < 5; j++) {
+            // Calculate the binary string based on the case of characters
+            String c = fifteenDigit.substring(i * 5 + j, i * 5 + j + 1);
+            // Only add to variable if c is uppercase
+            if (c.toUpperCase()  == c && (c >= 'A' && c <= 'Z')) {
+                flags += (1 << j);
             }
         }
-        
-        // Use the decimal value as an index to select the character from charSet
-        if (decimalValue >= 0 && decimalValue < charSet.length()) {
-            suffix += charSet.substring(decimalValue, decimalValue + 1);
-        } else {
-            return '-1'; // Handle any out-of-range values
+
+        if (flags <= 25) {
+            suffix += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.substring(flags, flags + 1);
         }
-    }
-    
+        else {
+            suffix = '012345'.substring(flags - 25, flags - 24);
+        }
+            
     // Return the 18-character ID
     return fifteenDigit + suffix;
 }
