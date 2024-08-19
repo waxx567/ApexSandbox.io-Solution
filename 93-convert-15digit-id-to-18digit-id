@@ -5,45 +5,29 @@ public String convert15to18DigitId(String fifteenDigit)
         return '-1';
     }
 
-    // Split the ID into three 5-character segments
-    String firstSegment = fifteenDigit.substring(0, 5);
-    String middleSegment = fifteenDigit.substring(5, 10); 
-    String lastSegment = fifteenDigit.substring(10, 15);
+    String suffix = '';
+    // An index from which to pick the correct character
+    String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
-    // Calculate checksums for each segment
-    String checksums = '';
-    for (String segment : new List<String>{firstSegment, middleSegment, lastSegment}) {
+    // Split the input ID into three 5-character segments
+    for (Integer i = 0; i <= 3; i++) {
+        String segment = fifteenDigit.substring(i * 5, (i + 1) * 5);
         String binaryString = '';
-        for (Integer i = 0; i < segment.length(); i++) {
-            String c = segment.substring(i, i + 1); // Extract individual character as a string
-            binaryString += (c.toUpperCase() == c ? '1' : '0'); // Compare the character to its uppercase version
+
+        // Calculate the binary string based on the case of the characters
+        for (Integer j = 0; j < segment.length(); j++) {
+            // Access individual characters withing the segment strings
+            String c = segment.substring(j, j + 1);
+            binaryString += (c.toUpperCase() == c ? '1' : '0'); 
         }
-        
-        // Convert the binary string to an integer
-        Integer decimalValue = 0;
-        for (Integer i = 0; i < binaryString.length(); i++) {
-            if (binaryString.substring(i, i + 1) == '1') {
-                decimalValue += Math.pow(2, binaryString.length() - 1 - i).intValue();
-            }
-        }
-        checksums += getChecksumCharacter(decimalValue);
+
+        // Convert the binary string to a decimal
+        Integer decimalValue = Integer.valueOf(binaryString, 2);
+
+        // Use the decimal value as an index to select a character from the character set
+        suffix += charSet.substring(decimalValue, decimalValue + 1);        
     }
 
-    // Combine the original 15 digits with 3 checksum characters
-    return fifteenDigit + checksums; 
-}
-
-    // Helper method to convert the decimal value to a character
-private String getChecksumCharacter(Integer decimalValue) 
-{
-    if (decimalValue <= 25) {
-        // Convert 0-25 to 'A-Z'
-        String decimalStr = String.valueOf(decimalValue);
-        return 'A' + decimalStr;
-    } else {
-        // Convert 26-35 to '0-9'
-        Integer decimal26 = decimalValue - 26;
-        String decimalString = String.valueOf(decimal26);
-        return '0' + decimalString;
-    }
+    // Return the 18-digit ID
+    return fifteenDigit + suffix;
 }
