@@ -9,7 +9,7 @@ public String convert15to18DigitId(String fifteenDigit)
     // An index from which to pick the correct character
     String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
 
-    
+    Integer decimalValue = 0;
     Double doubleDecimal = Double.ValueOf(decimalValue);
 
     // Split the input ID into three 5-character segments
@@ -25,7 +25,7 @@ public String convert15to18DigitId(String fifteenDigit)
         }
 
         // Convert the binary string to a decimal
-        Integer decimalValue = 0;
+        
         for (Integer k = 0; k < binaryString.length(); k++) {
             if (binaryString.substring(k, k + 1) == '1') {
                 doubleDecimal += Math.pow(2, binaryString.length() - 1 - k);
