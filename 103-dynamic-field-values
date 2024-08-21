@@ -4,9 +4,8 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
     List<String>  returnList = new List<String>(); 
 
     for (String field : fields) {
-        String fieldSolution = (String)acc?.get(field);
-        String solutionConvert = String.valueOf(fieldSolution);
-        returnList.add(solutionConvert); 
+        String fieldValue = String.valueOf(acc?.get(field));
+        returnList.add(fieldValue);
     }
     
     return returnList;
