@@ -1,0 +1,11 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // 
+    List<String>  returnList = new List<String>(); 
+
+    for (String field : fields) {
+        returnList = [SELECT field FROM acc]?.field;
+    }
+    
+    return returnList;
+}
