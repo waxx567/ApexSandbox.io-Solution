@@ -1,10 +1,14 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
+    if (accounts == []) {
+        return [];
+    }
+    
     String result = '';
     Integer count = 0;
 
     for (Integer i = 0; i < accounts.size(); i++) {
         Account account = accounts[count];
-        String name = account?.Name;
+        String name = account.Name;
         String billing = account?.BillingCity;
         result += '{"attributes":{"type":"Account"},"Name":"'+name+'","BillingCity":"'+billing+'"}'; 
         count++;  
