@@ -1,10 +1,14 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-    String name = accounts?.Name;
-    String billCity = accounts?.BillingCity;
-    accounts = Account.newInstance(
-    Name.newInstance(name),
-    BillingCity.newInstance(billCity)
-    );
-    String result = JSON.serialize(accounts);
+    String result = '';
+
+    for (Account account : accounts) {
+        // Query the acoount to get the relevant information
+        SObject s = [SELECT Id, Name, BillingCity FROM account];
+        // Convert the account in order to access the values
+        ID id = s.ID;
+        Account convertedAccount = (Account)s;
+        result = JSON.serialize(convertedAccount, suppressApexObjectNulls);
+    }
+
     return result;
 }
