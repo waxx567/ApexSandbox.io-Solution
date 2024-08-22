@@ -1,13 +1,13 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
     String result = '';
+    Integer count = 0;
 
-    for (Account account : accounts) {
-        // Query the acoount to get the relevant information
-        account  = [SELECT Id, Name, BillingCity FROM account];
-        // Convert the account in order to access the values
-        // ID id = s.ID;
-        // Account convertedAccount = (Account)s;
-        result = JSON.serialize(account);
+    for (Integer i = 0; i < accounts.size(); i++) {
+        Account account = accounts[count];
+        String name = account.Name;
+        String billing = account?.BillingCity;
+        result += '{"attributes":{"type":"Account"},"Name":"'+name+'","BillingCity":"'+billing+'"}'; 
+        count++;  
     }
 
     return result;
