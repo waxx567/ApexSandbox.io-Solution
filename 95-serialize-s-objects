@@ -3,27 +3,5 @@ public String getAccountsInJSONFormat(List<Account> accounts){
         return null;
     }
 
-    String result = '';
-    Integer count = 0;
-
-    for (Integer i = 0; i < accounts.size(); i++) {
-        Account account = accounts[count];
-        String name = account.Name;
-        String billing = account.BillingCity;
-        String description = account.Description;
-        // serialize 
-        try {
-            Account a = Account.newInstance(
-                Name = name,
-                BillingCity = billing,
-                Description = description
-            );
-            result = JSON.serialize(a);
-            count++;                    
-        } catch (AssertException ae) {
-            result = ae.getMessage();
-            return result;                    
-        }
-    }
-    return result;
+    return JSON.serialize(accounts);
 }
