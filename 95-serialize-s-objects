@@ -1,6 +1,6 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-    accounts?.Name = name;
-    accounts?.BillingCity = billCity;
+    String name = accounts?.Name;
+    String billCity = accounts?.BillingCity;
     accounts = Account.newInstance(
     Name.newInstance(name),
     BillingCity.newInstance(billCity)
