@@ -1,5 +1,5 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-    if (accounts == []) {
+    if (accounts == null) {
         return '';
     }
 
