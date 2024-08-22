@@ -1,8 +1,9 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
     if (accounts == []) {
-        return [];
+        return new List<Account>();
     }
-    
+
+
     String result = '';
     Integer count = 0;
 
