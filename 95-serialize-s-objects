@@ -3,11 +3,11 @@ public String getAccountsInJSONFormat(List<Account> accounts){
 
     for (Account account : accounts) {
         // Query the acoount to get the relevant information
-        SObject s = [SELECT Id, Name, BillingCity FROM account];
+        account  = [SELECT Id, Name, BillingCity FROM account];
         // Convert the account in order to access the values
         // ID id = s.ID;
         // Account convertedAccount = (Account)s;
-        result = JSON.serialize(s, suppressApexObjectNulls);
+        result = JSON.serialize(account, suppressApexObjectNulls);
     }
 
     return result;
