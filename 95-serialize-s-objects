@@ -1,0 +1,10 @@
+public String getAccountsInJSONFormat(List<Account> accounts){
+    accounts?.Name = name;
+    accounts?.BillingCity = billCity;
+    accounts = Account.newInstance(
+    Name.newInstance(name),
+    BillingCity.newInstance(billCity)
+    );
+    String result = JSON.serialize(accounts);
+    return result;
+}
