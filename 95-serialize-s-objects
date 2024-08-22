@@ -7,7 +7,7 @@ public String getAccountsInJSONFormat(List<Account> accounts){
         // Convert the account in order to access the values
         // ID id = s.ID;
         // Account convertedAccount = (Account)s;
-        result = JSON.serialize(account, suppressApexObjectNulls);
+        result = JSON.serialize(account);
     }
 
     return result;
