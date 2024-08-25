@@ -1,0 +1,46 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    // Create a list of AccountWrapper objects
+    List<AccountWrapper> wrappedAccounts = new List<AccountWrapper>();
+
+    // Wrap each account in the AccountWrapper
+    for (Account acc : accounts) {
+        wrappedAccounts.add(new AccountWrapper(acc));
+    }
+
+    // Sort the list using the custom compareTo method
+    wrappedAccounts.sort();
+
+    // Extract the sorted accounts back into a list
+    List<Account> sortedAccounts = new List<Account>();
+
+    for (AccountWrapper wrappedAcc : wrappedAccounts) {
+        sortedAccounts.add(wrappedAcc.account);
+    }
+    
+    return sortedAccounts;    
+}
+
+// Wrapper class 
+public class AccountWrapper implements Comparable {
+    public Account account;
+
+    // Constructor to initialize the wrapper with the Account object
+    public AccountWrapper(Account acc) {
+        this.account = acc;
+    }
+
+    // Implement the compareTo method for sorting
+    public Integer compareTo(Object compareToObject) {
+        AccountWrapper compareToWrapper = (AccountWrapper) compareToObject;
+
+        // Compare Annual Revenue in descending order
+        if (this.account.AnnualRevenue < compareToWrapper.account.AnnualRevenue) {
+            return -1;
+        } else if (this.account.AnnualRevenue > compareToWrapper.account.AnnualRevenue) {
+            return 1;
+        }  else {
+            return 0;
+        }
+    }
+}
+
