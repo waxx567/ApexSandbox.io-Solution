@@ -5,7 +5,6 @@ public void setParent(Account acc, Contact con, Opportunity opp) {
         opp.AccountId = acc.Id;
     } else if (acc == ' ') {
         System.debug('No account');
-    }
     } else {
         System.debug('No account Id');
     }
