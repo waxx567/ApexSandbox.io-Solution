@@ -9,7 +9,7 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
                 count = 0;
                 if (numbers[i] == 1) {
                     count += 1;
-                    if (count > highCount) {
+                    if (count >= highCount) {
                         highCount = count;
                     }
                 }
