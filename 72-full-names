@@ -3,6 +3,6 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
         return = new List<String>();
     } else {
         List<String> returnList = new List<String>();
-        return returnList;
     }
+    return returnList;
 }
