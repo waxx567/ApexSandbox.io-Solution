@@ -42,13 +42,14 @@ public Boolean companionPlants(List<String> plants) {
                     }
                 }
             } else if (plants[i] == 'tomatoes') {
-                for (String s : list5) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                if (plants[i] == 'omions')
+                // for (String s : list5) {
+                //     if (plants[i+1] == s) {
+                    return true;
+                } else {
+                    return false;
                 }
+                // }
             }
         }
     }
