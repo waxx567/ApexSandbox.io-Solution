@@ -19,11 +19,11 @@ public boolean isSorted(List<Integer> numbers) {
     boolean ascending = numbers[i] < numbers[i + 1];
 
     // Check the list
-    for (; i <numbers.size() - 1; i++) {
-        if (ascending && numbers[i] > numbers[i + 1]) {
+    for (Integer j = 0; j < numbers.size() - 1; j++) {
+        if (ascending && numbers[j] > numbers[j + 1]) {
             return false;
         }
-        if (!ascending && numbers[i] < numbers[i + 1]) {
+        if (!ascending && numbers[j] < numbers[j + 1]) {
             return false;
         }
     }
