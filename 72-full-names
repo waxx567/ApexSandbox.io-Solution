@@ -1,8 +1,8 @@
 public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
+    List<String> returnList = new List<String>();
     if (firstNames.isEmpty() || lastNames.isEmpty()) {
-        return = new List<String>();
+        return returnList;
     } else {
-        List<String> returnList = new List<String>();
+        return returnList;
     }
-    return returnList;
 }
