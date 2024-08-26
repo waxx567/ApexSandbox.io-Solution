@@ -20,5 +20,4 @@ public boolean isSorted(List<Integer> numbers) {
         }
         return true;
     }
-    return true;
 }
