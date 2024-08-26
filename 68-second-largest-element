@@ -6,7 +6,11 @@ public Integer secondLargest(List<Integer> numbers) {
         if (numbers[i] > largestSeen) {
             largestSeen = numbers[i];
         }
-        secondLargestSeen = largestSeen;
+    }
+    for (Integer i = 0; i < numbers.size(); i++) {
+        if (numbers[i] > secondLargestSeen && numbers[i] < largestSeen) {
+            secondLargestSeen = numbers[i];
+        }
     }
     return secondLargestSeen;
 }
