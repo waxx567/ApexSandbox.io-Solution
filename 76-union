@@ -1,8 +1,8 @@
 public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
     Set<Integer> unionSet = new Set<Integer>();
 
-    Boolean result = unionSet.addAll(set1);
-    Boolean result = unionSet.addAll(set2);
+    Boolean result1 = unionSet.addAll(set1);
+    Boolean result2 = unionSet.addAll(set2);
 
     return unionSet;
 }
