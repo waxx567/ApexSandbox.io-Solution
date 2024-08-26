@@ -3,10 +3,10 @@ public static Integer arraySum(List<Integer> numbers) {
     if (numbers == null) {
         return null;
     } else {
-        // Loop over the numbers input
+        // Loop over the numbers input and return the sum total
         Integer sumTotal = 0;
         for (Integer i = 0; i < numbers.size(); i++) {
-            sumTotal += i;
+            sumTotal += numbers[i];
         }
         return sumTotal;
     }
