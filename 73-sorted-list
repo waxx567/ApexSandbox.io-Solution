@@ -14,4 +14,12 @@ public boolean isSorted(List<Integer> numbers) {
     if (i == numbers.size() - 1) {
         return true;
     }
+
+    // Determines if the list is ascending or descending
+    boolean ascending = numbers[i] < numbers[i + 1];
+
+    // Check the list
+    for (Integer i = 0; i <numbers.size() - 1; i++) {
+        if (ascending &&)
+    }
 }
