@@ -1,16 +1,6 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    Set<Integer> set1 = new Set<Integer>(nums1);
+    Set<Integer> set2 = new Set<Integer>(nums2);
+
     
-    for (Integer i : nums1) {
-        if (nums2.contains(i) == false) {
-            return false;
-        }
-    }  
-
-    // for (Integer i : nums2) {
-    //     if (nums1.contains(i) == false) {
-    //         return false;
-    //     }
-    // }
-
-    return true;
 }
