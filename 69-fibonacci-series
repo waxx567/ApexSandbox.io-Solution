@@ -1,5 +1,5 @@
 public List<Integer> fibonacciSeries(Integer n) {
-    List<Integer> returnList = new List<Integer();
+    List<Integer> returnList = new List<Integer>();
     returnList.add(1);
     returnList.add(1);
 
