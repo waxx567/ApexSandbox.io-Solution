@@ -3,5 +3,7 @@ public boolean isSorted(List<Integer> numbers) {
         return true;
     }
 
+    Integer i = 0;
+
     
 }
