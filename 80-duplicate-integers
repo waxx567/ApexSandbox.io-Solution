@@ -6,7 +6,7 @@ public Boolean containsDuplicates(List<Integer> nums) {
             return false;
         }
         else {
-            set1.add(num);
+            Boolean result = set1.add(num);
         }
     }
 
