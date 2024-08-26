@@ -7,11 +7,10 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
         for (Integer i = 0; i < numbers.size(); i++) {
             if (numbers[i] == 0) {
                 count = 0;
-                if (numbers[i] == 1) {
-                    count += 1;
-                    if (count >= highCount) {
-                        highCount = count;
-                    }
+            } else if (numbers[i] == 1) {
+                count += 1;
+                if (count >= highCount) {
+                    highCount = count;
                 }
             }
         }
