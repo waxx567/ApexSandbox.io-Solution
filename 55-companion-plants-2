@@ -7,7 +7,7 @@ public Boolean companionPlants(List<String> plants) {
         List<String> list3 = ['cucumbers', 'lettuce'];
         List<String> list4 = ['carrots', 'onions'];
         List<String> list5 = ['tomatoes', 'onions'];
-        for (Integer i = 0; i < plants.size(); i++) {
+        for (Integer i = 0; i < plants.size() - 1; i++) {
             if (plants[i] == 'onions' && plant[i+1] in list1 || (plants[i] == 'lettuce' && plants[i+1] in list2) || (plants[i] == 'cucumbers' && plants[i+1] in list3) || (plants[i] == 'carrots' && plants[i+1] in list4) || (plants[i] == 'tomatoes' && plants[i+1] in list5)) {
                     return true;
             } 
