@@ -5,5 +5,10 @@ public boolean isSorted(List<Integer> numbers) {
 
     Integer i = 0;
 
+    // Determine the sort order by finding the first non-equal pair
+    while (i < numbers.size - 1 && numbers[i].equals(numbers[i + 1])) {
+        i++;
+    }
+
     
 }
