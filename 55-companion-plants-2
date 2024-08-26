@@ -1,6 +1,10 @@
 public Boolean companionPlants(List<String> plants) {
-    if (plants.isEmpty() || plants.size() == 1) {
+    if (plants.isEmpty()) {
         return true;
+    }
+
+    if (plants.size() == 1) {
+        return false;
     }
     
     Map<String, Set<String>> companionMap = new Map<String, Set<String>>{
