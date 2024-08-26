@@ -1,56 +1,22 @@
 public Boolean companionPlants(List<String> plants) {
     if (plants.isEmpty()) {
         return true;
-    } else {
-        List<String> list1 = new List<String>{'onions', 'lettuce', 'carrots', 'tomatoes'};
-        List<String> list2 = new List<String>{'cucumbers', 'onions'};
-        List<String> list3 = new List<String>{'cucumbers', 'lettuce'};
-        List<String> list4 = new List<String>{'carrots', 'onions'};
-        List<String> list5 = new List<String>{'tomatoes', 'onions'};
-        
-        for (Integer i = 0; i < plants.size() - 1; i++) {
-            if (plants[i] == 'onions') {
-                for (String s : list1) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            } else if (plants[i] == 'lettuce') {
-                for (String s : list2) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            } else if (plants[i] == 'cucumbers') {
-                for (String s : list3) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            } else if (plants[i] == 'carrots') {
-                for (String s : list4) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            } else if (plants[i] == 'tomatoes') {
-                for (String s : list5) {
-                    if (plants[i+1] == s) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            }
+
+    Map<String>, Set<String>> companionMap = new Map<String, Set<String>> {
+        'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
+        'lettuce' => new Set<String>{'cucumbers', 'onions'},
+        'cucumbers' => new Set<String>{'lettuce'},
+        'carrots' => new Set<String>{'onions'},
+        'tomatoes' => new Set<String>{'onions'}   
+    }
+
+    for (Integer i = 0; i < plants.size() -1; i++) {
+        String currentPlant = plants[i];
+        String nextPlant = plants[i+1];
+
+        if (!companionMap.containsKey(currentPlant) || !companionMap.containsKey(nextPlant)) {
+            return false;
         }
     }
-    return false;
+    return true;
 }
