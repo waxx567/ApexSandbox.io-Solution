@@ -1,9 +1,9 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
+    Integer highCount = 0;
     if (numbers.isEmpty()) {
         return null;
     } else {
         Integer count = 0;
-        Integer highCount = 0;
         for (Integer i = 0; i < numbers.size(); i++) {
             if (numbers[i] == 0) {
                 count = 0;
