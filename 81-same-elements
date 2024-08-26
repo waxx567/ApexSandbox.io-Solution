@@ -1,4 +1,8 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    if (nums1.size() != num.size()) {
+        return false
+    }
+    
     for (Integer i : nums1) {
         if (nums2.contains(i) == false) {
             return false;
@@ -10,6 +14,7 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
             return false;
         }
     }
+    // for (Integer i = 0; i < )
 
     return true;
 }
