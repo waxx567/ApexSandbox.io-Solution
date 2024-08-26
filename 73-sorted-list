@@ -1,3 +1,4 @@
 public boolean isSorted(List<Integer> numbers) {
     //code here
+    return true;
 }
