@@ -10,5 +10,8 @@ public boolean isSorted(List<Integer> numbers) {
         i++;
     }
 
-    
+    // If no non-equal pair is found, the list consists of equal elements
+    if (i == numbers.size() - 1) {
+        return true;
+    }
 }
