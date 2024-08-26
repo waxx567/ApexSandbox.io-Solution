@@ -1,3 +1,15 @@
 public List<Integer> fibonacciSeries(Integer n) {
-    //code here
+    List<Integer> returnList = new List<Integer();
+    returnList.add(1);
+    returnList.add(1);
+
+    if (n > 2) {
+        returnList.add(2);
+        Integer insertInt = 0;
+        for (Integer i = 3; i < n; i++) {
+            insertInt = returnList[i-1] + returnList[i-2];
+            returnList.add(insertInt);
+        }
+    }
+    return returnList;
 }
