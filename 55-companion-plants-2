@@ -2,11 +2,11 @@ public Boolean companionPlants(List<String> plants) {
     if (plants.isEmpty()) {
         return true;
     } else {
-        List<String> list1 = {'onions', 'lettuce', 'carrots', 'tomatoes'};
-        List<String> list2 = {'lettuce', 'cucumbers', 'onions'};
-        List<String> list3 = {'cucumbers', 'lettuce'};
-        List<String> list4 = {'carrots', 'onions'};
-        List<String> list5 = {'tomatoes', 'onions'};
+        List<String> list1 = new List<String>{'onions', 'lettuce', 'carrots', 'tomatoes'};
+        List<String> list2 = new List<String>{'lettuce', 'cucumbers', 'onions'};
+        List<String> list3 = new List<String>{'cucumbers', 'lettuce'};
+        List<String> list4 = new List<String>{'carrots', 'onions'};
+        List<String> list5 = new List<String>{'tomatoes', 'onions'};
         for (Integer i = 0; i < plants.size() - 1; i++) {
             if (plants[i] == 'onions' && plant[i+1] in list1 || (plants[i] == 'lettuce' && plants[i+1] in list2) || (plants[i] == 'cucumbers' && plants[i+1] in list3) || (plants[i] == 'carrots' && plants[i+1] in list4) || (plants[i] == 'tomatoes' && plants[i+1] in list5)) {
                     return true;
