@@ -1,3 +1,7 @@
 public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
-    if (f)
+    if (firstNames.isEmpty() || lastNames.isEmpty) {
+        return = new List<String>();
+    } else {
+        
+    }
 }
