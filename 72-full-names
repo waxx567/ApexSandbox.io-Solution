@@ -2,6 +2,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     if (firstNames.isEmpty() || lastNames.isEmpty) {
         return = new List<String>();
     } else {
-        
+        List<String> returnList = new List<String>();
+        return returnList;
     }
 }
