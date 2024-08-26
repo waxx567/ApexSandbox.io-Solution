@@ -2,7 +2,7 @@ public Boolean containsDuplicates(List<Integer> nums) {
     Set<Integer> set1 = new Set<Integer>(nums);
 
     for (Integer num : nums) {
-        if (set1.contains(num)) {
+        if (set1.contains(num) == true) {
             return false;
         }
         else {
