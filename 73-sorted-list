@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    if (numbers.isEmpty() || numbers.size() -= 2){
+    if (numbers.isEmpty() || numbers.size() <= 2){
         return true;
     }
     return false;
