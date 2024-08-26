@@ -2,4 +2,5 @@ public boolean isSorted(List<Integer> numbers) {
     if (numbers.isEmpty() || numbers.size() == 1){
         return true;
     }
+    return false;
 }
