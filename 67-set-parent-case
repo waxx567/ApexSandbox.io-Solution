@@ -1,5 +1,5 @@
 public void linkParent(Case c1, Case c2) {
-    if (c2.ContactId == null && c1.ContactId == null) {
+    if (c1.ContactId == null || c2.ContactId == null) {
         System.debug('The cases do not have any related contacts.');
     }
     // Check contact IDs match
