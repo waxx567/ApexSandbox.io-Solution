@@ -1,4 +1,9 @@
 public Boolean containsDuplicates(List<Integer> nums) {
+
+    if (nums.isEmpty()) {
+        return false;
+    }
+    
     Set<Integer> set1 = new Set<Integer>(nums);
 
     for (Integer num : nums) {
