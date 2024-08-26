@@ -3,7 +3,7 @@ public Boolean companionPlants(List<String> plants) {
         return true;
     } else {
         List<String> list1 = new List<String>{'onions', 'lettuce', 'carrots', 'tomatoes'};
-        List<String> list2 = new List<String>{'lettuce', 'cucumbers', 'onions'};
+        List<String> list2 = new List<String>{'cucumbers', 'onions'};
         List<String> list3 = new List<String>{'cucumbers', 'lettuce'};
         List<String> list4 = new List<String>{'carrots', 'onions'};
         List<String> list5 = new List<String>{'tomatoes', 'onions'};
