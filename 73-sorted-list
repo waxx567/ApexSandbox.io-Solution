@@ -20,6 +20,12 @@ public boolean isSorted(List<Integer> numbers) {
 
     // Check the list
     for (Integer i = 0; i <numbers.size() - 1; i++) {
-        if (ascending &&)
+        if (ascending && numbers[i] > numbers[i + 1]) {
+            return false;
+        }
+        if (!ascending && numbers[i] < numbers[i + 1]) {
+            return false;
+        }
     }
+    return true;
 }
