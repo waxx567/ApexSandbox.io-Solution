@@ -1,5 +1,3 @@
 public List<String> orgNames(List<String> adjectives, List<String> animals) {
     List<String> returnList = List<String>();
-
-    for (String s : adjectives)
 }
