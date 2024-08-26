@@ -3,14 +3,22 @@ public Boolean containsDuplicates(List<Integer> nums) {
     if (nums.isEmpty()) {
         return false;
     }
-    
+
     Set<Integer> set1 = new Set<Integer>(nums);
 
-    for (Integer num : nums) {
-        if (set1.contains(num) == true) {
+    for (Integer i = 0; i < nums.size(); i++) {
+        if (set1.contains(nums[i])) {
             return false;
+        } else {
+            return true;
         }
     }
 
-    return true;
+    // for (Integer num : nums) {
+    //     if (set1.contains(num) == true) {
+    //         return false;
+    //     }
+    // }
+
+    // return true;
 }
