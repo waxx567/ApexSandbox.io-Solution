@@ -4,10 +4,8 @@ public Integer secondLargest(List<Integer> numbers) {
 
     for (Integer i = 0; i < numbers.size(); i++) {
         if (i > largestSeen) {
+            secondLargestSeen = largestSeen;
             largestSeen = i;
-            if (largestSeen > secondLargestSeen) {
-                secondLargestSeen = largestSeen;
-            }
         }
     }
     return secondLargestSeen;
