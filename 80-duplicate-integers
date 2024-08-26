@@ -6,19 +6,15 @@ public Boolean containsDuplicates(List<Integer> nums) {
 
     Set<Integer> set1 = new Set<Integer>();
 
-    for (Integer i = 0; i < nums.size(); i++) {
-        if (set1.contains(nums[i])) {
-            return false;
-        } else {    
-            Boolean result = set1.add(nums[i]);
+    for (Integer num : nums) {
+        if (!set1.contains(num)) {
+            Boolean result = set1.add(num);
         }
     }
 
-    // for (Integer num : nums) {
-    //     if (set1.contains(num) == true) {
-    //         return false;
-    //     }
-    // }
-
-    return true;
+    if (nums.size().equals(set1,size()) == true) {
+        return true;
+    } else {
+        return false;
+    }
 }
