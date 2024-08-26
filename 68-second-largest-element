@@ -6,6 +6,7 @@ public Integer secondLargest(List<Integer> numbers) {
         if (numbers[i] > largestSeen) {
             largestSeen = numbers[i];
         }
+        secondLargestSeen = largestSeen;
     }
     return secondLargestSeen;
 }
