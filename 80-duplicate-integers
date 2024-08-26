@@ -1,0 +1,9 @@
+public Boolean containsDuplicates(List<Integer> nums) {
+    Set<Integer> set1 = Set<Integer>(nums);
+    
+    if (nums.size() == set.size()) {
+        return true;
+    } else {
+        return false;
+    }
+}
