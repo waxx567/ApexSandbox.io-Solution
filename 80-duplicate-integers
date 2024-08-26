@@ -12,7 +12,7 @@ public Boolean containsDuplicates(List<Integer> nums) {
         }
     }
 
-    if (nums.size().equals(set1,size()) == true) {
+    if (nums.size().equals(set1.size()) == true) {
         return true;
     } else {
         return false;
