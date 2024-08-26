@@ -3,23 +3,5 @@ public boolean isSorted(List<Integer> numbers) {
         return true;
     }
 
-    // Check if sorted ascending
-    if (numbers[0] >= numbers[1]) {
-        for (Integer i = 0; i < numbers.size()-1; i++) {
-            if (numbers[i] < numbers[i+1]) {
-                return false;
-            }
-        }  
-        return true;   
-    // Check if sorted descending   
-    } else if (numbers[0] <= numbers[1]) {
-        for (Integer i = 0; i < numbers.size()-1; i++) {
-            if (numbers[i] > numbers[i+1]) {
-                return false;
-            }
-        }
-        return true;
-    } else {
-        return true;
-    }
+    
 }
