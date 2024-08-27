@@ -5,6 +5,9 @@ public Map<String, String> phonebook(List<Contact> contacts) {
     for (Contact contact : contacts) {
         if (contact.Phone != null) {
             contactMap.put(contact.Name, contact.Phone);
+        } else if (contact.Phone == null) {
+            return new Map<String, String>();
+        }
     }
 
     return contactMap;
