@@ -3,9 +3,9 @@ public Map<String, String> phonebook(List<Contact> contacts) {
     Map<String, String> contactMap = new Map<String, String>();
     
     for (Contact contact : contacts) {
-        if (!contact.Phone) {
+        if (!contact.Phone == null) {
             return contactMap;
-        } else if (contact.Phone) {
+        } else if (contact.Phone != null) {
             contactMap.put(contact.Name, contact.Phone);
         }
     }
