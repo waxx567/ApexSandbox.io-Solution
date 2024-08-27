@@ -9,4 +9,6 @@ public Map<String, Account> phoneToAccount(List<Account> accounts) {
             return new Map<String, Account>();
         }
     }
+
+    return phoneMap;
 }
