@@ -1,0 +1,10 @@
+public Map<String, String> phonebook(List<Contact> contacts) {
+    
+    Map<String, String> contactMap = new Map<String, String>();
+
+    if (contacts.Phone == null) {
+        return null;
+    }
+
+    return contactMap;
+}
