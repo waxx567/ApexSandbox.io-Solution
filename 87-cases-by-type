@@ -1,6 +1,6 @@
 public Map<String, List<Case>> casesByType(List<Case> cases) {
     
-    Map<String, List<Case>> typedCases = Map<String, List<Case>>();
+    Map<String, List<Case>> typedCases = new Map<String, List<Case>>();
 
     return typedCases;
 }
