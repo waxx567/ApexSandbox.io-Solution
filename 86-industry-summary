@@ -2,5 +2,13 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     
     Map<String, Decimal> revenueMap = new Map<String, Decimal>();
 
+    for (Account account : accounts) {
+        if (revenueMap.containsKey(account.Industry) == true) {
+            revenueMap.get('Industry') += account.Industry;
+        } else {
+            revenueMap.put(account.Industry, account.AnnualRevenue);
+        }
+    }
+
     return revenueMap;
 }
