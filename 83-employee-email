@@ -1,3 +1,10 @@
 public String employeeEmail(Map<String, String> employeeIdToEmail, String employeeId) {
-    return '';
+    
+    String returnString = '';
+
+    if (employeeIdToEmail.containsKey(employeeId)) {
+        String getString = employeeIdToEmail.get(employeeId);
+        returnString += getString;
+    }
+    return returnString;
 }
