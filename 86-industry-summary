@@ -1,0 +1,6 @@
+public Map<String, Decimal> industrySummary(List<Account> accounts) {
+    
+    Map<String, Decimal> revenueMap = new Map<String, Decimal>();
+
+    return revenueMap;
+}
