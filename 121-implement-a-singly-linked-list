@@ -7,19 +7,47 @@ public class LinkedList{
     public Node head {get; private set; }
     public Node tail {get; private set; }
     public Integer size {get; private set; }
+
+    public SinglyLinkedList() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
     
     public void addToFront(Integer value){
-        newList.add(0, value);
+        Node newNode = new Node(value);
+
+        if (this.head == null) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.size++;
     }
+
     public Integer removeFromFront(){
-        return newList.remove(0);
+        
     }
+
     public void addToTail(Integer value){
-        newList.add(value);
+        Node newNode = new Node(value);
+
+        if (this.head == null) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.size++;
     }
+
     public Integer removeFromTail(){
         return newList.remove(-1);
     }
+
     public Integer size(){
         get;
         private set;
@@ -30,7 +58,7 @@ public class Node{
     Integer data;
     Node next;
 
-    public Node(Integer dataInteger) {
-        this.data = dataInteger;
+    public Node(Integer data) {
+        this.data = data;
     }
 }
