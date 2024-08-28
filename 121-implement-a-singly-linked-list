@@ -28,7 +28,13 @@ public class LinkedList{
     }
 
     public Integer removeFromFront(){
-        
+        if (this.size == 0) {
+            throw new SinglyLinkedListException('The list is empty');
+        }
+        Node remove = this.head;
+        this. head = this.head.next;
+        this.size--;
+        return remove.data;
     }
 
     public void addToTail(Integer value){
