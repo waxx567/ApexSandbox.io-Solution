@@ -9,8 +9,8 @@ public Boolean isPalindrome(String str){
     str = str.replaceAll(' ', '');
     System.debug('New string: ' + str);
     for (Integer i = 0; i < str.length(); i++) {
-        if (!i.isAlphanumeric()) {
-            str.replace(i, '');
+        if (!str[i].isAlphanumeric()) {
+            str.replace(str[i], '');
         }
     }
     
