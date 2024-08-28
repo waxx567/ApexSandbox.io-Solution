@@ -16,7 +16,7 @@ public class Stack {
         //implement size
         Integer listSize = 0;
         for (Integer i = 0; i < stackList.size(); i++) {
-            listSize += i;
+            listSize += 1;
         }
         return listSize;
     }
