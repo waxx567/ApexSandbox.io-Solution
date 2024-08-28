@@ -1,9 +1,5 @@
 public class LinkedList{
 
-    public class SinglyLinkedListException extends Exception {}
-
-    // List newList = new List();
-
     public Node head {get; private set; }
     public Node tail {get; private set; }
     public Integer size {get; private set; }
@@ -86,3 +82,5 @@ public class Node{
         this.data = data;
     }
 }
+
+public class SinglyLinkedListException extends Exception {}
