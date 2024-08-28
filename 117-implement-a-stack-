@@ -1,6 +1,5 @@
 public class Stack {
     List<Object> stackList = new List<Object>();
-    Integer listSize;
     
     public void push(Object obj) {
         //implement push
@@ -9,34 +8,27 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        return stackList.remove(-1);
+        if (stackList.isEmpty()) {
+            return null;
+        }
+        return stackList.remove(stackList.size() - 1);
     }
     
     public Integer size() {
         //implement size
-        for (Object o : stackList) {
-            listSize =+ 1;
-        }
-        return listSize;
+        return stackList.size();
     }
     
     public Object peek(){
         //implement peek
-        if (listSize == 0) {
-            return stackList.get(-1);
-        } else {
+        if (stackList.isEmpty()) {
             return null;
         }
+        return stackList.get(stackList.size() - 1);
     }
     
     public Boolean isEmpty() {
         //implement isEmpty
-        Boolean empty;
-        if (listSize == 0) {
-            empty = true;
-        } else {
-            empty = false;
-        }
-        return empty;
+        return stackList.isEmpty();
     }
 }
