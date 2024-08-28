@@ -8,12 +8,12 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        stack.remove(obj);
+        stack.remove(stack[-1]);
     }
     
     public Integer size() {
         //implement size
-        
+
     }
     
     public Object peek(){
