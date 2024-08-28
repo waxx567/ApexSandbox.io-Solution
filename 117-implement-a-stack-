@@ -34,7 +34,7 @@ public class Stack {
         //implement isEmpty
         Boolean empty = false;
         if (stack.size() == 0) {
-            empty == true;
+            empty = true;
         }
         return empty;
     }
