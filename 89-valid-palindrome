@@ -2,7 +2,7 @@ public Boolean isPalindrome(String str){
     String revisedString = '';
 
     for (Integer i = 0; i < str.length(); i++) {
-        if (str[i].isAlpha()) {
+        if (str[i].isAlpha() == true) {
             revisedString += str[i].toLowerCase();
         }
     }
