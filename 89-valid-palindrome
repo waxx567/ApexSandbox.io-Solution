@@ -2,13 +2,13 @@ public Boolean isPalindrome(String str){
     String revisedString = '';
 
     for (Integer i = 0; i < str.length(); i++) {
-        if (str[i].isAlpha() == true) {
-            revisedString += str[i].toLowerCase();
+        if (str.charAt(i).isAlpha()) {
+            revisedString += str.charAt(i).toLowerCase();
         }
     }
     for (Integer i = 0; i < revisedString.length(); i++) {
         for (Integer j = revisedString.length() - 1; j >= 0; j--) {
-            if (revisedString[i] != revisedString[j]) {
+            if (revisedString.charAt(i) != revisedString.charAt(j)) {
                 return false;
             }
         }
