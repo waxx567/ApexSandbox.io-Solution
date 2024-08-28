@@ -1,13 +1,11 @@
 public class LinkedList{
 
-    public Node head {get; private set; }
-    public Node tail {get; private set; }
-    public Integer size {get; private set; }
+    public Node head { get; private set; }
+    public Node tail { get; private set; }
 
     public LinkedList() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
     
     public void addToFront(Integer value){
@@ -20,17 +18,20 @@ public class LinkedList{
             newNode.next = this.head;
             this.head = newNode;
         }
-        this.size++;
     }
 
     public Integer removeFromFront(){
-        if (this.size == 0) {
-            throw new SinglyLinkedListException('The list is empty');
+        if (this.head == null) {
+            return null;
         }
 
         Node remove = this.head;
         this.head = this.head.next;
-        this.size--;
+
+        if (this.head == null) {
+            this.tail = null;
+        }
+
         return remove.data;
     }
 
@@ -44,34 +45,42 @@ public class LinkedList{
             this.tail.next = newNode;
             this.tail = newNode;
         }
-        this.size++;
     }
 
     public Integer removeFromTail(){
-        if (this.size == 0) {
-            throw new SinglyLinkedListException('The list is empty');
+        if (this.head == null) {
+            return null;
         }
 
-        if (this.size == 1) {
+        if (this.head == this.tail) {
             Node temp = this.head;
             this.head = null;
-            this.size--;
+            this.tail = null;
             return temp.data;
         }
 
         Node current = this.head;
-        Node newTail = null;
-
-        while (current.next != null) {
-            newTail = current;
+        while (current.next != this.tail) {
             current = current.next;
         }
 
-        this.tail = newTail;
-        tail.next = null;
-        this.size--;
-        return current.data;
+        Integer value = this.tail.data;
+        this.tail = current;
+        this.tail.next = null;
+
+        return value;
     }
+
+    public Integer size(){
+        Integer count = 0;
+        Node current = this.head;
+        
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }    
 }
 
 public class Node{
@@ -80,7 +89,6 @@ public class Node{
 
     public Node(Integer data) {
         this.data = data;
+        this.next = null;  // Explicitly set next to null for clarity.
     }
 }
-
-public class SinglyLinkedListException extends Exception {}
