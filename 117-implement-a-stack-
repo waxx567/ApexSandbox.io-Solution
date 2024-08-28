@@ -32,8 +32,10 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
+        Boolean empty = false;
         if (stack.size() == 0) {
-            isEmpty == true;
+            empty == true;
         }
+        return empty;
     }
 }
