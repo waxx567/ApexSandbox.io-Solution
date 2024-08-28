@@ -12,7 +12,7 @@ public class Stack {
         for (Object o : stackList) {
             listSize += 1;
         }
-        return stackList.remove(stackList[listSize-1]);
+        return stackList.pop();
     }
     
     public Integer size() {
