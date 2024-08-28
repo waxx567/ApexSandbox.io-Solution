@@ -5,12 +5,13 @@ public Boolean isPalindrome(String str){
     
     Pattern nonAlphanumeric = Pattern.compile('[^a-z0-9]');
     Matcher matcher = nonAlphanumeric.matcher(str);
+    matcher.replaceAll('');
     
     for (Integer i = str.length() - 1; i >= 0; i--) {
         secondString += str[i];
     }
 
-    if (str == secondString) {
+    if (matcher == secondString) {
         return true;
     } else {
         return false;
