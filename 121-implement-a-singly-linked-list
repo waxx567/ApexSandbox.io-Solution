@@ -31,6 +31,7 @@ public class LinkedList{
         if (this.size == 0) {
             throw new SinglyLinkedListException('The list is empty');
         }
+
         Node remove = this.head;
         this. head = this.head.next;
         this.size--;
@@ -51,13 +52,30 @@ public class LinkedList{
     }
 
     public Integer removeFromTail(){
-        return newList.remove(-1);
-    }
+        if (this.size == 0) {
+            throw new SinglyLinkedListException('The list is empty');
+        }
 
-    public Integer size(){
-        get;
-        private set;
-    }    
+        if (this.size == 1) {
+            Node temp = this.head;
+            this.head = null;
+            this.size--;
+            return temp.data;
+        }
+
+        Node current = this.head;
+        Node newTail = null;
+
+        while (current.next != null) {
+            newTail = current;
+            current = current.next;
+        }
+
+        this.tail = newTail;
+        tail.next = null;
+        this.size--;
+        return current.data;
+    }
 }
 
 public class Node{
