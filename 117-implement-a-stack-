@@ -1,6 +1,6 @@
 public class Stack {
     List<Object> stackList = new List<Object>();
-    Integer listSize = 0;
+    Integer listSize;
     
     public void push(Object obj) {
         //implement push
