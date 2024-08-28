@@ -1,14 +1,14 @@
 public class Stack {
-    List<Object> stack = new List<Object>();
+    List<Object> stackList = new List<Object>();
     
     public void push(Object obj) {
         //implement push
-        stack.add(obj);
+        stackList.add(obj);
     }
     
     public Object pop() {
         //implement pop
-        stack.remove(stack(-1));
+        stackList.remove(stackList(-1));
     }
     
     public Integer size() {
@@ -18,8 +18,8 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-        if (!stack.isEmpty) {
-            stack[-1];
+        if (!stackList.isEmpty) {
+            stackList[-1];
         }
     }
     
