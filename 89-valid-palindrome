@@ -10,7 +10,7 @@ public Boolean isPalindrome(String str){
     System.debug('New string: ' + str);
     for (String c : str) {
         if (!c.isAlphanumeric) {
-            str.replace(c, '';)
+            str.replace(c, '');
         }
     }
     
