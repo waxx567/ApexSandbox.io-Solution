@@ -8,6 +8,11 @@ public Boolean isPalindrome(String str){
     str = str.replaceAll(':', '');
     str = str.replaceAll(' ', '');
     System.debug('New string: ' + str);
+    for (String c : str) {
+        if (!c.isAlphanumeric) {
+            str.replace(c, '';)
+        }
+    }
     
     for (Integer i = str.length() - 1; i >= 0; i--) {
         for (Integer j = 0; j < str.length(); j++) {
