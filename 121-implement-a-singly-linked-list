@@ -1,5 +1,12 @@
 public class LinkedList{
-    List newList = new List();
+
+    public class SinglyLinkedListException extends Exception {}
+
+    // List newList = new List();
+
+    public Node head {get; private set; }
+    public Node tail {get; private set; }
+    public Integer size {get; private set; }
     
     public void addToFront(Integer value){
         newList.add(0, value);
@@ -14,11 +21,16 @@ public class LinkedList{
         return newList.remove(-1);
     }
     public Integer size(){
-        return newList.size();
+        get;
+        private set;
     }    
 }
 
 public class Node{
     Integer data;
     Node next;
+
+    public Node(Integer dataInteger) {
+        this.data = dataInteger;
+    }
 }
