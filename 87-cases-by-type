@@ -4,11 +4,11 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
 
     for (Case c : cases) {
         if (c.Type != null) {
-            if (typedCases.containsKey(c.Type) == true) {
+            if (typedCases.containsKey(c.Type)) {
                 typedCases.get(c.Type).add(c);
             } 
             else {
-                typedCases.put(c.Type, new List { c });
+                typedCases.put(c.Type, new List<Case>{ c });
             }
         }
     }
