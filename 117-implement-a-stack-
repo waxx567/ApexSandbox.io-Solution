@@ -8,7 +8,7 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        stack.remove(stack[-1]);
+        stack.remove(stack(-1));
     }
     
     public Integer size() {
