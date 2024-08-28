@@ -11,7 +11,7 @@ public Boolean isPalindrome(String str){
         secondString += i;
     }
 
-    if (matcher == secondString) {
+    if (str == secondString) {
         return true;
     } else {
         return false;
