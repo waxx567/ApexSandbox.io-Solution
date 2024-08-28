@@ -8,15 +8,19 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        Object popObject = stackList.remove(stackList.size()-1);
+        Integer listSize = 0;
+        for (Object o : stackList) {
+            listSize += 1;
+        }
+        Object popObject = stackList.remove(stackList[listSize]-1);
         return popObject;
     }
     
     public Integer size() {
         //implement size
         Integer listSize = 0;
-        for (Integer i = 0; i < stackList.size(); i++) {
-            listSize += 1;
+        for (Object o : stackList) {
+            listSize =+ 1;
         }
         return listSize;
     }
