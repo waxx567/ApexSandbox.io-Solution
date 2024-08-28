@@ -1,5 +1,6 @@
 public class Stack {
     List<Object> stackList = new List<Object>();
+    Integer listSize = 0;
     
     public void push(Object obj) {
         //implement push
@@ -13,7 +14,6 @@ public class Stack {
     
     public Integer size() {
         //implement size
-        Integer listSize = 0;
         for (Object o : stackList) {
             listSize =+ 1;
         }
@@ -22,7 +22,7 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-        if (stackList.size() == 0) {
+        if (listSize == 0) {
             return stackList.get(-1);
         } else {
             return null;
@@ -32,7 +32,7 @@ public class Stack {
     public Boolean isEmpty() {
         //implement isEmpty
         Boolean empty = false;
-        if (stack.size() == 0) {
+        if (listSize == 0) {
             empty = true;
         }
         return empty;
