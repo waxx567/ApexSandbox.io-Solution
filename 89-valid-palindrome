@@ -4,13 +4,10 @@ public Boolean isPalindrome(String str){
     Matcher matcher = nonAlphanumeric.matcher(str);
     matcher.replaceAll('');
     str = str.toLowerCase();
-    str = str.replaceAll(',', '');
-    str = str.replaceAll(':', '');
-    str = str.replaceAll(' ', '');
     System.debug('New string: ' + str);
     for (Integer i = 0; i < str.length(); i++) {
-        if (!str[i].isAlphanumeric()) {
-            str.replace(str[i], '');
+        if (!str.charAt(i).isAlphanumeric()) {
+            str.replace(str.charAt(i), '');
         }
     }
     
