@@ -1,0 +1,16 @@
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    List<Integer> output = new List<Integer>();
+
+    Integer i = 0; // list1 pointer
+    Integer j = 0; // list2 pointer
+
+    while (i < j) {
+        if (list1.charAt[i] < list2.charAt[j]) {
+            output.add(list1.charAt[i]);
+        } else {
+            output.add(list1.charAt[j]);
+        }
+    }
+
+    return output;
+}
