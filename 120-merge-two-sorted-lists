@@ -5,10 +5,10 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     Integer j = 0; // list2 pointer
 
     while (list1.size() < list2.size()) {
-        if (list1.charAt[i] < list2.charAt[j]) {
-            output.add(list1.charAt[i]);
+        if (list1.charAt(i) < list2.charAt(j)) {
+            output.add(list1.charAt(i));
         } else {
-            output.add(list1.charAt[j]);
+            output.add(list1.charAt(j));
         }
     }
 
