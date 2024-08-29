@@ -1,8 +1,8 @@
 public void plusOne(List<Integer> numbers) {
-    if (numbers.get(-1) == 9) {
-        numbers.get(-1) = 0;
-        numbers.get(-2)++;
+    if (numbers.get(numbers.size()-1) == 9) {
+        numbers.get(numbers.size()-1) = 0;
+        numbers.get(numbers.size()-2)++;
     } else {
-        numbers.get(-1)++;
+        numbers.get(numbers.size()-1)++;
     }
 }
