@@ -1,22 +1,20 @@
 public Boolean isPalindrome(String str){
-    if (str == '') {
-        return true;
-    }
-    
+    // Remove non-alphanumeric characters and convert to lowercase
     Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
     Matcher matcher = nonAlphanumeric.matcher(str);
-    str = matcher.replaceAll('');
-    str = str.toLowerCase();
-    System.debug('New string: ' + str);
+    str = matcher.replaceAll('').toLowerCase();
     
-    for (Integer i = str.length() - 1; i >= 0; i--) {
-        for (Integer j = 0; j < str.length(); j++) {
-            system.debug('i: ' + i + ' j: ' + j);
-            if (i == j) {
-                return true;
-            }
+    // Two-pointer technique to check palindrome
+    Integer left = 0;
+    Integer right = str.length() - 1;
+    
+    while (left < right) {
+        if (str.charAt(left) != str.charAt(right)) {
+            return false;
         }
+        left++;
+        right--;
     }
     
-    return false;
+    return true;
 }
