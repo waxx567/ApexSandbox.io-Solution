@@ -10,7 +10,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
             return middle;
         }
 
-        if (target < opportunities[middle]) {
+        if (target < middle) {
             right = middle - 1;
         } else {
             left = middle + 1;
