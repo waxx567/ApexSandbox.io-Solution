@@ -17,6 +17,7 @@ public boolean isAnagram(String s1, String s2) {
         } else {
             map1.put(convertedChar, 1);
         }
+        System.debug(map1);
     }
 
     for (Integer i = 0; i < s2.length(); i++) {
@@ -24,14 +25,14 @@ public boolean isAnagram(String s1, String s2) {
         String convertedChar = String.fromCharArray(charArr);
 
         if (map2.containsKey(convertedChar)) {
-            Integer i1 = map2.get(convertedChar);
-            i1++;
+            Integer i2 = map2.get(convertedChar);
+            i2++;
         } else {
             map2.put(convertedChar, 1);
         }
+        System.debug(map2);
     }
 
-    // Compare maps
     if (map1.equals(map2)) {
         return true;
     } else {
