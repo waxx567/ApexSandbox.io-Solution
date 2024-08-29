@@ -8,11 +8,11 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         Integer middle = (left + right) / 2;
         System.debug('Middle: ' + middle);
 
-        if (opportunities.amount[middle] == target) {
+        if (opportunities.Amount[middle] == target) {
             return middle;
         }
 
-        if (target < opportunities.amount[middle]) {
+        if (target < opportunities.Amount[middle]) {
             right = middle - 1;
         } else {
             left = middle + 1;
