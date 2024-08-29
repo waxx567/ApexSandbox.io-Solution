@@ -12,5 +12,4 @@ public void plusOne(List<Integer> numbers) {
             }
         }
     }
-    current++;
 }
