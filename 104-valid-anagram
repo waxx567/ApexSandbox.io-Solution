@@ -1,5 +1,5 @@
 public boolean isAnagram(String s1, String s2) {
-    Map<String, Integer> frequencies = Map<String, Integer>();
+    Map<String, Integer> frequencies = new Map<String, Integer>();
 
     return frequencies;
 }
