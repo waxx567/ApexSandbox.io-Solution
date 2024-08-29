@@ -11,9 +11,9 @@ public Boolean isPalindrome(String str){
             system.debug('i: ' + i + ' j: ' + j);
             if (i == j) {
                 return true;
-            } else {
-                return false;
             }
         }
     }
+    
+    return false;
 }
