@@ -4,8 +4,6 @@ public boolean isAnagram(String s1, String s2) {
         return false;
     }
 
-    String alphabet = 'abcdefghijklmnopqrstuvwxyz';
-
     Map<String, Integer> map1 = new Map<String, Integer>();
     Map<String, Integer> map2 = new Map<String, Integer>();
 
@@ -34,6 +32,9 @@ public boolean isAnagram(String s1, String s2) {
     }
 
     // Compare maps
-
-    return true;
+    if (map1.equals(map2)) {
+        return true;
+    } else {
+        return false;
+    }
 }
