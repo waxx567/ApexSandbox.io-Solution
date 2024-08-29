@@ -1,11 +1,5 @@
 public void plusOne(List<Integer> numbers) {
-    Integer lastElement = numbers.size() - 1;
-    if (numbers[lastElement] != 9) {
-        numbers[lastElement]++;
-    } else if (numbers[lastElement] == 9) {
-        numbers[lastElement] = 0;
-    } else {
-        numbers[lastElement-1] = 1;
-    }
+    Integer n = numbers.size();
+    
     
 }
