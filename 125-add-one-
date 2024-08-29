@@ -10,7 +10,7 @@ public void plusOne(List<Integer> numbers) {
                 current = 0;
                 i--;
             }
-            current++;
         }
+        current++;
     }
 }
