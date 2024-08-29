@@ -10,7 +10,7 @@ public Boolean isPalindrome(String str){
         for (Integer j = 0; j < str.length(); j++) {
             system.debug('i: ' + i + ' j: ' + j);
             if (i == j) {
-                return false;
+                return true;
             } else {
                 return false;
             }
