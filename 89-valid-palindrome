@@ -2,17 +2,13 @@ public Boolean isPalindrome(String str){
     
     Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
     Matcher matcher = nonAlphanumeric.matcher(str);
-    matcher.replaceAll('');
+    str = matcher.replaceAll('');
     str = str.toLowerCase();
     System.debug('New string: ' + str);
-    for (Integer i = 0; i < str.length(); i++) {
-        if (!str.charAt(i).isAlphanumeric()) {
-            str.replace(str.charAt(i), '');
-        }
-    }
     
     for (Integer i = str.length() - 1; i >= 0; i--) {
         for (Integer j = 0; j < str.length(); j++) {
+            system.debug('i: ' + i + ' j: ' + j);
             if (i != j) {
                 return false;
             }
