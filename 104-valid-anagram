@@ -12,7 +12,8 @@ public boolean isAnagram(String s1, String s2) {
         String convertedChar = String.fromCharArray(charArr);
 
         if (map1.containsKey(convertedChar)) {
-            map1.get(convertedChar)++;
+            Integer i1 = map1.get(convertedChar);
+            i1 += 1;
         } else {
             map1.put(convertedChar, 1);
         }
@@ -24,7 +25,8 @@ public boolean isAnagram(String s1, String s2) {
         String convertedChar = String.fromCharArray(charArr);
 
         if (map2.containsKey(convertedChar)) {
-            map2.get(convertedChar)++;
+            Integer i2 = map2.get(convertedChar);
+            i2 += 1;
         } else {
             map2.put(convertedChar, 1);
         }
