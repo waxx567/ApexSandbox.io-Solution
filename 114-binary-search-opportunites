@@ -1,4 +1,9 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
-    // solution here
-    return -1;
+    Integer left = 0;
+    Integer right = opportunities.size();
+
+    while (left < right) {
+
+    }
+    return left;
 }
