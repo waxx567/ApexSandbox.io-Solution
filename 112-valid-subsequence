@@ -1,5 +1,8 @@
 public Boolean isSubSequence(String s1, String s2){
-    // List<Integer> charArr = new List<Integer>{ s1.charAt(i) };
-    // String convertedChar = String.fromCharArray(charArr);
+    for (String c1:s1){
+        for (String c2:s2) {
+            if (c)
+        }
+    }
     return false;
 }
