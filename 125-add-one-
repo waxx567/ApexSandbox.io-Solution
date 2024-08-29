@@ -1,7 +1,7 @@
 public void plusOne(List<Integer> numbers) {
     Integer count = numbers.size() - 1;
     if (numbers.get(count) == 9) {
-        numbers.get(count) = 0;
+        numbers.add(count, 0);
         count -= 2;
         numbers.get(count)++;
     } else {
