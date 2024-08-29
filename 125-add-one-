@@ -5,6 +5,6 @@ public void plusOne(List<Integer> numbers) {
         count -= 2;
         numbers.add(count, numbers.get(count)+1);
     } else {
-        numbers.get(count)++;
+        numbers.add(count, numbers.get(count)+1);
     }
 }
