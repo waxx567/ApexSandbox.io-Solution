@@ -3,7 +3,19 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer right = opportunities.size();
 
     while (left < right) {
+        // Find the middle
+        Integer middle = (left + right) / 2;
 
+        if (opportunities[middle] == target) {
+            return middle;
+        }
+
+        if (target < middle) {
+            right = middle - 1;
+        } else {
+            left = middle + 1;
+        }
     }
-    return left;
+
+    return -1;
 }
