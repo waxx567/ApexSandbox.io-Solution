@@ -1,6 +1,6 @@
 public void plusOne(List<Integer> numbers) {
     Integer count = numbers.size();
-    if (numbers.get(count-1) == 9) {
+    if (numbers.get(count) == 9) {
         numbers.get(count-1) = 0;
         numbers.get(count-2)++;
     } else {
