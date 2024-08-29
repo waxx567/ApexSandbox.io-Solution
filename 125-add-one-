@@ -13,5 +13,4 @@ public void plusOne(List<Integer> numbers) {
     } else {
         numbers.add(count, numbers.get(count) + 1);
     }
-    count = numbers.size() - 1;
 }
