@@ -3,8 +3,10 @@ public void plusOne(List<Integer> numbers) {
     if (numbers.get(count) == 9) {
         numbers.add(count, 0);
         count -= 2;
-        numbers.add(count, numbers.get(count)+1);
+        numbers.add(count, numbers.get(count) + 1);
     } else {
-        numbers.add(count, numbers.get(count)+1);
+        numbers.add(count, numbers.get(count) + 1);
     }
+    count = numbers.size() - 1;
+    numbers.remove(count);
 }
