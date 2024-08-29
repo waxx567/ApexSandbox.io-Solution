@@ -10,8 +10,8 @@ public boolean isAnagram(String s1, String s2) {
     Map<String, Integer> map2 = new Map<String, Integer>();
 
     for (Integer i = 0; i < s1.length(); i++) {
-        Integer index = s1.charAt(i) + 97;
-        String c1 = alphabet(index);
+        Integer index = 97 - s1.charAt(i);
+        String c1 = alphabet[index];
         if (map1.containsKey(c1)) {
             Integer i1 = map1.get(c1);
             i1++;
