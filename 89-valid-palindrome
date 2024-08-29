@@ -1,4 +1,7 @@
 public Boolean isPalindrome(String str){
+    if (str == '') {
+        return true;
+    }
     
     Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
     Matcher matcher = nonAlphanumeric.matcher(str);
