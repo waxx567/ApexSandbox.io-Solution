@@ -7,26 +7,25 @@ public boolean isAnagram(String s1, String s2) {
     Map<String, Integer> map1 = new Map<String, Integer>();
     Map<String, Integer> map2 = new Map<String, Integer>();
 
-    for (String c1 : s1) {
-        if (map1.containsKey(c1)) {
-            Integer i1 = map1.get(c1);
+    for (Integer i = 0; i < s1.length(); i++) {
+        if (map1.containsKey(s1[i])) {
+            Integer i1 = map1.get(s1[i]);
             i1++;
         } else {
-            map1.put(c1, 1);
+            map1.put(s1[i], 1);
         }
     }
 
-    for (String c2 : s2) {
-        if (map2.containsKey(c)) {
-            Integer i2 = map2.get(c2);
-            i2++;
+    for (Integer j = 0; j < s1.length(); j++) {
+        if (map1.containsKey(s2[j])) {
+            Integer j1 = map2.get(s2[j]);
+            j1++;
         } else {
-            map2.put(c2, 1);
+            map2.put(s2[j], 1);
         }
     }
 
     // Compare maps
-
 
     return true;
 }
