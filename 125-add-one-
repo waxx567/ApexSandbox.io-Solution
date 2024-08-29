@@ -6,5 +6,5 @@ public void plusOne(List<Integer> numbers) {
     if (numbers[lastElement] == 9) {
         numbers[lastElement] = 0;
     }
-    
+    numbers[lastElement-1] = 1;
 }
