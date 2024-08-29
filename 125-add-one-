@@ -1,5 +1,5 @@
 public void plusOne(List<Integer> numbers) {
-    if (numbers.size[-1] != 9) {
+    if (numbers[-1] != 9) {
         numbers[-1]++;
     // numbers = [1, 2, 3]
     // for (Integer i = 0; i < numbers.size(); i++) {
