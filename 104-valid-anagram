@@ -3,7 +3,28 @@ public boolean isAnagram(String s1, String s2) {
     if (s1 == null || s2 == null) {
         return false;
     }
-    Map<String, Integer> frequencies = new Map<String, Integer>();
+
+    Map<String, Integer> map1 = new Map<String, Integer>();
+    Map<String, Integer> map2 = new Map<String, Integer>();
+
+    for (String c1 : s1) {
+        if (map1.containsKey(c1)) {
+            map1.get(c1)++;
+        } else {
+            map1.put(c1, 1);
+        }
+    }
+
+    for (String c2 : s2) {
+        if (map2.containsKey(c)) {
+            map2.get(c2)++;
+        } else {
+            map2.put(c2, 1);
+        }
+    }
+
+    // Compare maps
+    
 
     return true;
 }
