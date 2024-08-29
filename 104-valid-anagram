@@ -8,20 +8,20 @@ public boolean isAnagram(String s1, String s2) {
     Map<String, Integer> map2 = new Map<String, Integer>();
 
     for (Integer i = 0; i < s1.length(); i++) {
-        if (map1.containsKey(s1[i])) {
-            Integer i1 = map1.get(s1[i]);
+        if (map1.containsKey(s1.charAt(i))) {
+            Integer i1 = map1.get(s1.charAt(i));
             i1++;
         } else {
-            map1.put(s1[i], 1);
+            map1.put(s1.charAt(i), 1);
         }
     }
 
     for (Integer j = 0; j < s1.length(); j++) {
-        if (map1.containsKey(s2[j])) {
-            Integer j1 = map2.get(s2[j]);
+        if (map1.containsKey(s2.charAt(j))) {
+            Integer j1 = map2.get(s2.charAt(j));
             j1++;
         } else {
-            map2.put(s2[j], 1);
+            map2.put(s2.charAt(j), 1);
         }
     }
 
