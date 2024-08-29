@@ -6,11 +6,11 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         // Find the middle
         Integer middle = (left + right) / 2;
 
-        if (middle == target) {
+        if (opportunities[middle] == target) {
             return middle;
         }
 
-        if (target < middle) {
+        if (target < opportunities[middle]) {
             right = middle - 1;
         } else {
             left = middle + 1;
