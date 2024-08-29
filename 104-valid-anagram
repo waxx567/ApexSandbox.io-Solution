@@ -1,7 +1,7 @@
 public boolean isAnagram(String s1, String s2) {
     // null check
     if (s1 == null || s2 == null) {
-        return null;
+        return false;
     }
     Map<String, Integer> frequencies = new Map<String, Integer>();
 
