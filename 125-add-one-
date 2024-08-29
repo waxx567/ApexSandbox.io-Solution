@@ -2,12 +2,9 @@ public void plusOne(List<Integer> numbers) {
     Integer lastElement = numbers.size() - 1;
     if (numbers[lastElement] != 9) {
         numbers[lastElement]++;
-    } else {
-        for (Integer i = lastElement; i >= 0; i--) {
-            if (i == 9) {
-                i = 0;
-            }
-            i = 1;
-        }
+    } 
+    if (numbers[lastElement] == 9) {
+        numbers[lastElement] = 0;
     }
+    
 }
