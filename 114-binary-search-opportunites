@@ -1,18 +1,19 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
     System.debug('Target: ' + target);
     Integer left = 0;
-    Integer right = opportunities.size();
+    Integer right = opportunities.size() - 1;
 
-    while (left < right) {
+    while (left <= right) {
         // Find the middle
-        Integer middle = (left + right) / 2;
-        System.debug('Middle: ' + middle);
+        Integer middle = left + (right - left) / 2;
+        System.debug('Middle index: ' + middle);
+        System.debug('Middle Amount: ' + opportunities[middle].Amount);
 
-        if (opportunities.Amount[middle] == target) {
+        if (middle == target) {
             return middle;
         }
 
-        if (target < opportunities.Amount[middle]) {
+        if (target < middle) {
             right = middle - 1;
         } else {
             left = middle + 1;
