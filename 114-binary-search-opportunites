@@ -7,13 +7,15 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         // Find the middle
         Integer middle = left + (right - left) / 2;
         System.debug('Middle index: ' + middle);
-        System.debug('Middle Amount: ' + opportunities[middle].Amount);
 
-        if (middle == target) {
+        Decimal middleAmount = opportunities[middle].Amount;
+        System.debug('Middle Amount: ' + middleAmount);
+
+        if (middleAmount == target) {
             return middle;
         }
 
-        if (target < middle) {
+        if (target < middleAmount) {
             right = middle - 1;
         } else {
             left = middle + 1;
