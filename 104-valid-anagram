@@ -11,7 +11,7 @@ public boolean isAnagram(String s1, String s2) {
 
     for (Integer i = 0; i < s1.length(); i++) {
         List<Integer> charArr = new List<Integer>{ s1.charAt(i) };
-        String convertedChar = fromCharArray(charArr);
+        String convertedChar = String.fromCharArray(charArr);
 
         if (map1.containsKey(convertedChar)) {
             Integer i1 = map1.get(convertedChar);
