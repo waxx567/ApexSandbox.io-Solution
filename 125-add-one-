@@ -1,6 +1,7 @@
 public void plusOne(List<Integer> numbers) {
-    if (numbers[-1] != 9) {
-        numbers[-1]++;
+    Integer listSize = numbers.size();
+    if (numbers[listSize-1] != 9) {
+        numbers[listSize-1]++;
     // numbers = [1, 2, 3]
     // for (Integer i = 0; i < numbers.size(); i++) {
         // numbers.size() = 3
