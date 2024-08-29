@@ -9,7 +9,8 @@ public boolean isAnagram(String s1, String s2) {
 
     for (String c1 : s1) {
         if (map1.containsKey(c1)) {
-            map1.get(c1)++;
+            Integer i1 = map1.get(c1);
+            i1++;
         } else {
             map1.put(c1, 1);
         }
@@ -17,14 +18,15 @@ public boolean isAnagram(String s1, String s2) {
 
     for (String c2 : s2) {
         if (map2.containsKey(c)) {
-            map2.get(c2)++;
+            Integer i2 = map2.get(c2);
+            i2++;
         } else {
             map2.put(c2, 1);
         }
     }
 
     // Compare maps
-    
+
 
     return true;
 }
