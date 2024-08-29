@@ -4,7 +4,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     Integer i = 0; // list1 pointer
     Integer j = 0; // list2 pointer
 
-    while (i < j) {
+    while (list1 < list2) {
         if (list1.charAt[i] < list2.charAt[j]) {
             output.add(list1.charAt[i]);
         } else {
