@@ -11,5 +11,6 @@ public void plusOne(List<Integer> numbers) {
                 i--;
             }
         }
+        current = 1;
     }
 }
