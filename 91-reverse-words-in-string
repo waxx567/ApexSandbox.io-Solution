@@ -1,17 +1,9 @@
 public static String reverseWords(String str){
     
     List<String> words = str.split(' ');
-    Integer[] reversedInts = new List<Integer>();
     System.debug(words);
-
-    String reversedWord = '';
-    String[] revList = new List<String>();
-    for (Integer i = 0; i < words.size(); i++) {
-        for (Integer j = words[i].length() - 1; j >= 0; j--) {
-            reversedWord += words[i].get(j);
-        }
-        revList.add(reversedWord);
-    }
-    System.debug(reversedWord);
+    
+    List<String> reversedWords = new List<String>();
+    
     return '';
 }
