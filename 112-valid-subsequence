@@ -3,8 +3,11 @@ public Boolean isSubSequence(String s1, String s2){
     Integer p2 = 0;
 
     while (p1 < s1.length() && p2 < s2.length()) {
+        // if the characters match, move the pointer on s1
         if (s1.charAt(p1) == s2.charAt(p2)) {
             p1++;
         }
+        // move the pointer on s2
+        p2++;
     }
 }
