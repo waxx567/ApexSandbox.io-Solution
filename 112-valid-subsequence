@@ -10,4 +10,7 @@ public Boolean isSubSequence(String s1, String s2){
         // move the pointer on s2
         p2++;
     }
+
+    // if p1 has traversed all of s1, then s1 is a subsequence of s2
+    return
 }
