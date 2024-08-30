@@ -11,8 +11,11 @@ public static String reverseWords(String str){
         for (Integer i = word.length() - 1; i >= 0; i--) {
             reversedWord += word.charAt(i);
         }
-        System.debug(reversedWord);
-        reversedWords.add(reversedWord);
+        Integer charConvert = Integer.valueOf(reversedWord);
+        List<Integer> charArr = new Integer[]{charConvert};
+        String convertedChar = String.fromCharArray(charArr);
+        System.debug(convertedChar);
+        reversedWords.add(convertedChar);
     }
     System.debug(reversedWords);
 
