@@ -1,8 +1,6 @@
 public Boolean isSubSequence(String s1, String s2){
-    for (String c1:s1){
-        for (String c2:s2) {
-            if (c)
-        }
-    }
-    return false;
+    Integer p1 = 0;
+    Integer p2 = 0;
+
+    
 }
