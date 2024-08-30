@@ -8,7 +8,7 @@ public static String reverseWords(String str){
     String[] revList = new List<String>();
     for (Integer i = 0; i < words.size(); i++) {
         for (Integer j = words[i].length() - 1; j >= 0; j--) {
-            reversedWord += word[j];
+            reversedWord += words[i].get(j);
         }
         revList.add(reversedWord);
     }
