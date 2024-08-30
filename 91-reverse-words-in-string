@@ -11,7 +11,7 @@ public static String reverseWords(String str){
             reversedCharInts.add(word.charAt(i));
         }
         // Convert the reversed character integers back into a string
-        
+        String reversedWord = String.fromCharArray(reversedCharInts);
         reversedWords.add(reversedWord);
     }
 
