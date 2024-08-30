@@ -1,7 +1,7 @@
 public static String reverseWords(String str){
     // Approach 1: Using split to Separate Words
     // Step 1: Split the string into words
-    String words = str.split(' ');
+    List<String> words = str.split(' ');
 
     // Step 2: Reverse each word
     String reversedWords = '';
