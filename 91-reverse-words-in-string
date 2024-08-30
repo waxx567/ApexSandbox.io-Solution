@@ -6,6 +6,7 @@ public static String reverseWords(String str){
     List<String> reversedWords = new List<String>();
     for (String word : words) {
         // Create a list to hold the ASCII values of the reversed characters
+        List<Integer> reversedCharInts = List<Integer>();
         String reversedWord = '';
         for (Integer i = word.length() - 1; i >= 0; i--) {
             reversedWord += word.charAt(i);
