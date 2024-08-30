@@ -1,26 +1,18 @@
 public static String reverseWords(String str){
-    
-    // split the string into words
+    // Step 1: Split the string into words
     List<String> words = str.split(' ');
-    System.debug(words);
-    
-    // reverse the string
+
+    // Step 2: Reverse each word
     List<String> reversedWords = new List<String>();
-    for (String word:words) {
+    for (String word : words) {
         String reversedWord = '';
         for (Integer i = word.length() - 1; i >= 0; i--) {
             reversedWord += word.charAt(i);
         }
-        Integer charConvert = Integer.valueOf(reversedWord);
-        List<Integer> charArr = new Integer[]{charConvert};
-        String convertedChar = String.fromCharArray(charArr);
-        System.debug(convertedChar);
-        reversedWords.add(convertedChar);
+        reversedWords.add(reversedWord);
     }
-    System.debug(reversedWords);
 
-    // join the reversed words back into a string
+    // Step 3: Join the reversed words back into a string
     String result = String.join(reversedWords, ' ');
-    System.debug(result);
     return result;
 }
