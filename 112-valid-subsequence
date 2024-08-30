@@ -14,3 +14,6 @@ public Boolean isSubSequence(String s1, String s2){
     // if p1 has traversed all of s1, then s1 is a subsequence of s2
     return p1 == s1.length();
 }
+
+// Efficiency: This solution is linear, O(n), where n is the length of s2. It only requires a single pass through s2, making it very efficient.
+// Pointers Movement: The pointer p2 on s2 always moves forward, while p1 only moves forward when a matching character is found. This ensures the order of characters in s1 is maintained relative to s2.
