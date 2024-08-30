@@ -1,29 +1,21 @@
 public static String reverseWords(String str){
-    // Step 1: Convert the string to a character array
-    Integer[] charArray = str.getChars();
+    // Approach 1: Using split to Separate Words
+    // Step 1: Split the string into words
+    String words = str.split(' ');
 
-    // Step 2: Reverse characters in each word
-    Integer start = 0;
-    for (Integer i = 0; i < charArray.size(); i++) {
-        // If we reach a space or the end of the string, reverse the word
-        if (charArray[i] == 32 || i == charArray.size() - 1) {
-            Integer strEnd = (charArray[i] == 32) ? i - 1 : i;
-            reverseChars(charArray, start, strEnd);
-            start = i + 1;
-        }
+    // Step 2: Reverse each word
+    String reversedWords = '';
+    for (word:words) {
+        // Create a list to hold the ASCII values of the reversed characters
+        List<Integer> reversedCharInts = new List<Integer>();
+        for (Integer i = word.length() - 1; i >= 0; i--) {
+            reversedCharInts.add(word.charAt(i));
+        } 
+        // Convert the reversed character integers back to a string 
+        String reversedWord = String.fromCharArray(reversedCharInts);
+        reversedWords.add(reversedWord);
     }
-
-    // Step 3: Convert the character array back to a string
-    String result = String.fromCharArray(charArray);
-    return result;
-}
-
-private static void reverseChars(Integer[] arr, Integer start, Integer strEnd) {
-    while (start < strEnd) {
-        Integer temp = arr[start];
-        arr[start] = arr[strEnd];
-        arr[strEnd] = temp;
-        start++;
-        strEnd--;
-    }
+    // Step 3: Join the reversed words back into a string  
+    String result = String.join(reversedWords, ' ');
+    return result; 
 }
