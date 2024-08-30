@@ -12,7 +12,7 @@ public static String reverseWords(String str){
     System.debug(reversedInts);
     List<Integer> charArr = new List<Integer>();
     for (Integer reversedInt:reversedInts){
-        charArr = {reversedInt};
+        charArr.add(reversedInt);
 
     }
     String convertedChar = String.fromCharArray(charArr);
