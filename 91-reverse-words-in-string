@@ -1,9 +1,15 @@
 public static String reverseWords(String str){
     
+    // split the string into words
     List<String> words = str.split(' ');
     System.debug(words);
     
+    // reverse the string
     List<String> reversedWords = new List<String>();
-    
+    for (String word:words) {
+        String reversedWord = '';
+        
+    }
+
     return '';
 }
