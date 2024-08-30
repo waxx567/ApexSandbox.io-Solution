@@ -10,8 +10,11 @@ public static String reverseWords(String str){
         }
     }
     System.debug(reversedInts);
+    List<Integer> charArr = new List<Integer>();
+    for (Integer reversedInt:reversedInts){
+        charArr = {reversedInt};
 
-    List<List<Integer>> charArr= new Integer[]{reversedInts};
+    }
     String convertedChar = String.fromCharArray(charArr);
     System.debug(convertedChar);
 
