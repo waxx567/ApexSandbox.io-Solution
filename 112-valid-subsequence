@@ -3,6 +3,6 @@ public Boolean isSubSequence(String s1, String s2){
     Integer p2 = 0;
 
     while (p1 < s1.length() && p2 < s2.length()) {
-        
+        if ()
     }
 }
