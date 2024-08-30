@@ -1,10 +1,11 @@
 public static String reverseWords(String str){
-    // Step 1: Split the string into words
+    // Split the string into words
     List<String> words = str.split(' ');
 
-    // Step 2: Reverse each word
+    // Reverse each word
     List<String> reversedWords = new List<String>();
     for (String word : words) {
+        // Create a list to hold the ASCII values of the reversed characters
         String reversedWord = '';
         for (Integer i = word.length() - 1; i >= 0; i--) {
             reversedWord += word.charAt(i);
@@ -12,7 +13,8 @@ public static String reverseWords(String str){
         reversedWords.add(reversedWord);
     }
 
-    // Step 3: Join the reversed words back into a string
+    // Join the reversed words back into a string
     String result = String.join(reversedWords, ' ');
+    System.debug(result);
     return result;
 }
