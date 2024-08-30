@@ -1,12 +1,17 @@
 public static String reverseWords(String str){
     
-    Integer[] chars = str.getChars();
-    Integer[] reverseInts = new List<Integer>();
+    List<String> words = str.split(' ');
+    System.debug(words);
+    return '';
+    // Integer[] chars = str.getChars();
+    // Integer[] reverseInts = new List<Integer>();
 
-    for (Integer i = chars.size() - 1; i >= 0; i--) {
-        reverseInts.add(i);
-    }
+    // for (Integer i = chars.size() - 1; i >= 0; i--) {
+    //     reverseInts.add(i);
+    // }
+    // System.debug(reverseInts);
 
-    return 'stel nrael xepa sgnirts';
-    // return String.fromCharArray(reverseInts);
+    // String reverseStr = String.fromCharArray(reverseInts); 
+    // System.debug(reverseStr);
+    // return reverseStr;
 }
