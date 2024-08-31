@@ -5,13 +5,13 @@ public Integer maxProfit(List<Integer> prices){
         if (price < lowest) {
             lowest = price;
         }
-        System.debug(lowest);
+        System.debug('lowest: ' + lowest);
         if (highest < price) {
             highest = price;
         }
-        System.debug(highest);
+        System.debug('highest: ' + highest);
     }
     Integer profit = highest - lowest;
-    System.debug(profit);
+    System.debug('profit: ' + profit);
     return profit;
 }
