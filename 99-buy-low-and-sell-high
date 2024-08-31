@@ -2,13 +2,17 @@ public Integer maxProfit(List<Integer> prices){
     Integer lowest = 10000;
     Integer highest = 0;
     Integer day = 1;
+    Integer highestDay = 0;
     for (Integer price:prices) {
-        if (price < lowest) {
-            lowest = price;
+        if (highestDay < day) {
+            if (price < lowest) {
+                lowest = price;
+            }
         }
         System.debug('lowest: ' + lowest);
         if (highest < price) {
             highest = price;
+            highestDay = day;
         }
         System.debug('highest: ' + highest);
         day++;
@@ -17,4 +21,3 @@ public Integer maxProfit(List<Integer> prices){
     System.debug('profit: ' + profit);
     return profit;
 }
-// track the day somehow
