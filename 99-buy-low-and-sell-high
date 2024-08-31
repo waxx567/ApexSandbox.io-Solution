@@ -6,7 +6,7 @@ public Integer maxProfit(List<Integer> prices){
     for (Integer price:prices) {
         System.debug('day: ' + day);
         System.debug('highestDay: ' + highestDay);
-        if (highestDay < day) {
+        if (highestDay > day) {
             if (price < lowest) {
                 lowest = price;
             }
