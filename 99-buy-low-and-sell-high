@@ -10,5 +10,6 @@ public Integer maxProfit(List<Integer> prices){
         }
     }
     Integer profit = highest - lowest;
+    System.debug(profit);
     return profit;
 }
