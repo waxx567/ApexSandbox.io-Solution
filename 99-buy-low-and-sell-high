@@ -1,4 +1,4 @@
 public Integer maxProfit(List<Integer> prices){
-    Integer lowest = 0;
+    Integer lowest = 10000;
     return 0;
 }
