@@ -1,4 +1,11 @@
 public Integer maxProfit(List<Integer> prices){
     Integer lowest = 10000;
-    return 0;
+    for (Integer price:prices) {
+        if (price < lowest) {
+            lowest = price;
+        }
+    }
+    Integer profit = 0;
+
+    return profit;
 }
