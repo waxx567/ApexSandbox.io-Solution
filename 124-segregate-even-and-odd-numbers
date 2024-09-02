@@ -7,5 +7,20 @@ public static void segregateEvenOdd(List<Integer> numbers){
         while (left < right && Math.mod(numbers.get(left), 2) == 0) {
             left++;
         }
+        // Find the first even number from the right
+        while (left < right && Math.mod(numbers.get(right), 2) == 0) {
+            right++;
+        }
+
+        // Swap the odd number at left with the even number at right
+        if (left < right) {
+            Integer temp = numbers.get(left);
+            numbers.set(left, numbers.get(right));
+            numbers.set(right, temp);
+
+            // Move the pointers
+            left++;
+            right--:
+        }
     }
 }
