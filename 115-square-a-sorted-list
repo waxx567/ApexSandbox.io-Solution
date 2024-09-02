@@ -4,6 +4,8 @@ public static List<Integer> squareList(List<Integer> nums){
             nums[i] = num * num;
         }
     }
+    System.debug(nums);
+
     Integer count = 0;
     Integer p1 = nums[count];
     Integer p2 = nums[count+1];
@@ -16,6 +18,8 @@ public static List<Integer> squareList(List<Integer> nums){
         }
         count++;
     }
+
+    System.debug(nums);
     
     return nums;
 }
