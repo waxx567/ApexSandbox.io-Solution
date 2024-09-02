@@ -3,5 +3,9 @@ public Integer maxProfit(List<Integer> prices){
         return 0;
     }
 
+    // Start with the first price as the minumum
+    Integer minPrice = prices.get(0);
+    Integer profitVar = 0;
+
     
 }
