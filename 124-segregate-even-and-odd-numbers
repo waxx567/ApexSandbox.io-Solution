@@ -11,7 +11,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
             } else if (left != isEven) {
                 numbers[right - 1] = numbers[left];
             } else if (right != isOdd) {
-                numbers[left + 1] = [right];
+                numbers[left + 1] = numbers[right];
             }
         }
     }
