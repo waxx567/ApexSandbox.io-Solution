@@ -5,7 +5,7 @@ public static List<Integer> squareList(List<Integer> nums){
         System.debug(num);
         newNums.add(num);
     }
-    System.debug(nums);
+    System.debug(newNums);
 
     Integer count = 0;
     Integer p1 = newNums[count];
@@ -16,6 +16,7 @@ public static List<Integer> squareList(List<Integer> nums){
             temp = p2;
             p2 = p1;
             p1 = temp;
+            System.debug('p1: ' + p1);
         }
         count++;
     }
