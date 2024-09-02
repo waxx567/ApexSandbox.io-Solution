@@ -13,8 +13,8 @@ public static List<Integer> squareList(List<Integer> nums){
             temp = p2;
             p2 = p1;
             p1 = temp;
-            count++;
         }
+        count++;
     }
     
     return nums;
