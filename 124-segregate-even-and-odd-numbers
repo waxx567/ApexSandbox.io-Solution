@@ -1,5 +1,6 @@
 public static void segregateEvenOdd(List<Integer> numbers){
-    Integer left, right = 0, 0;
+    Integer left = 0;
+    Integer right = 0;
     Boolean isEven = Math.mod(left, 2) == 0;
     Boolean isOdd = Math.mod(right, 2) == 0;
 
