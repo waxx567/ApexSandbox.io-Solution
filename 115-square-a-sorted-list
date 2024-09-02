@@ -1,26 +1,5 @@
 public static List<Integer> squareList(List<Integer> nums){
     Integer[] newNums = new List<Integer>();
-    for (Integer num : nums) {
-        num = num * num;
-        System.debug(num);
-        newNums.add(num);
-    }
-    System.debug(newNums);
 
-    Integer count = 0;
-    Integer p1 = newNums[count];
-    Integer p2 = newNums[count+1];
-    Integer temp = 0;
-    while (count < newNums.size()) {
-        if (p1 > p2) {
-            temp = p2;
-            p2 = p1;
-            p1 = temp;
-            System.debug('p1: ' + p1);
-        }
-        count++;
-    }
-    System.debug(newNums);
-    
     return newNums;
 }
