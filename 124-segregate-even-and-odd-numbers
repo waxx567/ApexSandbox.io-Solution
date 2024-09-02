@@ -1,12 +1,18 @@
 public static void segregateEvenOdd(List<Integer> numbers){
-    Integer left = 0;
-    Integer right = numbers.size() - 1;
+    Boolean isEven = Math.mod(left, 2) == 0;
+    Boolean isOdd = Math.mod(right, 2) == 0;
 
-    while (left <= right) {
-        if (Math.mod(left, 2) != 0) {
-            numbers.add(left);
-            numbers.remove(left);
+    for (Integer left = 0; left < numbers.size(); left++) {
+        for (Integer right = numbers.size() - 1; right >= 0; right--) {
+            if (left == isEven) {
+                left++;
+            } else if (right == isOdd) {
+                right--;
+            } else if (left != isEven) {
+                numbers[right - 1] = numbers[left];
+            } else if (right != isOdd) {
+                numbers[l + 1] = [right];
+            }
         }
-        left++;
     }
 }
