@@ -1,3 +1,7 @@
 public Integer maxProfit(List<Integer> prices){
-    //code here
+    if (prices == null || prices.isEmpty()) {
+        return 0;
+    }
+
+    
 }
