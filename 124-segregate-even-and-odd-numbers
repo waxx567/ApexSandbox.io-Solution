@@ -1,4 +1,11 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     Integer left = 0;
     Integer right = numbers.size() - 1;
+
+    while (left < right) {
+        // Find the first odd number from the left
+        while (left < right && Math.mod(numbers.get(left), 2) == 0) {
+            left++;
+        }
+    }
 }
