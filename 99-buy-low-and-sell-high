@@ -7,5 +7,11 @@ public Integer maxProfit(List<Integer> prices){
     Integer minPrice = prices.get(0);
     Integer profitVar = 0;
 
-    
+    for (Integer price : prices) {
+        if (price < minPrice) {
+            minPrice = price;
+        }
+    }
+
+    return profitVar;
 }
