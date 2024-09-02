@@ -8,8 +8,16 @@ public Integer maxProfit(List<Integer> prices){
     Integer profitVar = 0;
 
     for (Integer price : prices) {
+        // Update minPrice if the current price is lower
         if (price < minPrice) {
             minPrice = price;
+        }
+        // Calculate the potential profit if the sale happens at the current price
+        Integer potentialProfit = price - minPrice;
+
+        // Update profitVar if the potential profit is greater
+        if (potentialProfit > profitVar) {
+            profitVar = potentialProfit;
         }
     }
 
