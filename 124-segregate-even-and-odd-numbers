@@ -4,8 +4,8 @@ public static void segregateEvenOdd(List<Integer> numbers){
     Boolean isEven = Math.mod(left, 2) == 0;
     Boolean isOdd = Math.mod(right, 2) == 0;
 
-    for (Integer left = 0; left < numbers.size(); left++) {
-        for (Integer right = numbers.size() - 1; right >= 0; right--) {
+    for (left = 0; left < numbers.size(); left++) {
+        for (right = numbers.size() - 1; right >= 0; right--) {
             if (left == isEven) {
                 left++;
             } else if (right == isOdd) {
