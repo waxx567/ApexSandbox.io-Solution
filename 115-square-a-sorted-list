@@ -4,7 +4,7 @@ public static List<Integer> squareList(List<Integer> nums){
             nums[i] = num * num;
         }
     }
-    Integer count = 0
+    Integer count = 0;
     Integer p1 = nums[count];
     Integer p2 = nums[count+1];
     Integer temp = 0;
