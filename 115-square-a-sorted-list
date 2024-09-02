@@ -1,16 +1,15 @@
 public static List<Integer> squareList(List<Integer> nums){
-    // Create a new list to hold the squared values
+    // Create a new list to hold the squared numbers
     List<Integer> squaredNums = new List<Integer>();
-
     // Pointers to start at the beginning and end of the input list
     Integer left = 0;
     Integer right = nums.size() - 1;
-
-    // Traverse from beginning to end of the squaredNums list
+    
+    // Traverse the list from the end to the beginning of the squaredNums list
     while (left <= right) {
         Integer leftSquare = nums[left] * nums[left];
         Integer rightSquare = nums[right] * nums[right];
-
+        
         if (leftSquare > rightSquare) {
             // Add the larger square to the result list
             squaredNums.add(0, leftSquare);
@@ -23,6 +22,6 @@ public static List<Integer> squareList(List<Integer> nums){
             right--;
         }
     }
-
+    
     return squaredNums;
 }
