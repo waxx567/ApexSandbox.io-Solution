@@ -1,6 +1,6 @@
 public static List<Integer> squareList(List<Integer> nums){
     // Create a new list to hold the squared values
-    Integer[] squaredNums = new List<Integer>();
+    List<Integer> squaredNums = new List<Integer>();
 
     // Pointers to start at the beginning and end of the input list
     Integer left = 0;
