@@ -1,8 +1,6 @@
 public static List<Integer> squareList(List<Integer> nums){
-    for (Integer i = 0; i < nums.size(); i++) {
-        for (Integer num : nums) {
-            nums[i] = num * num;
-        }
+    for (Integer num : nums) {
+        nums[i] = num * num;
     }
     System.debug(nums);
 
@@ -18,7 +16,6 @@ public static List<Integer> squareList(List<Integer> nums){
         }
         count++;
     }
-
     System.debug(nums);
     
     return nums;
