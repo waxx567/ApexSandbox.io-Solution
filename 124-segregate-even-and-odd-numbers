@@ -3,7 +3,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
     Integer right = numbers.size() - 1;
 
     while (left <= right) {
-        if (Math.mod(left, 0) != 0) {
+        if (Math.mod(left, 2) != 0) {
             numbers.add(left);
             numbers.remove(left);
         }
