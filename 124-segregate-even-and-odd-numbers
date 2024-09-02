@@ -1,0 +1,12 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    Integer left = 0;
+    Integer right = numbers.size() - 1;
+
+    while (left <= right) {
+        if (Math.mod(left, 0) != 0) {
+            numbers.add(left);
+            numbers.remove(left);
+        }
+        left++;
+    }
+}
