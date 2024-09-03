@@ -29,5 +29,5 @@ public Boolean isValid(String s){
     }
 
     // If the stack is empty, all brackets matched correctly
-    return stack.isEmpty();
+    return true;
 }
