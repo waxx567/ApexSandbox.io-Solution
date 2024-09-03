@@ -14,7 +14,9 @@ public Boolean isValid(String s){
         String currentChar = s.substring(i, i + 1);
 
         // If the current character is an opening bracket, push it onto the stack
-        
+        if (matchingPairs.values().contains(currentChar)) {
+            stack.add(currentChar);
+        }
     }
 
     return true;
