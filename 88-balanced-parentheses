@@ -13,13 +13,13 @@ public Boolean isValid(String s){
     for (Integer i = 0; i < s.length(); i++) {
         String currentChar = s.substring(i, i+1);
         
-        // If it's an opening bracket, push it onto the stack
+        // If the current character is an opening bracket, push it onto the stack
         if (matchingPairs.values().contains(currentChar)) {
             stack.add(currentChar);
         } 
         // If it's a closing bracket, check for a matching opening bracket
         else if (matchingPairs.keySet().contains(currentChar)) {
-            // If stack is empty or the top of the stack doesn't match, return false
+            // If stack is empty or the top of the stack doesn't match
             if (stack.isEmpty() || stack[stack.size() - 1] != matchingPairs.get(currentChar)) {
                 return false;
             }
