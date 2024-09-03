@@ -1,5 +1,7 @@
 public Boolean isValid(String s){
     List<String> stack = new List<String>();
 
+    // Define the pairs of matching brackets
+
     return true;
 }
