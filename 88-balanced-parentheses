@@ -3,6 +3,11 @@ public Boolean isValid(String s){
     List<String> stack = new List<String>();
 
     // Define the pairs of matching brackets
+    Map<String, String> matchingPairs = new Map<String, String>{
+        '(' => ')',
+        '[' => ']',
+        '{' => '}'
+    };
 
     return true;
 }
