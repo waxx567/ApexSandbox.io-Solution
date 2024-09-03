@@ -1,6 +1,5 @@
 public Boolean isValid(String s){
-    List<String> openers = new List<String>{'(', '[', '{'};
-    List<String> closers = new List<String>{')', ']', '}'};
+    List<String> stack = new List<String>();
 
     return true;
 }
