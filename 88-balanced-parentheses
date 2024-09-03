@@ -12,6 +12,9 @@ public Boolean isValid(String s){
     // Iterate through the string
     for (Integer i = 0; i < s.length(); i++) {
         String currentChar = s.substring(i, i + 1);
+
+        // If the current character is an opening bracket, push it onto the stack
+        
     }
 
     return true;
