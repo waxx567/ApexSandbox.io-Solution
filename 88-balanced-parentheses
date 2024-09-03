@@ -1,0 +1,6 @@
+public Boolean isValid(String s){
+    List<String> openers = {'(', '[', '{'};
+    List<String> closers = {')', ']', '}'};
+
+    return true;
+}
