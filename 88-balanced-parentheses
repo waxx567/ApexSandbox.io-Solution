@@ -1,33 +1,33 @@
 public Boolean isValid(String s){
     // Initialize a stack to keep track of opening brackets
     List<String> stack = new List<String>();
-
+    
     // Define the pairs of matching brackets
     Map<String, String> matchingPairs = new Map<String, String>{
-        '(' => ')',
-        '[' => ']',
-        '{' => '}'
+        ')' => '(', 
+        ']' => '[', 
+        '}' => '{'
     };
-
+    
     // Iterate through the string
     for (Integer i = 0; i < s.length(); i++) {
-        String currentChar = s.substring(i, i + 1);
-
-        // If the current character is an opening bracket, push it onto the stack
+        String currentChar = s.substring(i, i+1);
+        
+        // If it's an opening bracket, push it onto the stack
         if (matchingPairs.values().contains(currentChar)) {
             stack.add(currentChar);
-        }
+        } 
         // If it's a closing bracket, check for a matching opening bracket
         else if (matchingPairs.keySet().contains(currentChar)) {
-            // If the stack is empty, or the top of the stack doesn't match
+            // If stack is empty or the top of the stack doesn't match, return false
             if (stack.isEmpty() || stack[stack.size() - 1] != matchingPairs.get(currentChar)) {
                 return false;
             }
-            // Pop the top off the stack
+            // Pop the top of the stack
             stack.remove(stack.size() - 1);
         }
     }
-
+    
     // If the stack is empty, all brackets matched correctly
-    return true;
+    return stack.isEmpty();
 }
