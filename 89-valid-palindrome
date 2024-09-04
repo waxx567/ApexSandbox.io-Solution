@@ -13,6 +13,7 @@ public Boolean isPalindrome(String str){
         if (str.charAt(left) != str.charAt(right)) {
             return false;
         }
+        // Move pointers
         left++;
         right--;
     }
