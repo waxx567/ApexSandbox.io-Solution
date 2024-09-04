@@ -5,7 +5,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
 
     while (left <= right) {
         // Find the middle
-        Integer middle = left + (right - left) / 2;
+        Integer middle = left + (right - left) / 2; // see detailed explanation of this line below
         // System.debug('Middle index: ' + middle);
 
         Decimal middleAmount = opportunities[middle].Amount;
