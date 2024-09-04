@@ -5,8 +5,8 @@ public void defragging(Integer[] memory)
 
     while (n < memory.size() && p < memory.size()) {
         if (memory[n] == -1) {
+            memory.add(memory[n]);
             memory.remove(memory[n]);
-            memory.add(-1);
             n++;
         }
         p++;
