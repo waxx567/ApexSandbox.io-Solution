@@ -13,49 +13,67 @@ public class LinkedList{
     
     // Adds a new node with the given value to the front of the list.
     public void addToFront(Integer value){
+        // Create a new node with the provided value.
         Node newNode = new Node(value);
 
+        // If the list is empty, the new node is both the head and tail.
         if (this.head == null) {
             this.head = newNode;
             this.tail = this.head;
         } else {
+            // Otherwise, set the new node's next reference to the current head.
             newNode.next = this.head;
+            // Update the head to be the new node.
             this.head = newNode;
         }
     }
 
+    // Removes the node at the front of the list and returns its value.
     public Integer removeFromFront(){
+        // If the list is empty, return null.
         if (this.head == null) {
             return null;
         }
 
+        // Store the current head node to be removed.
         Node remove = this.head;
+        // Move the head to the next node in the list.
         this.head = this.head.next;
 
+        // If the list is now empty after removal, set tail to null.
         if (this.head == null) {
             this.tail = null;
         }
 
+        // Return the value of the removed node.
         return remove.data;
     }
 
+    // Adds a new node with the given value to the end (tail) of the list.
     public void addToTail(Integer value){
+        // Create a new node with the provided value.
         Node newNode = new Node(value);
 
+        // If the list is empty, the new node is both the head and tail.
         if (this.head == null) {
             this.head = newNode;
             this.tail = this.head;
         } else {
+            // Otherwise, set the current tail's next reference to the new node.
             this.tail.next = newNode;
+            // Update the tail to be the new node.
             this.tail = newNode;
         }
     }
 
+    // Removes the node at the end (tail) of the list and returns its value.
     public Integer removeFromTail(){
+        // If the list is empty, return null.
         if (this.head == null) {
             return null;
         }
 
+        // If there's only one node in the list, remove it and set both head and tail to null.
         if (this.head == this.tail) {
             Node temp = this.head;
             this.head = null;
@@ -63,34 +81,46 @@ public class LinkedList{
             return temp.data;
         }
 
+        // Traverse the list to find the node just before the tail.
         Node current = this.head;
         while (current.next != this.tail) {
             current = current.next;
         }
 
+        // Store the value of the tail node to be removed.
         Integer value = this.tail.data;
+        // Update the tail to be the current node.
         this.tail = current;
+        // Set the new tail's next reference to null.
         this.tail.next = null;
 
+        // Return the value of the removed node.
         return value;
     }
 
+    // Returns the number of nodes in the list.
     public Integer size(){
         Integer count = 0;
         Node current = this.head;
         
+        // Traverse the list, counting each node.
         while (current != null) {
             count++;
             current = current.next;
         }
+
+        // Return the total count.
         return count;
     }    
 }
 
 public class Node{
+    // `data` holds the value stored in the node.
     Integer data;
+    // `next` is a reference to the next node in the list.
     Node next;
 
+    // Constructor initializes the node with a given value.
     public Node(Integer data) {
         this.data = data;
         this.next = null;  // Explicitly set next to null for clarity.
