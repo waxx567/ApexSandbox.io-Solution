@@ -9,6 +9,7 @@ public Boolean isPalindrome(String str){
     Integer right = str.length() - 1;
     
     while (left < right) {
+        // If characters don't match, it is not a palindrome
         if (str.charAt(left) != str.charAt(right)) {
             return false;
         }
