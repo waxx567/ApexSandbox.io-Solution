@@ -4,8 +4,8 @@ public void defragging(Integer[] memory)
     Integer p = 0; // Pointer for positives
 
     while (n < memory.size() && p < memory.size()) {
-        if (memory.charAt(n) == -1) {
-            memory.remove(memory.charAt(n));
+        if (memory[n] == -1) {
+            memory.remove(memory[n]);
             memory.add(-1);
             n++;
         }
