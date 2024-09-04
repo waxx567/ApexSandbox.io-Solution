@@ -1,21 +1,21 @@
 public static String reverseWords(String str){
-    // Approach 1: Using split to Separate Words
-    // Step 1: Split the string into words
-    List<String> words = str.split(' ');
-
-    // Step 2: Reverse each word
-    String[] reversedWords = new List<String>();
+    // Split the input string into a list of individual words
+    String[] words = str.split(' ');
+    // Create a new list to hold string values of reversed words
+    List<String> reversedWords = new List<String>();
+    // Loop through the words list
     for (String word:words) {
-        // Create a list to hold the ASCII values of the reversed characters
+        // Create a new list to hold ASCII values of reversed characters
         List<Integer> reversedCharInts = new List<Integer>();
+        // Reverse the words and add them to ASCII list
         for (Integer i = word.length() - 1; i >= 0; i--) {
             reversedCharInts.add(word.charAt(i));
-        } 
-        // Convert the reversed character integers back to a string 
+        }
+        // Convert the ASCIIs back to characters and add them to the reversedWords list
         String reversedWord = String.fromCharArray(reversedCharInts);
         reversedWords.add(reversedWord);
     }
-    // Step 3: Join the reversed words back into a string  
+    // Join the words in the list into a single string with spaces, and return the result
     String result = String.join(reversedWords, ' ');
-    return result; 
+    return result;
 }
