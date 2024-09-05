@@ -6,7 +6,7 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
     for (Integer i = 0; i < nums.size(); i++) {
         while (left < right) {
             if (right > target) {
-                rght++;
+                right++;
             } else {
                 if (left < target) {
                     if (left + right == target) {
