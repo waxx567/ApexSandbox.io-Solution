@@ -11,7 +11,7 @@ public boolean isSorted(List<Integer> numbers) {
     // Check if in ascending order
     if (numbers[left] < numbers[right]) {
         while (left < right) {
-            if (numbers[left + 1] < numbers[right]) {
+            if (numbers[left + 1] < numbers[left]) {
                 return false;
             }
             left++;
@@ -21,7 +21,7 @@ public boolean isSorted(List<Integer> numbers) {
     // Check if in descending order
     if (numbers[left] > numbers[right]) {
         while (left < right) {
-            if (numbers[left + 1] > numbers[right]) {
+            if (numbers[left + 1] > numbers[left]) {
                 return false;
             }
             left++;
