@@ -28,3 +28,8 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
     // If no solution is found, return null or an empty list
     return null;
 }
+
+/*
+Time complexity: O(n) since you only go through the list once with two pointers.
+Space complexity: O(1) because the additional memory usage does not grow with input size.
+*/
