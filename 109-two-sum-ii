@@ -18,7 +18,7 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
             left++;
         }
         // If the sum is too large, move the right pointer
-        else if (condition) {
+        else if (sum > target) {
             right++;                
         }
     }
