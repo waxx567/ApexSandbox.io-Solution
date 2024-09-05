@@ -4,13 +4,13 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
     for (Integer i = 0; i < nums.size(); i++) {
         if (nums[i] < target) {
             n = nums[i];
-            i++;
+            // i++;
             if (i == (target - n)) {
                 indices.add(n);
                 indices.add(i);
-            } else {
-                i++;
-            }
+            } //else {
+            //     i++;
+            // }
         }
     }
     return indices;
