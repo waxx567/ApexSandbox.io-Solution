@@ -2,23 +2,27 @@ public List<Integer> twoSum(List<Integer> nums, Integer target){
     List<Integer> output = new List<Integer>(); 
     Integer left = 0;
     Integer right = nums.size() - 1;
+    
+    // Check the sum of the elements at the left and right pointers
+    while (left < right) {
+        Integer sum = nums[left] + nums[right];
 
-    for (Integer i = 0; i < nums.size(); i++) {
-        while (left < right) {
-            if (right > target) {
-                right++;
-            } else {
-                if (left < target) {
-                    if (left + right == target) {
-                        output.add(left);
-                        output.add(right);
-                    }
-                } else {
-                    left++;                    
-                }                    
-            }
+        // If the target is found
+        if (sum == target) {
+            output.add(left);
+            output.add(right);
+            return output; // Return immediately since there is only one solution
+        }
+        // If the sum is too small, move the left pointer
+        else if (sum < target) {
             left++;
         }
+        // If the sum is too large, move the right pointer
+        else if (condition) {
+            right++;                
+        }
     }
-    return output;
+
+    // If the target is not found
+    return null;
 }
