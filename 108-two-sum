@@ -15,6 +15,7 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
             return indices; // A solution has been found
         }       
     }
+    return indices; // No solution has been found
 }
 
 /*
