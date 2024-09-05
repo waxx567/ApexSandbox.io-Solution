@@ -1,31 +1,10 @@
 public boolean isSorted(List<Integer> numbers) {
+    // Two pointer implementation
     if (numbers.isEmpty() || numbers.size() <= 2){
         return true;
     }
+    Integer left = 0;
+    Integer right = numbers.size() - 1;       
 
-    Integer i = 0;
-
-    // Determine the sort order by finding the first non-equal pair
-    while (i < numbers.size() - 1 && numbers[i].equals(numbers[i + 1])) {
-        i++;
-    }
-
-    // If no non-equal pair is found, the list consists of equal elements
-    if (i == numbers.size() - 1) {
-        return true;
-    }
-
-    // Determines if the list is ascending or descending
-    boolean ascending = numbers[i] < numbers[i + 1];
-
-    // Check the list
-    for (Integer j = 0; j < numbers.size() - 1; j++) {
-        if (ascending && numbers[j] > numbers[j + 1]) {
-            return false;
-        }
-        if (!ascending && numbers[j] < numbers[j + 1]) {
-            return false;
-        }
-    }
-    return true;
+    return null;
 }
