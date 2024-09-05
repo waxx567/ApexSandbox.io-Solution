@@ -13,9 +13,14 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
             indices.add(numMap.get(complement));
             indices.add(i);
             return indices; // A solution has been found
-        }       
+        }
+
+        // Add the current number and its index to the map
+        numMap.put(currentNum, i);       
     }
-    return indices; // No solution has been found
+
+    // Return empty if no solution is found (even though the problem guarantees a solution)
+    return indices;
 }
 
 /*
