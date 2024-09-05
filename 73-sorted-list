@@ -1,7 +1,6 @@
 public boolean isSorted(List<Integer> numbers) {
     // Two pointer implementation
-    // Check empty or less than 3 (always sorted)
-    if (numbers.isEmpty() || numbers.size() <= 2) {
+    if (numbers.size() <= 2) {
         return true;
     }
 
