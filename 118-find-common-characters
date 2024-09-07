@@ -1,0 +1,50 @@
+public List<String> commonChars(List<String> strs){
+    // Map to store the frequency of characters for each string
+    Map<String, Integer> map1 = new Map<String, Integer>(); 
+    
+    // Process the First String
+    String firstStr = strs[0];
+    for (Integer i = 0; i < firstStr.length(); i++) {
+        String ch = firstStr.substring(i, 1 + 1); // Get each character as a string
+        if (!map1.containsKey(ch)) {
+            map1.put(ch, 1); // First occurrence
+        } else {
+            map1.put(ch, map1.get(ch) + 1); // Increment count
+        }
+    }
+
+    // Process remaining strings
+    for (Integer i = 1; i < strs.size(); i++) {
+        // Map to store minimum frequencies of all characters across all strings
+        Map<Integer, Integer> tempMap = new Map<Integer, Integer>(); 
+        String currentStr = strs[i];
+        for (Integer j = 0; j < currentStr.length(); j++) {
+            String ch = currentStr.substring(j, j + 1);
+            if (!tempMap.containsKey(ch)) {
+                tempMap.put(ch, 1);
+            } else {
+                tempMap.put(ch, tempMap.get(ch) + 1);
+            }
+        }
+
+        // Update map1 to store the minumum frequency for each character
+        for (String key : map1.keySet()) {
+            if (tempMap.containsKey(key)) {
+                map1.put(key, Math.min(map1.get(key), tempMap.get(key)));
+            } else {
+                map1.put(key, 0); //Character not found, set count to 0
+            }
+        }
+    }
+
+    // Build the results based on map1
+    List<String> result = new List<String>();
+    for (String key : map1.keySet()) {
+        Integer freq = map1.get(key);
+        for (Integer k = 0; k < freq; k++) {
+            result.add(key);
+        }
+    }
+
+    return result;    
+}
