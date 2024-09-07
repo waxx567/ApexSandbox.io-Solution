@@ -1,0 +1,3 @@
+public static Integer longestDistinctSubstring(String str, Integer k){ 
+    return 0;
+}
