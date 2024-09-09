@@ -2,7 +2,7 @@ public static Boolean sameString(String str1, String str2){
     Integer left = 0;
     // Remove all '#' from beginning of strings
     while (str1.substring(left, left + 1) == '#') {
-        str1.remove(left);
+        str1.remove(str1.charAt(left));
         left++; 
     }
     while (str2.substring(left, left + 1) == '#') {
