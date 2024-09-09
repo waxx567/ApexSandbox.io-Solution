@@ -1,31 +1,49 @@
 public static Boolean sameString(String str1, String str2){
-    Integer left = 0;
-    // Remove all '#' from beginning of strings
-    while (str1.substring(left, left + 1) == '#') {
-        str1.remove(str1.charAt(left));
-        left++; 
-    }
-    while (str2.substring(left, left + 1) == '#') {
-        str2.remove(left);
-        left++; 
-    }
+    Integer p1 = str1.length() - 1; // Pointer for str1
+    Integer p2 = str2.length() - 1; // Poimter for str2
 
-    // Loop through strings from right to left
-    for (Integer right = str1.length() - 1; right >= 0; right--) {
-        if (str1.substring(right, right - 1) == '#') {
-            str1.remove(right);
+    while (p1 >= 0 || p2 >= 0) {
+        // Process backspaces in str1
+        Integer skip1 = 0;
+        while (p1 >= 0) {
+            if (str1.substring(p1, p1) == '#') {
+                skip1++;
+                p1--;
+            } else if (skip1 > 0) {
+                skip1--;
+                p1--;
+            } else {
+                break;
+            }         
         }
-    }
-    for (Integer right = str2.length() - 1; right >= 0; right--) {
-        if (str2.substring(right, right - 1) == '#') {
-            str2.remove(right);
-        }            
-    }
 
-    // If the resultant strings are the same
-    if (str1.equals(str2)) {
+        // Process backspaces in str2
+        Integer skip2 = 0;
+        while (p2 >= 0) {
+            if (str2.substring(p2, p2) == '#') {
+                skip2++;
+                p2--;
+            } else if (skip2 > 0) {
+                skip2--;
+                p2--;
+            } else {
+                break;
+            }
+        }
+
+        // Compare current characters
+        if (p1 >= 0 && p2 >= 0) {
+            if (str1.substring(p1, p1) != str2.substring(p2, p2)) {
+                return false;
+            } else if (p1 >= 0 || p2 >= 0) {
+                // If one pointer is still valid but the other isn't, the strings are different
+                return false;
+            }
+
+            p1--;
+            p2--;
+        }
+
         return true;
-    } else {
-        return false;
     }
 }
