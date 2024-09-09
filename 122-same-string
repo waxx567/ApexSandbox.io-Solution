@@ -1,3 +1,31 @@
 public static Boolean sameString(String str1, String str2){
-    return true;
+    Integer left = 0;
+    // Remove all '#' from beginning of strings
+    while (str1.substring(left, left + 1) == '#') {
+        str1.remove(left);
+        left++; 
+    }
+    while (str2.substring(left, left + 1) == '#') {
+        str2.remove(left);
+        left++; 
+    }
+
+    // Loop through strings from right to left
+    for (Integer right = str1.length() - 1; right >= 0; right--) {
+        if (str1.substring(right, right - 1) == '#') {
+            str1.remove(right);
+        }
+    }
+    for (Integer right = str2.length() - 1; right >= 0; right--) {
+        if (str2.substring(right, right - 1) == '#') {
+            str2.remove(right);
+        }            
+    }
+
+    // If the resultant strings are the same
+    if (str1.equals(str2)) {
+        return true;
+    } else {
+        return false;
+    }
 }
