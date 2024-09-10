@@ -10,7 +10,6 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         );
         students.add(student); // Add the record to the list
     }
-
-    // Perform a single DML insert operation to insert all records at once
+    // Single DML insert operation to insert all records at once
     insert students;
 }
