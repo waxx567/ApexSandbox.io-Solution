@@ -1,7 +1,8 @@
 public Id insertStudent(String name, String email) {
     // Create a new student record
     apxio__Student__c student = new apxio__Student__c(
-        Name=name, apxio__Email__c=email);
+        Name=name, apxio__Email__c=email
+        );
     
     // Insert the record into the database
     insert student;
