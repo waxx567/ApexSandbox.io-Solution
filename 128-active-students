@@ -1,5 +1,4 @@
 public List<apxio__Student__c> selectActiveStudents() {
-    
     // Query database and return result
     return [
         SELECT Id, Name 
