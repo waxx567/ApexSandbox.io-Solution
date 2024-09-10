@@ -2,9 +2,7 @@ public String evenOrOdd(Integer num) {
     
     num = Math.abs(num);
 
-    Integer result = Math.mod(num, 2);
-
-    if (result==0) {
+    if ((Math.mod(num, 2))==0) {
         return 'even';
     } else {
         return 'odd';
