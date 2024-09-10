@@ -1,8 +1,8 @@
 public Id insertCourse(String name, String details, Integer credits) {
     
     // String of valid inputs values for credits 
-    String validCreds = '01234';
-    // Convert integer input to string
+    String validCreds = '1234';
+    // Convert integer input to a string
     String creds = String.valueOf(credits.format());
 
     // Validate credits input
