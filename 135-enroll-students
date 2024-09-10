@@ -4,14 +4,12 @@ public void enrollStudents(List<String> emails, String className) {
         SELECT Id, Name FROM apxio__Class__c
         WHERE Name = :className
     ];
-
     // Ensure the class exists
     if (classList.isEmpty()) {
         return;
     }
- 
-    apxio__Class__c classRecord = classList[0]; // Assuming there is only one class with that name
 
+    apxio__Class__c classRecord = classList[0]; // Assuming there is only one class with that name
     // Query the Student object to find students whose email addresses match the provided list
     List<apxio__Student__c> studentList = [
         SELECT Id, Name, apxio__Email__c FROM apxio__Student__c
@@ -20,7 +18,6 @@ public void enrollStudents(List<String> emails, String className) {
 
     // Create a list to hold all the enrollment records
     List<apxio__Class_Enrollment__c> enrollments = new List<apxio__Class_Enrollment__c>();
-
     // Create enrollment records and add them to the list of all enrollments
     for (apxio__Student__c student : studentList) {
         apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c(
@@ -29,7 +26,6 @@ public void enrollStudents(List<String> emails, String className) {
         );
         enrollments.add(enrollment);
     }
-
     // Check the program is not trying to insert an empty record
     if (!enrollments.isEmpty()) {
         // Insert the records of all enrollments into the database
