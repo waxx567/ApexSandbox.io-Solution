@@ -21,7 +21,7 @@ public void enrollStudents(List<String> emails, String className) {
     // Create a list to hold all the enrollment records
     List<apxio__Class_Enrollment__c> enrollments = new List<apxio__Class_Enrollment__c>();
 
-    // Create enrollment records and add them to the enrollments list
+    // Create enrollment records and add them to the list of all enrollments
     for (apxio__Student__c student : studentList) {
         apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c(
             apxio__Student__c = student.Id,
