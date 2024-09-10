@@ -4,6 +4,6 @@ public Integer diff(Integer a, Integer b) {
     } else if (b > a) {
         return b - a;
     } else {
-        return null;
+        return 0;
     }
 }
