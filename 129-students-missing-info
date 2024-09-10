@@ -1,5 +1,4 @@
 public List<apxio__Student__c> selectStudentsWithoutContactInfo() {
-    
     // Query database and return result
     return [SELECT Id, Name FROM apxio__Student__c 
             WHERE ((apxio__Phone__c = NULL) 
