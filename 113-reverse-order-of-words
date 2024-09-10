@@ -5,7 +5,6 @@ public String reverseWordsInASentence(String sentence){
     }
     
     String[] words = sentence.split(' ');
-
     List<String> reversed = new List<String>();
 
     for (Integer i = words.size() - 1; i >= 0; i--) {
