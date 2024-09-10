@@ -1,20 +1,17 @@
 public Integer nextPrime(Integer num) {
 
-    // If the input number is negative, return 2, which is the smallest prime number
+    // If input number is negative, return 2, ie. the smallest prime number
     if (num < 2) {
         return 2;
     }
-
     Integer current = num + 1;
 
     // Infinite loop continues until a prime number is found
     while (true) {
-
         Boolean isPrime = true;
-
         // Check divisibility from 2 up to the square root of current
-        // If divisible, set flag to false and break out of for loop
         for (Integer i = 2; i * i <= current; i++) {
+            // If divisible, set flag to false and break out of the for loop
             if (Math.mod(current, i) == 0) {
                 isPrime = false;
                 break;
@@ -24,11 +21,13 @@ public Integer nextPrime(Integer num) {
         if (isPrime) {
             return current; // Return the prime number found
         }
-
-        current += 1; // If no prime number has been found yet, move to the next number
+        // If no prime number has been found yet, move to the next number
+        current += 1; 
     }
 
-    // The while loop is infinite and always returns a prime number, hence this return
-    // statement will technically never be reached. It is only needed to satisfy the compiler.
+    // The while loop is infinite and always returns a prime number, 
+    // hence this return statement will technically never be reached.
+    // If no prime number has been found yet, move to the next number
+    // It is only needed to satisfy the compiler.
     return null;
 }
