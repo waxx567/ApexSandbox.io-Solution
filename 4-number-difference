@@ -1,10 +1,8 @@
 public Integer diff(Integer a, Integer b) {
-    Integer answer = 0;
     if(a > b) {
-        answer = a - b;
+        return a - b;
     } 
     if(b > a) {
-        answer = b - a;
+        eturn b - a;
     }
-    return answer;
 }
