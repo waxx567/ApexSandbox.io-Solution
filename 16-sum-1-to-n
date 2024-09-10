@@ -9,10 +9,10 @@ public Integer sumToN(Integer n) {
     Integer answer = 0;
 
     for (Integer AddInt : numList) {
-        answer = answer + AddInt;
+        answer += AddInt;
     }
 
-    answer = answer + n;
+    answer += n;
 
     return answer;
 }
