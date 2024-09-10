@@ -4,8 +4,9 @@ public Id classFromCourse(String courseName) {
         SELECT Id, Name FROM apxio__Course__c
         WHERE Name = :courseName
     ];
+    // If no course with the given name is found
     if (record.isEmpty()) {
-        return null; // If no course with the given name is found
+        return null; 
     }
     // Create a new class
     apxio__Class__c newClass = new apxio__Class__c(
