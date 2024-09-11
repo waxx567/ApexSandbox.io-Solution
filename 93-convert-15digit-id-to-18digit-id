@@ -21,11 +21,11 @@ public String convert15to18DigitId(String fifteenDigit)
 
     String suffix = '';
 
-    List<String> segments = new List<String>(
+    List<String> segments = new List<String> {
         fifteenDigit.substring(0, 5),
         fifteenDigit.substring(5, 10),
         fifteenDigit.substring(10, 15)
-    );
+    };
     // Split segments into lists of characters
     String[] firstChars = segments[0].split('');
     String[] middleChars = segments[1].split('');
