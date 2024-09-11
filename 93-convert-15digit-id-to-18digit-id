@@ -30,21 +30,45 @@ public String convert15to18DigitId(String fifteenDigit)
     String[] firstChars = segments[0].split('');
     String[] middleChars = segments[1].split('');
     String[] lastChars = segments[2].split('');
+
+    List<List<String>> charlist = new List<List<String>> {
+        firstChars,
+        middleChars,
+        lastChars
+    };
     // Variables to store allocations
     String firstBinaryString = '';
     String middleBinaryString = '';
     String lastBinaryString = '';
-
-    // Handle first segment
-    // Loop over segment character list and Allocate as directed
-    for (String f : firstChars) {
-        if (f.isNumeric() || f.isAllLowerCase()) {
-            firstBinaryString += '0';
+    List<String> binaryList = new List<String> {
+        firstBinaryString,
+        middleBinaryString,
+        lastBinaryString
+    };
+    // Loop over each segment character list and allocate as directed
+    Integer count = 0;
+    while (count < charlist.size()) {
+        for (String ch : charlist[count]) {
+            if (ch.isNumeric() || ch.isAllLowerCase()) {
+                // handle binary strings
+                binaryList[count] += '0';
+            } else {
+                binaryList[count] += '1';
+            }
         }
-        else {
-            firstBinaryString += '1';
-        }
+        count++;
     }
+    // }
+    // // Handle first segment
+    // // Loop over segment character list and Allocate as directed
+    // for (String f : firstChars) {
+    //     if (f.isNumeric() || f.isAllLowerCase()) {
+    //         firstBinaryString += '0';
+    //     }
+    //     else {
+    //         firstBinaryString += '1';
+    //     }
+    // }
     // Loop over binaries list and check against binary string
     for (String s : binaries) {
         Integer firstIndex = binaries.indexOf(s);
@@ -56,16 +80,16 @@ public String convert15to18DigitId(String fifteenDigit)
     }
     // System.debug('suffix: ' + suffix);
 
-    // Handle middle segment
-    // Loop over segment character list and Allocate as directed
-    for (String m : middleChars) {
-        if (m.isNumeric() || m.isAllLowerCase()) {
-            middleBinaryString += '0';
-        }
-        else {
-            middleBinaryString += '1';
-        }
-    }
+    // // Handle middle segment
+    // // Loop over segment character list and Allocate as directed
+    // for (String m : middleChars) {
+    //     if (m.isNumeric() || m.isAllLowerCase()) {
+    //         middleBinaryString += '0';
+    //     }
+    //     else {
+    //         middleBinaryString += '1';
+    //     }
+    // }
     // Loop over binaries list and check against binary string
     for (String t : binaries) {
         Integer middleIndex = binaries.indexOf(t);
@@ -76,16 +100,16 @@ public String convert15to18DigitId(String fifteenDigit)
         }
     }
 
-    // Handle last segment
-    // Loop over segment character list and Allocate as directed
-    for (String l : lastChars) {
-        if (l.isNumeric() || l.isAllLowerCase()) {
-            lastBinaryString += '0';
-        }
-        else {
-            lastBinaryString += '1';
-        }
-    }
+    // // Handle last segment
+    // // Loop over segment character list and Allocate as directed
+    // for (String l : lastChars) {
+    //     if (l.isNumeric() || l.isAllLowerCase()) {
+    //         lastBinaryString += '0';
+    //     }
+    //     else {
+    //         lastBinaryString += '1';
+    //     }
+    // }
     // Loop over binaries list and check against binary string
     for (String u : binaries) {
         Integer lastIndex = binaries.indexOf(u);
