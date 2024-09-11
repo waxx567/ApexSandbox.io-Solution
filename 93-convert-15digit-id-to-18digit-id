@@ -21,18 +21,15 @@ public String convert15to18DigitId(String fifteenDigit)
 
     String suffix = '';
 
-    List<String> segments = new List<String>();
-    String firstSegment = fifteenDigit.substring(0, 5);
-    String middleSegment = fifteenDigit.substring(5, 10);
-    String lastSegment = fifteenDigit.substring(10, 15);
-    // Add the segments to the segments list
-    segments.add(firstSegment);
-    segments.add(middleSegment);
-    segments.add(lastSegment);
+    List<String> segments = new List<String>(
+        fifteenDigit.substring(0, 5),
+        fifteenDigit.substring(5, 10),
+        fifteenDigit.substring(10, 15)
+    );
     // Split segments into lists of characters
-    String[] firstChars = firstSegment.split('');
-    String[] middleChars = middleSegment.split('');
-    String[] lastChars = lastSegment.split('');
+    String[] firstChars = segments[0].split('');
+    String[] middleChars = segments[1].split('');
+    String[] lastChars = segments[2].split('');
     // Variables to store allocations
     String firstBinaryString = '';
     String middleBinaryString = '';
