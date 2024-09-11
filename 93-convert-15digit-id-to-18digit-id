@@ -29,16 +29,16 @@ public String convert15to18DigitId(String fifteenDigit)
     segments.add(firstSegment);
     segments.add(middleSegment);
     segments.add(lastSegment);
-
+    // Split segments into lists of characters
     String[] firstChars = firstSegment.split('');
     String[] middleChars = middleSegment.split('');
     String[] lastChars = lastSegment.split('');
-
+    // Variables to store allocations
     String firstBinaryString = '';
     String middleBinaryString = '';
     String lastBinaryString = '';
 
-    // Handle firstSegment
+    // Handle first segment
     // Loop over segment character list and Allocate as directed
     for (String f : firstChars) {
         if (f.isNumeric() || f.isAllLowerCase()) {
@@ -48,17 +48,18 @@ public String convert15to18DigitId(String fifteenDigit)
             firstBinaryString += '1';
         }
     }
-    // Loop over binaries list
+    // Loop over binaries list and check against binary string
     for (String s : binaries) {
         Integer firstIndex = binaries.indexOf(s);
         Boolean sMatch = s.equals(firstBinaryString);
+        // Add to suffix if a match is found
         if (sMatch) {
             suffix += characters[firstIndex];
         }
     }
     // System.debug('suffix: ' + suffix);
 
-    // Handle middleSegment
+    // Handle middle segment
     // Loop over segment character list and Allocate as directed
     for (String m : middleChars) {
         if (m.isNumeric() || m.isAllLowerCase()) {
@@ -68,16 +69,17 @@ public String convert15to18DigitId(String fifteenDigit)
             middleBinaryString += '1';
         }
     }
-    // Loop over binaries list
+    // Loop over binaries list and check against binary string
     for (String t : binaries) {
         Integer middleIndex = binaries.indexOf(t);
         Boolean tMatch = t.equals(middleBinaryString);
+        // Add to suffix if a match is found
         if (tMatch) {
             suffix += characters[middleIndex];
         }
     }
 
-    // Handle lastSegment
+    // Handle last segment
     // Loop over segment character list and Allocate as directed
     for (String l : lastChars) {
         if (l.isNumeric() || l.isAllLowerCase()) {
@@ -87,10 +89,11 @@ public String convert15to18DigitId(String fifteenDigit)
             lastBinaryString += '1';
         }
     }
-    // Loop over binaries list
+    // Loop over binaries list and check against binary string
     for (String u : binaries) {
         Integer lastIndex = binaries.indexOf(u);
         Boolean uMatch = u.equals(lastBinaryString);
+        // Add to suffix if a match is found
         if (uMatch) {
             suffix += characters[lastIndex];
         }
