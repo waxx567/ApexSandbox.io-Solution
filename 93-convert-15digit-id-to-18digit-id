@@ -25,14 +25,21 @@ public String convert15to18DigitId(String fifteenDigit)
     String firstSegment = fifteenDigit.substring(0, 5);
     String middleSegment = fifteenDigit.substring(5, 10);
     String lastSegment = fifteenDigit.substring(10, 15);
+    // Add the segments to the segments list
     segments.add(firstSegment);
     segments.add(middleSegment);
     segments.add(lastSegment);
 
-    // Handle firstSegment
     String[] firstChars = firstSegment.split('');
+    String[] middleChars = middleSegment.split('');
+    String[] lastChars = lastSegment.split('');
+
     String firstBinaryString = '';
-    // Loop over first segment character list
+    String middleBinaryString = '';
+    String lastBinaryString = '';
+
+    // Handle firstSegment
+    // Loop over segment character list and Allocate as directed
     for (String f : firstChars) {
         if (f.isNumeric() || f.isAllLowerCase()) {
             firstBinaryString += '0';
@@ -41,7 +48,7 @@ public String convert15to18DigitId(String fifteenDigit)
             firstBinaryString += '1';
         }
     }
-
+    // Loop over binaries list
     for (String s : binaries) {
         Integer firstIndex = binaries.indexOf(s);
         Boolean sMatch = s.equals(firstBinaryString);
@@ -49,12 +56,10 @@ public String convert15to18DigitId(String fifteenDigit)
             suffix += characters[firstIndex];
         }
     }
-    System.debug('suffix: ' + suffix);
+    // System.debug('suffix: ' + suffix);
 
     // Handle middleSegment
-    String[] middleChars = middleSegment.split('');
-    String middleBinaryString = '';
-    // Loop over middle segment character list
+    // Loop over segment character list and Allocate as directed
     for (String m : middleChars) {
         if (m.isNumeric() || m.isAllLowerCase()) {
             middleBinaryString += '0';
@@ -63,7 +68,7 @@ public String convert15to18DigitId(String fifteenDigit)
             middleBinaryString += '1';
         }
     }
-
+    // Loop over binaries list
     for (String t : binaries) {
         Integer middleIndex = binaries.indexOf(t);
         Boolean tMatch = t.equals(middleBinaryString);
@@ -73,9 +78,7 @@ public String convert15to18DigitId(String fifteenDigit)
     }
 
     // Handle lastSegment
-    String[] lastChars = lastSegment.split('');
-    String lastBinaryString = '';
-    // Loop over last segment character list
+    // Loop over segment character list and Allocate as directed
     for (String l : lastChars) {
         if (l.isNumeric() || l.isAllLowerCase()) {
             lastBinaryString += '0';
@@ -84,7 +87,7 @@ public String convert15to18DigitId(String fifteenDigit)
             lastBinaryString += '1';
         }
     }
-
+    // Loop over binaries list
     for (String u : binaries) {
         Integer lastIndex = binaries.indexOf(u);
         Boolean uMatch = u.equals(lastBinaryString);
