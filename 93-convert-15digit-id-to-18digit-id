@@ -19,7 +19,7 @@ public String convert15to18DigitId(String fifteenDigit)
         }
 
         // Convert the binary string to an integer
-        Integer index = Integer.valueOf(binaryString;
+        Integer index = Integer.valueOf(binaryString);
         // Add it to the suffix variable
         suffix += charSet.substring(index, index + 1);
     }
