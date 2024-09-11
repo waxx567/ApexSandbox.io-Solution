@@ -4,11 +4,11 @@ public String convert15to18DigitId(String fifteenDigit)
     if (fifteenDigit == null || fifteenDigit.length() != 15) {
         return '-1';
     }
-    // Character set and variable to store new suffix
+
     String charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
     String suffix = '';
-    
-    // Convert a segment to the corresponding character
+
+    // Helper method to convert a segment to the corresponding character
     for (Integer i = 0; i < 3; i++) {
         String segment = fifteenDigit.substring(i * 5, (i + 1) * 5);
         String binaryString = '';
@@ -18,11 +18,10 @@ public String convert15to18DigitId(String fifteenDigit)
             binaryString += (c.toUpperCase() == c ? '1' : '0');
         }
 
-        // Convert the binary string to an integer
-        Integer index = Integer.valueOf(binaryString);
-        // Add it to the suffix variable
+        // Convert binary string to decimal index
+        Integer index = Integer.valueOf(binaryString, 2);
         suffix += charSet.substring(index, index + 1);
     }
-    // Concatenate input and suffix strings
+
     return fifteenDigit + suffix;
 }
