@@ -1,15 +1,15 @@
 public Decimal average(List<Decimal> numbers){
-    Decimal total = 0.0;
+    Decimal sumTotal = 0.0;
 
     if (numbers.isEmpty()) {
         return null;
     } else {
         for (integer i = 0; i < numbers.size(); i++) {
-            total += numbers[i];            
+            sumTotal += numbers[i];            
         }
     }
 
-    Decimal answer = total / numbers.size();
+    Decimal numbersAvg = sumTotal / numbers.size();
 
-    return answer.setScale(2);
+    return numbersAvg.setScale(2);
 }
