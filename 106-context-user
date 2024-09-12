@@ -1,13 +1,13 @@
 public Map<String,String> getContextUserInformation(){
     // Create a map to store context user information
-    Map<String,String> userMap = new Map<String,String>();
+    Map<String,String> contextUser = new Map<String,String>();
 
     // Populate the map
-    userMap.put('UserName', UserInfo.getUserName());
-    userMap.put('ProfileId', UserInfo.getProfileId());
-    userMap.put('EmailId', UserInfo.getUserEmail());
-    userMap.put('Type', UserInfo.getUserType());
+    contextUser.put('UserName', UserInfo.getUserName());
+    contextUser.put('ProfileId', UserInfo.getProfileId());
+    contextUser.put('EmailId', UserInfo.getUserEmail());
+    contextUser.put('Type', UserInfo.getUserType());
 
     // Return the map
-    return userMap;
+    return contextUser;
 }
