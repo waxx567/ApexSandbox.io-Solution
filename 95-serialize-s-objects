@@ -1,9 +1,3 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-    // Handle null check
-    if (accounts == null) {
-        return 'null';
-    }
-
-    // Convert the list of accounts into a JSON string
-    return JSON.serialize(accounts);
+    return JSON.serialize(accounts?.isEmpty() ? null : accounts);
 }
