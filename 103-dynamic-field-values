@@ -9,6 +9,5 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
         // or the above two lines expressed in one line:
         // result.add(String.valueOf(acc?.get(field)));
     }
-    
     return result;
 }
