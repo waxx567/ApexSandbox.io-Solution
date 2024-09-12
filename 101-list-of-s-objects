@@ -1,6 +1,6 @@
 public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
 {
-        List<sObject> sObjectList = new List<sObject>();
+        List<sObject> AccountsAndContacts = new List<sObject>();
 
         if (accounts == null) {
             accounts = new List<Account>();
@@ -10,11 +10,11 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
         }
 
         for (Account account : accounts) {
-            sObjectList.add(account);
+            AccountsAndContacts.add(account);
         }
         for (Contact contact : contacts) {
-            sObjectList.add(contact);
+            AccountsAndContacts.add(contact);
         }
 
-        return sObjectList;                          
+        return AccountsAndContacts;                          
 }
