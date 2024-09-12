@@ -1,20 +1,19 @@
 public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
 {
         List<sObject> AccountsAndContacts = new List<sObject>();
-
+        // Null checks
         if (accounts == null) {
             accounts = new List<Account>();
         }
         if (contacts == null) {
             contacts = new List<Contact>();
         }
-
+        // Add list items to new list and return new list
         for (Account account : accounts) {
             AccountsAndContacts.add(account);
         }
         for (Contact contact : contacts) {
             AccountsAndContacts.add(contact);
         }
-
         return AccountsAndContacts;                          
 }
