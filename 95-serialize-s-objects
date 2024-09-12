@@ -5,7 +5,8 @@ public String getAccountsInJSONFormat(List<Account> accounts){
     }
 
     // Convert the list of accounts into a JSON string
-    // return JSON.serialize(accounts);
+    return JSON.serialize(accounts);
 
-    return JSON.serialize(accounts?.isEmpty() ? null : accounts);
+    // This doesn't work but you can make it work
+    // return JSON.serialize(accounts?.isEmpty() ? null : accounts);
 }
