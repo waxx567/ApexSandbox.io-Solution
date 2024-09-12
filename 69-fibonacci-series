@@ -1,22 +1,22 @@
 public List<Integer> fibonacciSeries(Integer n) {
-    List<Integer> returnList = new List<Integer>();
+    List<Integer> nFibonacci = new List<Integer>();
     if (n == 1) {
-        returnList.add(1);
+        nFibonacci.add(1);
     }
 
     if (n == 2) {
-        returnList.add(1);
-        returnList.add(1);
+        nFibonacci.add(1);
+        nFibonacci.add(1);
     }
 
     if (n > 2) {
-        returnList.add(1);
-        returnList.add(1);
+        nFibonacci.add(1);
+        nFibonacci.add(1);
         Integer insertInt = 0;
         for (Integer i = 2; i < n; i++) {
-            insertInt = returnList[i-1] + returnList[i-2];
-            returnList.add(insertInt);
+            insertInt = nFibonacci[i-1] + nFibonacci[i-2];
+            nFibonacci.add(insertInt);
         }
     }
-    return returnList;
+    return nFibonacci;
 }
