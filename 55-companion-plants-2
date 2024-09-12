@@ -22,6 +22,5 @@ public Boolean companionPlants(List<String> plants) {
             return false;
         }
     }
-    
     return true;
 }
