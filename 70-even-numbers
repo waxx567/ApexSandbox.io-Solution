@@ -1,12 +1,12 @@
 public List<Integer> evenNumbers(Integer n) {
-    List<Integer> returnList = new List<Integer>();
+    List<Integer> nEvenNumbers = new List<Integer>();
     Integer listInt = 2;
     if (n > 0) {
-        returnList.add(listInt);
+        nEvenNumbers.add(listInt);
         for (Integer i = 1; i < n; i++) {
             listInt += 2;
-            returnList.add(listInt);
+            nEvenNumbers.add(listInt);
         }
     }
-    return returnList;
+    return nEvenNumbers;
 }
