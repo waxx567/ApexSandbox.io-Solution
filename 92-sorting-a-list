@@ -1,12 +1,12 @@
 public List<String> getNamesInAscOrder(List<String> accountNames)
 {
-    List<String> returnList = new List<String>();
+    List<String> acctsAscOrder = new List<String>();
     if (accountNames == null) {
         return null;
     }
     accountNames.sort();
     for (String accName : accountNames) {
-        returnList.add(accName);
+        acctsAscOrder.add(accName);
     }
-    return returnList;
+    return acctsAscOrder;
 }
