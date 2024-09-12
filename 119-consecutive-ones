@@ -1,5 +1,5 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
-    Integer consecutiveCount = 0;
+    Integer consecutiveOnesCount = 0;
     if (numbers.isEmpty()) {
         return 0;
     } else {
@@ -9,11 +9,11 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
                 count = 0;
             } else if (numbers[i] == 1) {
                 count += 1;
-                if (count >= consecutiveCount) {
-                    consecutiveCount = count;
+                if (count >= consecutiveOnesCount) {
+                    consecutiveOnesCount = count;
                 }
             }
         }
     }
-    return consecutiveCount;
+    return consecutiveOnesCount;
 }
