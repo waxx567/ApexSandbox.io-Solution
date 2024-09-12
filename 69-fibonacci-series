@@ -10,10 +10,10 @@ public List<Integer> fibonacciSeries(Integer n) {
     if (n > 2) {
         nFibonacci.add(1);
         nFibonacci.add(1);
-        Integer NumberToAdd = 0;
+        Integer numberToAdd = 0;
         for (Integer i = 2; i < n; i++) {
-            NumberToAdd = nFibonacci[i-1] + nFibonacci[i-2];
-            nFibonacci.add(NumberToAdd);
+            numberToAdd = nFibonacci[i-1] + nFibonacci[i-2];
+            nFibonacci.add(numberToAdd);
         }
     }
     return nFibonacci;
