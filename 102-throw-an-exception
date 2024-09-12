@@ -4,7 +4,14 @@ public List<Account> checkAccounts(List<Account> accounts)
     if (accounts == null) {
         throw new IllegalArgumentException('accounts should not be null');
     }
-
+    // Iterate through each account in the list
+    for (Account acc : accounts) {
+        // If any account doesn't have BillingCity, throw an AccountException
+        if (acc.BillingCity == null) {
+            throw new AccountException('Invalid BillingCity');
+        }
+    }    
+    // Return the original list if no exceptions were found
     return accounts;
 }
 
