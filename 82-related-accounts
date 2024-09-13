@@ -1,11 +1,11 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
-    Set<Id> oppIds = new Set<Id>();
+    Set<Id> relatedAccIds = new Set<Id>();
 
     for (Opportunity opp : opps) {
         if (opp.AccountId != null) {
-            Boolean result = oppIds.add(opp.AccountId);
+            Boolean result = relatedAccIds.add(opp.AccountId);
         }
     }
 
-    return oppIds;
+    return relatedAccIds;
 }
