@@ -40,7 +40,7 @@ public static Boolean sameString(String str1, String str2){
             // If one pointer is still valid but the other isn't, the strings are different
             return false;
         }
-
+        // Move the pointers leftward
         p1--;
         p2--;
     }
